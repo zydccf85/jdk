@@ -34,13 +34,21 @@ namespace JKD.Service
             result.Add("处方数", 0);
             result.Add("处方明细数", 0);
             string xmlPath = ConfigurationManager.AppSettings["importXmlPath"];
-            Directory.GetFiles(xmlPath).ToList()
+            if (Directory.Exists(xmlPath))
+            {
+                Directory.GetFiles(xmlPath).ToList()
                 .Where(item => item.Substring(item.IndexOf("cf.xml") - 8, 8).CompareTo(maxDate) >= 0).OrderByDescending(f => f.ToString()).ToList()
                 .ForEach(item => {
-                    Dictionary<string,int> res = Import(item);
+                    Dictionary<string, int> res = Import(item);
                     result["处方数"] += res["处方数"];
                     result["处方明细数"] += res["处方明细数"];
                 });
+            }
+            else
+            {
+                return null;
+            }
+            
             return result;
         }
         #endregion

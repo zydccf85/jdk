@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menus>
+  <menu name="药房">
+    <subItem>药品明细</subItem>
+  </menu>
+  <menu name="处方">
+    <subItem>处方明细</subItem>
+    <subItem>处方统计</subItem>
+  </menu>
+
+  <menu name="人员">
+    <subItem>人员明细</subItem>
+  </menu>
+
+  <menu name="费用">
+    <subItem>缴款记录</subItem>
+  </menu>
+
+  <menu name="常用设置">
+  </menu>
+</menus>

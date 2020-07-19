@@ -114,8 +114,6 @@
             this.txtDoctor = new DevExpress.XtraEditors.TextEdit();
             this.btnQuery = new DevExpress.XtraEditors.SimpleButton();
             this.tsIsall = new DevExpress.XtraEditors.ToggleSwitch();
-            this.layoutConverter1 = new DevExpress.XtraLayout.Converter.LayoutConverter(this.components);
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.sidePanel2 = new DevExpress.XtraEditors.SidePanel();
             this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
@@ -1611,8 +1609,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn EkCount;
         private DevExpress.XtraGrid.Columns.GridColumn JsCount;
         private DevExpress.XtraGrid.Columns.GridColumn JeCount;
-        private DevExpress.XtraLayout.Converter.LayoutConverter layoutConverter1;
-        private System.Windows.Forms.ColorDialog colorDialog1;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
         private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
         private DevExpress.XtraEditors.ToggleSwitch tsIsall;

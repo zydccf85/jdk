@@ -18,6 +18,23 @@ namespace JKD
     public static class SqlHelper
     {
         public static string MysqlConnStr = ConfigurationManager.ConnectionStrings["mysqlConnectionStr"].ConnectionString;
+        public static bool IsSuccessConn()
+        {
+            MySqlConnection conn = new MySqlConnection(MysqlConnStr);
+            try
+            {
+                conn.Open();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
         public static Object ExecuteScaler(String sqltext, params MySqlParameter[] ps)
         {
             using (MySqlConnection conn = new MySqlConnection(MysqlConnStr))

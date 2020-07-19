@@ -7,12 +7,8 @@ namespace JKD.Models
     ///<summary>
     ///
     ///</summary>
-    public partial class user
+    public partial class User
     {
-           public user(){
-
-
-           }
            /// <summary>
            /// Desc:
            /// Default:

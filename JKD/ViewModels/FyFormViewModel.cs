@@ -174,14 +174,17 @@ namespace JKD.ViewModels
             //HZdata["Minprice"], HZdata["Avgprice"], HZdata["Zcycount"], HZdata["Jdcount"], HZdata["Jecount"], HZdata["Ekcount"], HZdata["Jscount"]);
             System.Diagnostics.Debug.WriteLine(BeginTime);
             System.Diagnostics.Debug.WriteLine(EndTime);
-            string sqlstr= $@"SELECT SUBSTR(opertime,1,10) as '日期' ,feibie as '费别',SUM(if(doctor='陈刚',1,NULL)) AS '陈刚',
-SUM(if(doctor='徐春华',1,NULL)) AS '徐春华',SUM(if(doctor='倪小备',1,NULL)) AS '倪晓备',
-SUM(if (doctor = '陆惠琳',1,NULL)) AS '陆惠琳',SUM(if (doctor = '胡云丹',1,NULL)) AS '胡云丹',
-SUM(if (doctor = '胡培红',1,NULL)) AS '胡培红',SUM(if (doctor = '陈要刚',1,NULL)) AS '陈要刚'
-FROM cfhead where opertime >= concat({BeginTime},'00:00:00') and opertime <= concat({ EndTime},' 23:59:59')
-GROUP BY SUBSTR(opertime, 1, 10),feibie order by SUBSTR(opertime, 1, 10) desc ";
-           
-            HzByDoctor = SqlHelper.ExecuteTable(sqlstr);
+            //            string sqlstr= $@"SELECT SUBSTR(opertime,1,10) as '日期' ,feibie as '费别',SUM(if(doctor='陈刚',1,NULL)) AS '陈刚',
+            //SUM(if(doctor='徐春华',1,NULL)) AS '徐春华',SUM(if(doctor='倪小备',1,NULL)) AS '倪晓备',
+            //SUM(if (doctor = '陆惠琳',1,NULL)) AS '陆惠琳',SUM(if (doctor = '胡云丹',1,NULL)) AS '胡云丹',
+            //SUM(if (doctor = '胡培红',1,NULL)) AS '胡培红',SUM(if (doctor = '陈要刚',1,NULL)) AS '陈要刚'
+            //FROM cfhead where opertime >= concat('{BeginTime}','00:00:00') and opertime <= concat('{ EndTime}',' 23:59:59')
+            //GROUP BY SUBSTR(opertime, 1, 10),feibie order by SUBSTR(opertime, 1, 10) desc ";
+
+
+
+            HzByDoctor = new HzByDoctor().GetDataTable(BeginTime, EndTime);
+            System.Diagnostics.Debug.WriteLine(HzByDoctor.Rows.Count.ToString());
         }
         #endregion
 

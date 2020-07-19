@@ -24,9 +24,7 @@ namespace JKD
           
 
             InitializeComponent();
-            this.Load += (o,e)=>{
-                SplashScreenManager.CloseForm();
-            };
+            
             panel1.Controls.Add(CTC);
             foreach (ToolStripMenuItem menu in menuStrip1.Items)
             {

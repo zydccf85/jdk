@@ -202,34 +202,7 @@ namespace JKD.CenterView
 
         private void xtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
-            //mvvmContext.DetachBehavior(xtraTabControl1);
-            //if (e.Page.Name == "xtraTabPage1")
-            //{
-                
-            //    foreach (CustomHeaderButton chb in xtraTabControl1.CustomHeaderButtons)
-            //    {
-            //        chb.Visible = true;
-            //        if (chb.Caption == "导出汇总")
-            //        {
-            //            chb.Visible = false;
-            //        }
-                    
-            //    }
-            //}
-            //else
-            //{
-            //    mvvmContext.WithEvent<FyFormViewModel, CustomHeaderButtonEventArgs>(xtraTabControl1, "CustomHeaderButtonClick")
-            //    .EventToCommand(x => x.Export(this.gridControl2), cs => this.gridControl2, args => args.Button.Caption == "导出汇总");
-            //    foreach (CustomHeaderButton chb in xtraTabControl1.CustomHeaderButtons)
-            //    {
-            //        chb.Visible = false;
-            //        if(chb.Caption == "导出汇总")
-            //        {
-            //            chb.Visible = true;
-            //        }
-                    
-            //    }
-            //}
+          
         }
 
         

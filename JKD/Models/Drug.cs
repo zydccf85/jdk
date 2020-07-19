@@ -82,6 +82,7 @@ namespace JKD.Models
            /// Nullable:True
            /// </summary>           
            public string cate {get;set;}
+          public string cata { get; set; }
         public override string ToString()
         {
             return string.Format("id:{0},code:{1},name:{2},form:{3},spci:{4},unit:{5},unitprice:{6},searchcode:{7},cate:{8}",

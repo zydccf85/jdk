@@ -13,6 +13,7 @@ using JKD.Models;
 using DevExpress.Data.Filtering;
 using DevExpress.Utils.Drawing;
 using JKD.Service;
+using JKD.Dialog;
 namespace JKD.CenterView
 {
     public partial class DrugUserControl : DevExpress.XtraEditors.XtraUserControl
@@ -24,29 +25,20 @@ namespace JKD.CenterView
             List<Drug> drugs = new DrugManager().GetAll();
             this.pagerNavigator1.GC = this.gridControl1;
             this.pagerNavigator1.SetData(drugs);
-            drugs.Select(item => item.name).Distinct().ToList().ForEach(item => textEdit1.Properties.Items.Add(item));
-            this.textEdit1.TextChanged += (s, e) =>
+            this.gridView1.RowClick += (s, e) =>
             {
-                ComboBoxEdit ss = s as ComboBoxEdit;
-               
-                
-                textEdit1.Properties.Items.Clear();
-                
-                drugs.Where(iem => iem.searchcode.Contains(ss.Text))
-                .Select(item => item.name).Distinct().ToList().ForEach(it => textEdit1.Properties.Items.Add(it));
-                if (!ss.IsPopupOpen)
+                if (e.Clicks == 2)
                 {
-                    ss.ShowPopup();
+                   Drug drug = gridView1.GetRow(e.RowHandle) as Drug;
+                    DialogFactory.CreateDrugEditControl(drug);
                 }
-
-            };
-           
+            };          
             #region 单击查询按钮
             btnQuery.Click += (s, e) =>
             {
                 Drug drug = new Drug()
                 {
-                    name=textEdit1.Text,
+                    name=buttonEdit1.Text,
                     address=textEdit2.Text,
                     form=textEdit3.Text
                 };
@@ -67,7 +59,7 @@ namespace JKD.CenterView
             #region 单击重置按钮
             btnReset.Click += (s, e) =>
             {
-                textEdit1.Text = textEdit2.Text = textEdit3.Text = string.Empty;
+                buttonEdit1.Text = textEdit2.Text = textEdit3.Text = string.Empty;
             };
             #endregion
 
@@ -98,5 +90,12 @@ namespace JKD.CenterView
                 System.Windows.Forms.MessageBox.Show("更新数据：" + count.ToString() + "条","更新信息",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
+
+        private void buttonEdit1_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            DialogFactory.CreateSearchControl(this.buttonEdit1);
+
+        }
+        
     }
 }

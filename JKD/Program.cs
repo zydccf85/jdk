@@ -30,52 +30,49 @@ namespace JKD
         static void Main()
         {
             WindowsFormsSettings.DefaultFont = new System.Drawing.Font("宋体", 11);
+            WindowsFormsSettings.DefaultMenuFont = new System.Drawing.Font("微软雅黑", 11);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             CultureInfo culture = CultureInfo.CreateSpecificCulture("zh-Hans");
-
-            // The following line provides localization for the application's user interface. ?
             Thread.CurrentThread.CurrentUICulture = culture;
-
-            // The following line provides localization for data formats. ?
             Thread.CurrentThread.CurrentCulture = culture;
-
-            // Set this culture as the default culture for all threads in this application. ?
-            // Note: The following properties are supported in the .NET Framework 4.5+?
             CultureInfo.DefaultThreadCurrentCulture = culture;
             CultureInfo.DefaultThreadCurrentUICulture = culture;
-            IninConfig();
-            //AppDomain.CurrentDomain.SetData();
-            Application.Run(new NaviFrm());
+            LoginFrm lf = new LoginFrm();
+            //lf.Show();
+            //if (lf.isSuccess)
+            //{
+            //    IninConfig();
 
-            // Application.Run(new FyForm());
-            // new DbContext().Db.DbFirst.CreateClassFile(@"C:\Users\Lenovo\Desktop", "JKD.Models");
-            //dothing();
+            //    SplashScreenManager.CloseForm();
+            //    Application.Run(new NaviFrm());
+            //}
+           Application.Run(new LoginFrm());
             
         }
-        private static void  IninConfig()
-        {
-            SplashScreenManager.ShowForm(typeof(SplashScreen1));
-            string maxTime = new CfheadManager().GetMaxTime();
-            SplashScreenManager.Default.SendCommand(null, string.Format("最新更新时间为{0},1", maxTime));
+        //private static void  IninConfig()
+        //{
+        //    SplashScreenManager.ShowForm(typeof(SplashScreen1));
+        //    string maxTime = new CfheadManager().GetMaxTime();
+        //    SplashScreenManager.Default.SendCommand(null, string.Format("最新更新时间为{0},1", maxTime));
             
-            string maxDate = maxTime.Split(' ')[0].Replace("-", "").Trim();
-            string xmlPath = ConfigurationManager.AppSettings["importXmlPath"];
-            if (Directory.Exists(xmlPath))
-            {
-                Directory.GetFiles(xmlPath).ToList()
-                .Where(item => item.Substring(item.IndexOf("cf.xml") - 8, 8).CompareTo(maxDate) >= 0).OrderByDescending(f => f.ToString()).ToList()
-                .ForEach(item => ImportData(item));
-            }
+        //    string maxDate = maxTime.Split(' ')[0].Replace("-", "").Trim();
+        //    string xmlPath = ConfigurationManager.AppSettings["importXmlPath"];
+        //    if (Directory.Exists(xmlPath))
+        //    {
+        //        Directory.GetFiles(xmlPath).ToList()
+        //        .Where(item => item.Substring(item.IndexOf("cf.xml") - 8, 8).CompareTo(maxDate) >= 0).OrderByDescending(f => f.ToString()).ToList()
+        //        .ForEach(item => ImportData(item));
+        //    }
             
 
-            SplashScreenManager.Default.SendCommand(null, "内容面板预加载，开始,10");
-            UserControlFactory.CreateInstance("");
-            SplashScreenManager.Default.SendCommand(null, "内容面板预加载，结束,50");
+        //    SplashScreenManager.Default.SendCommand(null, "内容面板预加载，开始,10");
+        //    UserControlFactory.CreateInstance("");
+        //    SplashScreenManager.Default.SendCommand(null, "内容面板预加载，结束,50");
             
-            SplashScreenManager.Default.SendCommand(null, "数据更新完成,100");
-            
-        }
+        //    SplashScreenManager.Default.SendCommand(null, "数据更新完成,100");
+        //    SplashScreenManager.CloseForm();
+        //}
         private static string ImportData(string filename)
         {
             DataTable dt = SqlHelper.ExecuteTable("select opertime from cfhead");
