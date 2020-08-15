@@ -20,6 +20,9 @@ using JKD.CenterView;
 using JKD.DB;
 using System.IO;
 using System.Configuration;
+using JKD.Models;
+using System.Reflection;
+
 namespace JKD.Service
 {
    public  class ImportData
@@ -95,7 +98,7 @@ namespace JKD.Service
                 num01 += SqlHelper.ExecuteNoQuery(sql01);
                 XmlNodeList cfdetail = cf.SelectNodes("处方信息");
                 string sql02 = string.Empty;
-                foreach (XmlNode c in cfdetail)
+                foreach (XmlNode c in cf.SelectNodes("处方信息"))
                 {
                     string gid = c.SelectSingleNode("组号").InnerText;
                     string drug = c.SelectSingleNode("名称").InnerText;
@@ -123,6 +126,130 @@ namespace JKD.Service
             return result;
 
         }
+        #endregion
+
+        #region 从指定文件中导入数据
+        public List<Cfhead> Import02(string filename)
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(filename);
+            Type t = new Cfhead().GetType();
+            List<PropertyInfo> lili = new Cfhead().GetType().GetRuntimeProperties().ToList();
+            List<PropertyInfo> lili02 = new Cfdetail().GetType().GetRuntimeProperties().ToList();
+            List<Cfhead> li = new List<Cfhead>();
+            foreach (XmlNode cf in doc.SelectNodes("//NewDataSet"))
+            {
+                XmlNode cfinfo = cf.SelectSingleNode("诊断信息");
+                //Object obj = Activator.CreateInstance(t);
+                Cfhead cfhead = new Cfhead();
+
+                lili.Where(i=>i.Name !="id" && i.Name !="enable" && i.Name != "cfDetails").ToList().ForEach(item =>
+                {
+                    
+                        string temp = cfinfo.SelectSingleNode(Cfhead.NameMap[item.Name]).InnerText;
+                        if (item.PropertyType == typeof(double?))
+                        {
+                            item.SetValue(cfhead, Convert.ToDouble(temp), null);
+                        }
+                        else
+                        {
+                            item.SetValue(cfhead, temp, null);
+                        }
+                });
+                List<Cfdetail> cfdetails = new List<Cfdetail>();
+
+                foreach (XmlNode c in cf.SelectNodes("处方信息"))
+                {
+                    Cfdetail cfdetail = new Cfdetail();
+                    lili02.Where(i => i.Name != "id" && i.Name != "enable" && i.Name != "opertime").ToList().ForEach(item =>
+                        {
+                            string temp = c.SelectSingleNode(Cfdetail.NameMap[item.Name]).InnerText;
+                            if (item.PropertyType == typeof(double?))
+                            {
+                                item.SetValue(cfdetail, Convert.ToDouble(temp), null);
+                            }
+                            else if(item.PropertyType == typeof(int?))
+                            {
+                                item.SetValue(cfdetail, Convert.ToInt32(temp), null);
+                            }
+                            else if(item.PropertyType == typeof(string))
+                            {
+                                item.SetValue(cfdetail, temp, null);
+                            }
+                        });
+                    cfdetail.opertime = cfhead.opertime;
+                    cfdetails.Add(cfdetail);
+
+                }
+                cfhead.cfDetails = cfdetails;
+                li.Add(cfhead);
+
+            }
+            return li;
+        }
+        #endregion
+
+        #region 从指定文件夹中导入数据(文件夹)
+        public List<Cfhead> ImportByDir(string dirname,Func<FileInfo,bool> func)
+        {
+            List<Cfhead> li = new List<Cfhead>();
+           new DirectoryInfo(dirname).GetFiles("*.xml").Where(func).ToList().ForEach(item=> {
+               li.AddRange(Import02(item.FullName));
+           });
+            return li;
+        }
+        #endregion
+
+        #region 根据时间,自动导入
+        public Dictionary<string,int> AutoImportData()
+        {
+            Dictionary<string, int> dic = new Dictionary<string, int>();
+            string maxTime = new CfheadManager().GetMaxTime();
+            string maxDate = string.Empty;
+            if(maxTime==null || string.IsNullOrEmpty(maxTime))
+            {
+                maxDate = "1970-01-01";
+            }
+            else
+            {
+                maxDate = maxTime.Split(' ')[0].Replace("-", "").Trim();
+            }
+            
+            Func<FileInfo, bool> func = item => item.Name.CompareTo(maxDate) >= 0;
+            string xmlPath = ConfigurationManager.AppSettings["importXmlPath"];
+            if (Directory.Exists(xmlPath))
+            {
+                List<Cfhead> li = ImportByDir(xmlPath, func);
+                if (li.Count == 0) {
+                    dic.Add("处方数",0);
+                    dic.Add("处方明细数",0);
+                    return dic;
+                };
+                List<Cfhead> filList = FilterUnique(li);
+                Debug.WriteLine(filList.Count);
+                int cfs =  new DbContext().Db.Insertable(filList.ToArray()).ExecuteCommand();
+                List<Cfdetail> lili = new List<Cfdetail>();
+                filList.ForEach(item => lili.AddRange(item.cfDetails) );
+                int mxs = new DbContext().Db.Insertable(lili.ToArray()).ExecuteCommand();
+                dic.Add("处方数", cfs);
+                dic.Add("处方明细数", mxs);
+
+                return dic;
+            }
+            return null;
+        }
+        #endregion
+
+
+        #region 过滤重复项
+        private List<Cfhead> FilterUnique(List<Cfhead> originList)
+        {
+            List<string> opertimes =new CfheadManager().GetUniqueOpertime();
+
+
+            return originList.Where(item=>!opertimes.Contains(item.opertime)).ToList();
+        }
+
         #endregion
 
 

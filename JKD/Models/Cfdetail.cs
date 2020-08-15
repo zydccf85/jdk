@@ -31,7 +31,7 @@ namespace JKD.Models
            /// Default:
            /// Nullable:False
            /// </summary>           
-           public int gid {get;set;}
+           public int? gid {get;set;}
 
            /// <summary>
            /// Desc:

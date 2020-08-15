@@ -59,10 +59,12 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.opertime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -72,8 +74,25 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl3 = new DevExpress.XtraGrid.GridControl();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lblTotlprice = new DevExpress.XtraEditors.LabelControl();
+            this.sidePanel2 = new DevExpress.XtraEditors.SidePanel();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
@@ -115,23 +134,6 @@
             this.btnQuery = new DevExpress.XtraEditors.SimpleButton();
             this.tsIsall = new DevExpress.XtraEditors.ToggleSwitch();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.sidePanel2 = new DevExpress.XtraEditors.SidePanel();
-            this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl3 = new DevExpress.XtraGrid.GridControl();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -140,7 +142,12 @@
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
+            this.xtraTabControl2.SuspendLayout();
+            this.xtraTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
             this.gridSplitContainer1.SuspendLayout();
@@ -166,12 +173,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tsIsall.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            this.sidePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
-            this.xtraTabControl2.SuspendLayout();
-            this.xtraTabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView2
@@ -311,14 +312,14 @@
             gridLevelNode1.RelationName = "Detail";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.Location = new System.Drawing.Point(4, 4);
             this.gridControl1.LookAndFeel.SkinName = "Office 2010 Blue";
             this.gridControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.gridControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1746, 418);
+            this.gridControl1.Size = new System.Drawing.Size(1738, 361);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.Tag = "处方头汇总表";
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -343,10 +344,12 @@
             this.gridView1.AppearancePrint.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.opertime,
+            this.gridColumn29,
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5,
+            this.gridColumn28,
             this.gridColumn6,
             this.gridColumn7,
             this.gridColumn8,
@@ -404,7 +407,17 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "发药时间", "处方数：{0}")});
             this.opertime.Visible = true;
             this.opertime.VisibleIndex = 0;
-            this.opertime.Width = 183;
+            this.opertime.Width = 180;
+            // 
+            // gridColumn29
+            // 
+            this.gridColumn29.Caption = "科室";
+            this.gridColumn29.FieldName = "department";
+            this.gridColumn29.MinWidth = 100;
+            this.gridColumn29.Name = "gridColumn29";
+            this.gridColumn29.Visible = true;
+            this.gridColumn29.VisibleIndex = 1;
+            this.gridColumn29.Width = 100;
             // 
             // gridColumn2
             // 
@@ -415,8 +428,8 @@
             this.gridColumn2.MinWidth = 27;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 133;
+            this.gridColumn2.VisibleIndex = 2;
+            this.gridColumn2.Width = 126;
             // 
             // gridColumn3
             // 
@@ -439,8 +452,8 @@
             this.gridColumn4.MinWidth = 27;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 176;
+            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 167;
             // 
             // gridColumn5
             // 
@@ -452,8 +465,18 @@
             this.gridColumn5.MinWidth = 27;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 176;
+            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 167;
+            // 
+            // gridColumn28
+            // 
+            this.gridColumn28.Caption = "性别";
+            this.gridColumn28.FieldName = "gender";
+            this.gridColumn28.MinWidth = 25;
+            this.gridColumn28.Name = "gridColumn28";
+            this.gridColumn28.Visible = true;
+            this.gridColumn28.VisibleIndex = 6;
+            this.gridColumn28.Width = 89;
             // 
             // gridColumn6
             // 
@@ -465,8 +488,8 @@
             this.gridColumn6.MinWidth = 27;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 4;
-            this.gridColumn6.Width = 120;
+            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.Width = 113;
             // 
             // gridColumn7
             // 
@@ -478,8 +501,8 @@
             this.gridColumn7.MinWidth = 27;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 5;
-            this.gridColumn7.Width = 120;
+            this.gridColumn7.VisibleIndex = 7;
+            this.gridColumn7.Width = 113;
             // 
             // gridColumn8
             // 
@@ -491,8 +514,8 @@
             this.gridColumn8.MinWidth = 27;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 6;
-            this.gridColumn8.Width = 267;
+            this.gridColumn8.VisibleIndex = 8;
+            this.gridColumn8.Width = 254;
             // 
             // fei_bei
             // 
@@ -504,8 +527,8 @@
             this.fei_bei.MinWidth = 27;
             this.fei_bei.Name = "fei_bei";
             this.fei_bei.Visible = true;
-            this.fei_bei.VisibleIndex = 7;
-            this.fei_bei.Width = 107;
+            this.fei_bei.VisibleIndex = 9;
+            this.fei_bei.Width = 101;
             // 
             // total_price
             // 
@@ -519,8 +542,8 @@
             this.total_price.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "totalprice", "{0:C2}")});
             this.total_price.Visible = true;
-            this.total_price.VisibleIndex = 8;
-            this.total_price.Width = 267;
+            this.total_price.VisibleIndex = 10;
+            this.total_price.Width = 259;
             // 
             // sidePanel3
             // 
@@ -529,7 +552,7 @@
             this.sidePanel3.Location = new System.Drawing.Point(0, 75);
             this.sidePanel3.Margin = new System.Windows.Forms.Padding(4);
             this.sidePanel3.Name = "sidePanel3";
-            this.sidePanel3.Size = new System.Drawing.Size(1753, 489);
+            this.sidePanel3.Size = new System.Drawing.Size(1753, 597);
             this.sidePanel3.TabIndex = 5;
             this.sidePanel3.Text = "sidePanel3";
             // 
@@ -585,7 +608,7 @@
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
             this.xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.True;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1753, 489);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1753, 597);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -600,33 +623,232 @@
             this.xtraTabPage1.Appearance.Header.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.xtraTabPage1.Appearance.Header.Options.UseBackColor = true;
             this.xtraTabPage1.Controls.Add(this.panel2);
-            this.xtraTabPage1.Controls.Add(this.panel1);
             this.xtraTabPage1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1746, 450);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1746, 558);
             this.xtraTabPage1.Text = "门诊处方明细表";
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.gridControl1);
+            this.panel2.Controls.Add(this.tableLayoutPanel1);
+            this.panel2.Controls.Add(this.sidePanel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1746, 418);
+            this.panel2.Size = new System.Drawing.Size(1746, 558);
             this.panel2.TabIndex = 4;
             // 
-            // panel1
+            // tableLayoutPanel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Controls.Add(this.lblTotlprice);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 418);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1746, 32);
-            this.panel1.TabIndex = 3;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.xtraTabControl2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.gridControl1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblTotlprice, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1746, 558);
+            this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // xtraTabControl2
+            // 
+            editorButtonImageOptions6.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions6.Image")));
+            editorButtonImageOptions6.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            serializableAppearanceObject6.ForeColor = System.Drawing.Color.Maroon;
+            serializableAppearanceObject6.Options.UseForeColor = true;
+            this.xtraTabControl2.CustomHeaderButtons.AddRange(new DevExpress.XtraTab.Buttons.CustomHeaderButton[] {
+            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "查看历史处方", -1, true, true, editorButtonImageOptions6, serializableAppearanceObject6, "", null, null)});
+            this.xtraTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabControl2.Location = new System.Drawing.Point(4, 403);
+            this.xtraTabControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.xtraTabControl2.Name = "xtraTabControl2";
+            this.xtraTabControl2.SelectedTabPage = this.xtraTabPage3;
+            this.xtraTabControl2.Size = new System.Drawing.Size(1738, 151);
+            this.xtraTabControl2.TabIndex = 0;
+            this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage3});
+            // 
+            // xtraTabPage3
+            // 
+            this.xtraTabPage3.Controls.Add(this.gridControl3);
+            this.xtraTabPage3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(4);
+            this.xtraTabPage3.Name = "xtraTabPage3";
+            this.xtraTabPage3.Size = new System.Drawing.Size(1731, 115);
+            this.xtraTabPage3.Text = "门诊处方明细表";
+            // 
+            // gridControl3
+            // 
+            this.gridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl3.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl3.Location = new System.Drawing.Point(0, 0);
+            this.gridControl3.MainView = this.gridView4;
+            this.gridControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl3.Name = "gridControl3";
+            this.gridControl3.Size = new System.Drawing.Size(1731, 115);
+            this.gridControl3.TabIndex = 0;
+            this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
+            // 
+            // gridView4
+            // 
+            this.gridView4.ActiveFilterEnabled = false;
+            this.gridView4.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView4.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn20,
+            this.gridColumn26,
+            this.gridColumn21,
+            this.gridColumn22,
+            this.gridColumn23,
+            this.gridColumn24,
+            this.gridColumn25,
+            this.gridColumn18,
+            this.gridColumn27});
+            this.gridView4.DetailHeight = 437;
+            this.gridView4.GridControl = this.gridControl3;
+            this.gridView4.Name = "gridView4";
+            this.gridView4.OptionsBehavior.Editable = false;
+            this.gridView4.OptionsBehavior.ReadOnly = true;
+            this.gridView4.OptionsCustomization.AllowFilter = false;
+            this.gridView4.OptionsFilter.AllowFilterEditor = false;
+            this.gridView4.OptionsFilter.AllowFilterIncrementalSearch = false;
+            this.gridView4.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.gridView4.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "编号";
+            this.gridColumn1.FieldName = "id";
+            this.gridColumn1.MinWidth = 27;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Width = 67;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "分组号";
+            this.gridColumn9.FieldName = "gid";
+            this.gridColumn9.MinWidth = 27;
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 0;
+            this.gridColumn9.Width = 133;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "药品名称";
+            this.gridColumn10.FieldName = "drug";
+            this.gridColumn10.MinWidth = 27;
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 1;
+            this.gridColumn10.Width = 267;
+            // 
+            // gridColumn20
+            // 
+            this.gridColumn20.Caption = "规格";
+            this.gridColumn20.FieldName = "spci";
+            this.gridColumn20.MinWidth = 27;
+            this.gridColumn20.Name = "gridColumn20";
+            this.gridColumn20.Visible = true;
+            this.gridColumn20.VisibleIndex = 2;
+            this.gridColumn20.Width = 267;
+            // 
+            // gridColumn26
+            // 
+            this.gridColumn26.Caption = "单价";
+            this.gridColumn26.DisplayFormat.FormatString = "c2";
+            this.gridColumn26.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn26.FieldName = "unitprice";
+            this.gridColumn26.MinWidth = 27;
+            this.gridColumn26.Name = "gridColumn26";
+            this.gridColumn26.Visible = true;
+            this.gridColumn26.VisibleIndex = 3;
+            this.gridColumn26.Width = 100;
+            // 
+            // gridColumn21
+            // 
+            this.gridColumn21.Caption = "次数";
+            this.gridColumn21.FieldName = "cishu";
+            this.gridColumn21.MinWidth = 27;
+            this.gridColumn21.Name = "gridColumn21";
+            this.gridColumn21.Visible = true;
+            this.gridColumn21.VisibleIndex = 4;
+            this.gridColumn21.Width = 207;
+            // 
+            // gridColumn22
+            // 
+            this.gridColumn22.Caption = "用量";
+            this.gridColumn22.FieldName = "yongliang";
+            this.gridColumn22.MinWidth = 27;
+            this.gridColumn22.Name = "gridColumn22";
+            this.gridColumn22.Visible = true;
+            this.gridColumn22.VisibleIndex = 5;
+            this.gridColumn22.Width = 207;
+            // 
+            // gridColumn23
+            // 
+            this.gridColumn23.Caption = "用量单位";
+            this.gridColumn23.FieldName = "danwei";
+            this.gridColumn23.MinWidth = 27;
+            this.gridColumn23.Name = "gridColumn23";
+            this.gridColumn23.Visible = true;
+            this.gridColumn23.VisibleIndex = 6;
+            this.gridColumn23.Width = 207;
+            // 
+            // gridColumn24
+            // 
+            this.gridColumn24.Caption = "用法";
+            this.gridColumn24.FieldName = "yongfa";
+            this.gridColumn24.MinWidth = 27;
+            this.gridColumn24.Name = "gridColumn24";
+            this.gridColumn24.Visible = true;
+            this.gridColumn24.VisibleIndex = 7;
+            this.gridColumn24.Width = 207;
+            // 
+            // gridColumn25
+            // 
+            this.gridColumn25.Caption = "数量";
+            this.gridColumn25.FieldName = "quantity";
+            this.gridColumn25.MinWidth = 27;
+            this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.Visible = true;
+            this.gridColumn25.VisibleIndex = 8;
+            this.gridColumn25.Width = 228;
+            // 
+            // gridColumn18
+            // 
+            this.gridColumn18.Caption = "单位";
+            this.gridColumn18.FieldName = "unit";
+            this.gridColumn18.MinWidth = 27;
+            this.gridColumn18.Name = "gridColumn18";
+            this.gridColumn18.Visible = true;
+            this.gridColumn18.VisibleIndex = 9;
+            this.gridColumn18.Width = 100;
+            // 
+            // gridColumn27
+            // 
+            this.gridColumn27.Caption = "金额";
+            this.gridColumn27.DisplayFormat.FormatString = "c2";
+            this.gridColumn27.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn27.FieldName = "gridColumn27";
+            this.gridColumn27.MinWidth = 27;
+            this.gridColumn27.Name = "gridColumn27";
+            this.gridColumn27.UnboundExpression = "[unitprice] * [quantity]";
+            this.gridColumn27.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.gridColumn27.Visible = true;
+            this.gridColumn27.VisibleIndex = 10;
+            this.gridColumn27.Width = 100;
             // 
             // lblTotlprice
             // 
@@ -649,23 +871,32 @@
             this.lblTotlprice.AutoEllipsis = true;
             this.lblTotlprice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTotlprice.LineLocation = DevExpress.XtraEditors.LineLocation.Bottom;
-            this.lblTotlprice.Location = new System.Drawing.Point(0, 0);
+            this.lblTotlprice.Location = new System.Drawing.Point(7, 375);
             this.lblTotlprice.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.lblTotlprice.MaximumSize = new System.Drawing.Size(2000, 31);
             this.lblTotlprice.MinimumSize = new System.Drawing.Size(1467, 31);
             this.lblTotlprice.Name = "lblTotlprice";
             this.lblTotlprice.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.lblTotlprice.Size = new System.Drawing.Size(1467, 31);
+            this.lblTotlprice.Size = new System.Drawing.Size(1732, 31);
             this.lblTotlprice.TabIndex = 2;
             this.lblTotlprice.Text = "处方数：";
             this.lblTotlprice.UseMnemonic = false;
+            // 
+            // sidePanel2
+            // 
+            this.sidePanel2.Location = new System.Drawing.Point(0, 548);
+            this.sidePanel2.Margin = new System.Windows.Forms.Padding(16, 15, 16, 15);
+            this.sidePanel2.Name = "sidePanel2";
+            this.sidePanel2.Size = new System.Drawing.Size(1746, 10);
+            this.sidePanel2.TabIndex = 5;
+            this.sidePanel2.Text = "sidePanel2";
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.gridSplitContainer1);
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1746, 450);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1746, 558);
             this.xtraTabPage2.Text = "门诊处方汇总表（按日）";
             // 
             // gridSplitContainer1
@@ -676,7 +907,7 @@
             this.gridSplitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.gridSplitContainer1.Name = "gridSplitContainer1";
             this.gridSplitContainer1.Panel1.Controls.Add(this.gridControl2);
-            this.gridSplitContainer1.Size = new System.Drawing.Size(1746, 450);
+            this.gridSplitContainer1.Size = new System.Drawing.Size(1746, 558);
             this.gridSplitContainer1.TabIndex = 0;
             // 
             // gridControl2
@@ -687,7 +918,7 @@
             this.gridControl2.MainView = this.gridView3;
             this.gridControl2.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1746, 450);
+            this.gridControl2.Size = new System.Drawing.Size(1746, 558);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.Tag = "处方统计表";
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -922,7 +1153,7 @@
             // 
             this.xtraTabPage4.Controls.Add(this.gridControl4);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(1746, 450);
+            this.xtraTabPage4.Size = new System.Drawing.Size(1746, 558);
             this.xtraTabPage4.Text = "处方统计（按医生）";
             // 
             // gridControl4
@@ -931,7 +1162,7 @@
             this.gridControl4.Location = new System.Drawing.Point(0, 0);
             this.gridControl4.MainView = this.gridView5;
             this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(1746, 450);
+            this.gridControl4.Size = new System.Drawing.Size(1746, 558);
             this.gridControl4.TabIndex = 0;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -940,6 +1171,7 @@
             // 
             this.gridView5.GridControl = this.gridControl4;
             this.gridView5.Name = "gridView5";
+            this.gridView5.OptionsBehavior.Editable = false;
             this.gridView5.OptionsView.ShowGroupPanel = false;
             // 
             // 缴款表TableAdapter1
@@ -1285,220 +1517,15 @@
             this.dateEdit1.Size = new System.Drawing.Size(1067, 26);
             this.dateEdit1.TabIndex = 4;
             // 
-            // sidePanel2
-            // 
-            this.sidePanel2.Controls.Add(this.xtraTabControl2);
-            this.sidePanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.sidePanel2.Location = new System.Drawing.Point(0, 564);
-            this.sidePanel2.Margin = new System.Windows.Forms.Padding(16, 15, 16, 15);
-            this.sidePanel2.Name = "sidePanel2";
-            this.sidePanel2.Size = new System.Drawing.Size(1753, 184);
-            this.sidePanel2.TabIndex = 4;
-            this.sidePanel2.Text = "sidePanel2";
-            // 
-            // xtraTabControl2
-            // 
-            editorButtonImageOptions6.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions6.Image")));
-            editorButtonImageOptions6.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            serializableAppearanceObject6.ForeColor = System.Drawing.Color.Maroon;
-            serializableAppearanceObject6.Options.UseForeColor = true;
-            this.xtraTabControl2.CustomHeaderButtons.AddRange(new DevExpress.XtraTab.Buttons.CustomHeaderButton[] {
-            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "查看历史处方", -1, true, true, editorButtonImageOptions6, serializableAppearanceObject6, "", null, null)});
-            this.xtraTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl2.Location = new System.Drawing.Point(0, 1);
-            this.xtraTabControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.xtraTabControl2.Name = "xtraTabControl2";
-            this.xtraTabControl2.SelectedTabPage = this.xtraTabPage3;
-            this.xtraTabControl2.Size = new System.Drawing.Size(1753, 183);
-            this.xtraTabControl2.TabIndex = 0;
-            this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage3});
-            // 
-            // xtraTabPage3
-            // 
-            this.xtraTabPage3.Controls.Add(this.gridControl3);
-            this.xtraTabPage3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(4);
-            this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1746, 147);
-            this.xtraTabPage3.Text = "门诊处方明细表";
-            // 
-            // gridControl3
-            // 
-            this.gridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl3.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gridControl3.Location = new System.Drawing.Point(0, 0);
-            this.gridControl3.MainView = this.gridView4;
-            this.gridControl3.Margin = new System.Windows.Forms.Padding(4);
-            this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(1746, 147);
-            this.gridControl3.TabIndex = 0;
-            this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView4});
-            // 
-            // gridView4
-            // 
-            this.gridView4.ActiveFilterEnabled = false;
-            this.gridView4.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.gridView4.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn9,
-            this.gridColumn10,
-            this.gridColumn20,
-            this.gridColumn26,
-            this.gridColumn21,
-            this.gridColumn22,
-            this.gridColumn23,
-            this.gridColumn24,
-            this.gridColumn25,
-            this.gridColumn18,
-            this.gridColumn27});
-            this.gridView4.DetailHeight = 437;
-            this.gridView4.GridControl = this.gridControl3;
-            this.gridView4.Name = "gridView4";
-            this.gridView4.OptionsBehavior.Editable = false;
-            this.gridView4.OptionsBehavior.ReadOnly = true;
-            this.gridView4.OptionsCustomization.AllowFilter = false;
-            this.gridView4.OptionsFilter.AllowFilterEditor = false;
-            this.gridView4.OptionsFilter.AllowFilterIncrementalSearch = false;
-            this.gridView4.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
-            this.gridView4.OptionsView.ShowGroupPanel = false;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "编号";
-            this.gridColumn1.FieldName = "id";
-            this.gridColumn1.MinWidth = 27;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Width = 67;
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Caption = "分组号";
-            this.gridColumn9.FieldName = "gid";
-            this.gridColumn9.MinWidth = 27;
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 0;
-            this.gridColumn9.Width = 133;
-            // 
-            // gridColumn10
-            // 
-            this.gridColumn10.Caption = "药品名称";
-            this.gridColumn10.FieldName = "drug";
-            this.gridColumn10.MinWidth = 27;
-            this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 1;
-            this.gridColumn10.Width = 267;
-            // 
-            // gridColumn20
-            // 
-            this.gridColumn20.Caption = "规格";
-            this.gridColumn20.FieldName = "spci";
-            this.gridColumn20.MinWidth = 27;
-            this.gridColumn20.Name = "gridColumn20";
-            this.gridColumn20.Visible = true;
-            this.gridColumn20.VisibleIndex = 2;
-            this.gridColumn20.Width = 267;
-            // 
-            // gridColumn26
-            // 
-            this.gridColumn26.Caption = "单价";
-            this.gridColumn26.DisplayFormat.FormatString = "c2";
-            this.gridColumn26.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn26.FieldName = "unitprice";
-            this.gridColumn26.MinWidth = 27;
-            this.gridColumn26.Name = "gridColumn26";
-            this.gridColumn26.Visible = true;
-            this.gridColumn26.VisibleIndex = 3;
-            this.gridColumn26.Width = 100;
-            // 
-            // gridColumn21
-            // 
-            this.gridColumn21.Caption = "次数";
-            this.gridColumn21.FieldName = "cishu";
-            this.gridColumn21.MinWidth = 27;
-            this.gridColumn21.Name = "gridColumn21";
-            this.gridColumn21.Visible = true;
-            this.gridColumn21.VisibleIndex = 4;
-            this.gridColumn21.Width = 207;
-            // 
-            // gridColumn22
-            // 
-            this.gridColumn22.Caption = "用量";
-            this.gridColumn22.FieldName = "yongliang";
-            this.gridColumn22.MinWidth = 27;
-            this.gridColumn22.Name = "gridColumn22";
-            this.gridColumn22.Visible = true;
-            this.gridColumn22.VisibleIndex = 5;
-            this.gridColumn22.Width = 207;
-            // 
-            // gridColumn23
-            // 
-            this.gridColumn23.Caption = "用量单位";
-            this.gridColumn23.FieldName = "danwei";
-            this.gridColumn23.MinWidth = 27;
-            this.gridColumn23.Name = "gridColumn23";
-            this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 6;
-            this.gridColumn23.Width = 207;
-            // 
-            // gridColumn24
-            // 
-            this.gridColumn24.Caption = "用法";
-            this.gridColumn24.FieldName = "yongfa";
-            this.gridColumn24.MinWidth = 27;
-            this.gridColumn24.Name = "gridColumn24";
-            this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 7;
-            this.gridColumn24.Width = 207;
-            // 
-            // gridColumn25
-            // 
-            this.gridColumn25.Caption = "数量";
-            this.gridColumn25.FieldName = "quantity";
-            this.gridColumn25.MinWidth = 27;
-            this.gridColumn25.Name = "gridColumn25";
-            this.gridColumn25.Visible = true;
-            this.gridColumn25.VisibleIndex = 8;
-            this.gridColumn25.Width = 228;
-            // 
-            // gridColumn18
-            // 
-            this.gridColumn18.Caption = "单位";
-            this.gridColumn18.FieldName = "unit";
-            this.gridColumn18.MinWidth = 27;
-            this.gridColumn18.Name = "gridColumn18";
-            this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 9;
-            this.gridColumn18.Width = 100;
-            // 
-            // gridColumn27
-            // 
-            this.gridColumn27.Caption = "金额";
-            this.gridColumn27.DisplayFormat.FormatString = "c2";
-            this.gridColumn27.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn27.FieldName = "gridColumn27";
-            this.gridColumn27.MinWidth = 27;
-            this.gridColumn27.Name = "gridColumn27";
-            this.gridColumn27.UnboundExpression = "[unitprice] * [quantity]";
-            this.gridColumn27.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.gridColumn27.Visible = true;
-            this.gridColumn27.VisibleIndex = 10;
-            this.gridColumn27.Width = 100;
-            // 
             // ChufangControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.sidePanel3);
-            this.Controls.Add(this.sidePanel2);
             this.Controls.Add(this.sidePanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChufangControl";
-            this.Size = new System.Drawing.Size(1753, 748);
+            this.Size = new System.Drawing.Size(1753, 672);
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -1507,8 +1534,13 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).EndInit();
+            this.xtraTabControl2.ResumeLayout(false);
+            this.xtraTabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
             this.gridSplitContainer1.ResumeLayout(false);
@@ -1536,12 +1568,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tsIsall.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            this.sidePanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).EndInit();
-            this.xtraTabControl2.ResumeLayout(false);
-            this.xtraTabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1590,7 +1616,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn fei_bei;
         private DevExpress.XtraGrid.Columns.GridColumn total_price;
-        private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.LabelControl lblTotlprice;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraGrid.GridControl gridControl2;
@@ -1612,7 +1637,10 @@
         private DevExpress.XtraEditors.DateEdit dateEdit1;
         private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
         private DevExpress.XtraEditors.ToggleSwitch tsIsall;
-        private DevExpress.XtraEditors.SidePanel sidePanel2;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
+        private DevExpress.XtraGrid.GridControl gridControl4;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl2;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
         private DevExpress.XtraGrid.GridControl gridControl3;
@@ -1629,8 +1657,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
-        private DevExpress.XtraGrid.GridControl gridControl4;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
+        private DevExpress.XtraEditors.SidePanel sidePanel2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
     }
 }

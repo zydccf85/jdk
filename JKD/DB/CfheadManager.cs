@@ -11,27 +11,8 @@ namespace JKD.DB
     {
         public List<Cfhead> GetAll()
         {
-            List<string> jeList = new DbContext().cfdetailDb
-                .GetList(item => item.drug.Contains("艾司唑仑"))
-                .Select(item => item.opertime).Distinct().ToList();
-            return new DbContext().Db.Queryable<Cfhead>()
-                .Mapper(it =>
-                {
-                    if (double.Parse(it.age.Replace('岁', '.').TrimEnd('月')) <= 12)
-                    {
-                        it.cftype = "儿科";
-                    }
-                    else if (jeList.Contains(it.opertime))
-                    {
-                        it.cftype = "精二";
-                    }
-                    else
-                    {
-                        it.cftype = "普通";
-                    }
-                    it.disease = (it.disease + "," + it.disease2).TrimEnd(',');
-
-                })
+           
+            return new DbContext().Db.Queryable<Cfhead>().IgnoreColumns("cfDetails")
                 .Where(it => it.enable == 1).OrderBy(it => it.opertime, SqlSugar.OrderByType.Desc).ToList(); 
         }
         public List<Cfhead> GetListByDid(string did)
@@ -68,6 +49,10 @@ namespace JKD.DB
         public string GetMaxTime()
         {
             return new DbContext().cfdetailDb.GetList().Max(item => item.opertime);
+        }
+        public List<string> GetUniqueOpertime()
+        {
+            return new DbContext().Db.SqlQueryable<Cfhead>("select distinct opertime from cfhead").Select(item => item.opertime).ToList();
         }
 
     }

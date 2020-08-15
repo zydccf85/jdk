@@ -168,23 +168,24 @@ namespace JKD.ViewModels
 
             };
             Huizong = HZ.ToString();
-            //    Huizong = string.Format(@"处方数量：{0:n0}（医保处方数：{1:n0}，自费处方数：{2:n0}），门诊人次数：{3:n0}，金额：{4:c2}（最大金额：{5:c2}，" +
-            //"最小金额：{6:c2}，平均金额：{7:c2}），中成药处方数：{8:n0}，静滴处方数：{9:n0}，精二处方数：{10:n0}，儿科处方数：{11:n0}，激素处方数：{12:n0}  ",
-            //HZdata["Cfcount"], HZdata["YBcount"], HZdata["ZFcount"], HZdata["Mzcount"], HZdata["Totalprice"], HZdata["Maxprice"],
-            //HZdata["Minprice"], HZdata["Avgprice"], HZdata["Zcycount"], HZdata["Jdcount"], HZdata["Jecount"], HZdata["Ekcount"], HZdata["Jscount"]);
-            System.Diagnostics.Debug.WriteLine(BeginTime);
-            System.Diagnostics.Debug.WriteLine(EndTime);
-            //            string sqlstr= $@"SELECT SUBSTR(opertime,1,10) as '日期' ,feibie as '费别',SUM(if(doctor='陈刚',1,NULL)) AS '陈刚',
-            //SUM(if(doctor='徐春华',1,NULL)) AS '徐春华',SUM(if(doctor='倪小备',1,NULL)) AS '倪晓备',
-            //SUM(if (doctor = '陆惠琳',1,NULL)) AS '陆惠琳',SUM(if (doctor = '胡云丹',1,NULL)) AS '胡云丹',
-            //SUM(if (doctor = '胡培红',1,NULL)) AS '胡培红',SUM(if (doctor = '陈要刚',1,NULL)) AS '陈要刚'
-            //FROM cfhead where opertime >= concat('{BeginTime}','00:00:00') and opertime <= concat('{ EndTime}',' 23:59:59')
-            //GROUP BY SUBSTR(opertime, 1, 10),feibie order by SUBSTR(opertime, 1, 10) desc ";
 
-
-
-            HzByDoctor = new HzByDoctor().GetDataTable(BeginTime, EndTime);
-            System.Diagnostics.Debug.WriteLine(HzByDoctor.Rows.Count.ToString());
+            var temp = cfhead.GroupBy(i =>new { opertime=i.opertime.Substring(0, 10),doctor= i.doctor })
+                .Select(x => new { opertime = x.Key.opertime,doctor=x.Key.doctor, quantity = x.Count() });
+            HzByDoctor = new DataTable();
+            HzByDoctor.Columns.Add("发药日期", typeof(String));
+            HzByDoctor.Columns.Add("医生", typeof(String));
+            HzByDoctor.Columns.Add("数量", typeof(int));
+            foreach (var l in temp)
+            {
+                 DataRow dr = HzByDoctor.NewRow();
+                dr.SetField("发药日期",l.opertime);
+                dr.SetField("医生", l.doctor);
+                dr.SetField("数量", l.quantity);
+                HzByDoctor.Rows.Add(dr);
+                
+               
+            }
+           // HzByDoctor = new HzByDoctor().GetDataTable(BeginTime, EndTime);
         }
         #endregion
 
@@ -299,9 +300,9 @@ namespace JKD.ViewModels
         #region 同步数据
         public void Refresh()
         {
-            
-            Dictionary<string,int> result = new ImportData().AutoImport();
-            MessageBox.Show(string.Format("处方数：{0}，处方明细数{1}", result["处方数"], result["处方明细数"]), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+             Dictionary<string,int> result = new ImportData().AutoImportData();
+            MessageBox.Show(string.Format("处方数:{0}，处方明细数:{1}", result["处方数"], result["处方明细数"]), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 
