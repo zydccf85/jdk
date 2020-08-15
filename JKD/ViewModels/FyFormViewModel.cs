@@ -169,18 +169,42 @@ namespace JKD.ViewModels
             };
             Huizong = HZ.ToString();
 
-            var temp = cfhead.GroupBy(i =>new { opertime=i.opertime.Substring(0, 10),doctor= i.doctor })
-                .Select(x => new { opertime = x.Key.opertime,doctor=x.Key.doctor, quantity = x.Count() });
+            var temp = cfhead.GroupBy(i =>new { opertime=i.opertime.Substring(0, 10),department=i.department,doctor= i.doctor })
+                .Select(x => new { opertime = x.Key.opertime,doctor=x.Key.doctor,department=x.Key.department,
+                   total =x.Count(),
+                    yibao = x.Count(z => z.feibie == "医保"),zifei = x.Count(z => z.feibie == "自费"),
+                    butong= x.Count(z => z.cftype == "普通"),
+                    erke = x.Count(z => z.cftype == "儿科"),
+                    jinger = x.Count(z => z.cftype == "精二"),
+                    mazui = x.Count(z => z.cftype == "麻醉"),
+                    jizhen = x.Count(z => z.cftype == "急诊"),
+                }).OrderByDescending(item=>item.opertime).ThenByDescending(item=>item.department);
             HzByDoctor = new DataTable();
             HzByDoctor.Columns.Add("发药日期", typeof(String));
+            HzByDoctor.Columns.Add("科室", typeof(String));
             HzByDoctor.Columns.Add("医生", typeof(String));
-            HzByDoctor.Columns.Add("数量", typeof(int));
+            HzByDoctor.Columns.Add("处方数", typeof(int));
+            HzByDoctor.Columns.Add("自费", typeof(int));
+            HzByDoctor.Columns.Add("医保", typeof(int));
+            HzByDoctor.Columns.Add("普通", typeof(int));
+            HzByDoctor.Columns.Add("儿科", typeof(int));
+            HzByDoctor.Columns.Add("精二", typeof(int));
+            HzByDoctor.Columns.Add("麻醉", typeof(int));
+            HzByDoctor.Columns.Add("急诊", typeof(int));
             foreach (var l in temp)
             {
                  DataRow dr = HzByDoctor.NewRow();
                 dr.SetField("发药日期",l.opertime);
+                dr.SetField("科室", l.department);
                 dr.SetField("医生", l.doctor);
-                dr.SetField("数量", l.quantity);
+                dr.SetField("处方数", l.total);
+                dr.SetField("自费", l.zifei);
+                dr.SetField("医保", l.yibao);
+                dr.SetField("普通", l.butong);
+                dr.SetField("儿科", l.erke);
+                dr.SetField("精二", l.jinger);
+                dr.SetField("麻醉", l.mazui);
+                dr.SetField("急诊", l.jizhen);
                 HzByDoctor.Rows.Add(dr);
                 
                
