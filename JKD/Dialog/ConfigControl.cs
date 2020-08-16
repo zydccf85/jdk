@@ -43,7 +43,7 @@ namespace JKD.Dialog
         {
             List<string> li = new DbContext().Db.SqlQueryable<Object>("select schema_name from information_schema.schemata").Select<string>().ToList();
             cbeDb.Properties.Items.AddRange(li);
-            cbeDb.SelectedItem = "wsy";
+            cbeDb.SelectedItem = "webdb";
             string conn = AppconfigHelper.GetConnectionStringsConfig("mysqlConnectionStr");
             // server = localhost; uid = root; pwd = 541800; database = wsy;
             this.teServer.Text = conn.Split(';')[0].Split('=')[1].Trim();

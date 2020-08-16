@@ -11,7 +11,6 @@ namespace JKD.DB
     {
         public List<Cfhead> GetAll()
         {
-           
             return new DbContext().Db.Queryable<Cfhead>().IgnoreColumns("cfDetails")
                 .Where(it => it.enable == 1).OrderBy(it => it.opertime, SqlSugar.OrderByType.Desc).ToList(); 
         }

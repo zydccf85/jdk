@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Text;
 using System.Collections.Generic;
+using SqlSugar;
+
 namespace JKD.Models
 {
     ///<summary>
@@ -11,7 +13,7 @@ namespace JKD.Models
     {
         public static Dictionary<string, string> NameMap = new Dictionary<string, string>()
         {
-            { "id","编号" },{ "cftype","处方类型名称" },{ "hospital","单位名称" },{ "cardid","卡号" },{ "pid","门诊号" },{ "patient","姓名" },{ "gender","性别" },
+            { "id","编号" },{ "cftype","处方类型名称" },{ "hospital","单位名称" },{ "cardid","卡号" },{ "pid","门诊号" },{ "patient","姓名" },{"gender","性别" },
             { "age","年龄" },{"department","科室" },{ "doctor","医生" },{ "disease","诊断" },{ "disease2","辅助信息" },{ "feibie","费别" },{ "phone","联系电话" },
             { "address","居住地址" },{ "totalprice","总金额" },{ "opertime","操作时间" },{ "did","身份证号" },{ "enable","是否作废" },
         };
@@ -54,6 +56,7 @@ namespace JKD.Models
         
            public string did {get;set;}
            public int enable { get; set; }
-           public List<Cfdetail> cfDetails { get; set; }
+        [SugarColumn(IsIgnore = true)]
+        public List<Cfdetail> cfDetails { get; set; }
     }
 }

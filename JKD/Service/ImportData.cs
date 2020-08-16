@@ -141,7 +141,9 @@ namespace JKD.Service
             {
                 XmlNode cfinfo = cf.SelectSingleNode("诊断信息");
                 //Object obj = Activator.CreateInstance(t);
-                Cfhead cfhead = new Cfhead();
+                Cfhead cfhead = new Cfhead() { 
+                    enable=1
+                };
 
                 lili.Where(i=>i.Name !="id" && i.Name !="enable" && i.Name != "cfDetails").ToList().ForEach(item =>
                 {
@@ -160,7 +162,9 @@ namespace JKD.Service
 
                 foreach (XmlNode c in cf.SelectNodes("处方信息"))
                 {
-                    Cfdetail cfdetail = new Cfdetail();
+                    Cfdetail cfdetail = new Cfdetail() { 
+                        enable=1
+                    };
                     lili02.Where(i => i.Name != "id" && i.Name != "enable" && i.Name != "opertime").ToList().ForEach(item =>
                         {
                             string temp = c.SelectSingleNode(Cfdetail.NameMap[item.Name]).InnerText;
@@ -220,14 +224,15 @@ namespace JKD.Service
             if (Directory.Exists(xmlPath))
             {
                 List<Cfhead> li = ImportByDir(xmlPath, func);
-                if (li.Count == 0) {
-                    dic.Add("处方数",0);
-                    dic.Add("处方明细数",0);
+               
+                List<Cfhead> filList = FilterUnique(li);
+                if (filList.Count == 0)
+                {
+                    dic.Add("处方数", 0);
+                    dic.Add("处方明细数", 0);
                     return dic;
                 };
-                List<Cfhead> filList = FilterUnique(li);
-                Debug.WriteLine(filList.Count);
-                int cfs =  new DbContext().Db.Insertable(filList.ToArray()).ExecuteCommand();
+                int cfs =  new DbContext().Db.Insertable<Cfhead>(filList.ToArray()).IgnoreColumns("cfDetails").IgnoreColumns("id").ExecuteCommand();
                 List<Cfdetail> lili = new List<Cfdetail>();
                 filList.ForEach(item => lili.AddRange(item.cfDetails) );
                 int mxs = new DbContext().Db.Insertable(lili.ToArray()).ExecuteCommand();
@@ -245,9 +250,10 @@ namespace JKD.Service
         private List<Cfhead> FilterUnique(List<Cfhead> originList)
         {
             List<string> opertimes =new CfheadManager().GetUniqueOpertime();
-
-
-            return originList.Where(item=>!opertimes.Contains(item.opertime)).ToList();
+            Debug.WriteLine(opertimes.Count);
+            List<Cfhead> li = originList.Where(item => !opertimes.Contains(item.opertime)).ToList();
+            Debug.WriteLine(li.Count);
+            return li;
         }
 
         #endregion

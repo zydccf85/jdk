@@ -18,6 +18,7 @@ using DevExpress.XtraPrinting;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using JKD.DB;
+using DevExpress.Data.Helpers;
 
 namespace JKD.ViewModels
 {
@@ -168,21 +169,24 @@ namespace JKD.ViewModels
 
             };
             Huizong = HZ.ToString();
-
-            var temp = cfhead.GroupBy(i =>new { opertime=i.opertime.Substring(0, 10),department=i.department,doctor= i.doctor })
-                .Select(x => new { opertime = x.Key.opertime,doctor=x.Key.doctor,department=x.Key.department,
-                   total =x.Count(),
-                    yibao = x.Count(z => z.feibie == "医保"),zifei = x.Count(z => z.feibie == "自费"),
-                    butong= x.Count(z => z.cftype == "普通"),
+            cfhead.ForEach(item => item.cfDetails = new CfdeatilManager().GetListByOpertime(item.opertime));
+            var temp = cfhead.GroupBy(i => new { opertime = i.opertime.Substring(0, 10), department = i.department, doctor = i.doctor })
+                .Select(x => new { opertime = x.Key.opertime, doctor = x.Key.doctor, department = x.Key.department,
+                    renci = x.GroupBy(z => z.pid).Count(),
+                   total = x.Count(),
+                    yibao = x.Count(z => z.feibie == "医保"), zifei = x.Count(z => z.feibie == "自费"),
+                    butong = x.Count(z => z.cftype == "普通"),
                     erke = x.Count(z => z.cftype == "儿科"),
                     jinger = x.Count(z => z.cftype == "精二"),
                     mazui = x.Count(z => z.cftype == "麻醉"),
                     jizhen = x.Count(z => z.cftype == "急诊"),
+                    jingdi = x.Count(z => z.cfDetails.Any(u => u.yongfa == "静滴") == true)
                 }).OrderByDescending(item=>item.opertime).ThenByDescending(item=>item.department);
             HzByDoctor = new DataTable();
             HzByDoctor.Columns.Add("发药日期", typeof(String));
             HzByDoctor.Columns.Add("科室", typeof(String));
             HzByDoctor.Columns.Add("医生", typeof(String));
+            HzByDoctor.Columns.Add("人次数", typeof(int));
             HzByDoctor.Columns.Add("处方数", typeof(int));
             HzByDoctor.Columns.Add("自费", typeof(int));
             HzByDoctor.Columns.Add("医保", typeof(int));
@@ -191,12 +195,14 @@ namespace JKD.ViewModels
             HzByDoctor.Columns.Add("精二", typeof(int));
             HzByDoctor.Columns.Add("麻醉", typeof(int));
             HzByDoctor.Columns.Add("急诊", typeof(int));
+            HzByDoctor.Columns.Add("静滴", typeof(int));
             foreach (var l in temp)
             {
                  DataRow dr = HzByDoctor.NewRow();
                 dr.SetField("发药日期",l.opertime);
                 dr.SetField("科室", l.department);
                 dr.SetField("医生", l.doctor);
+                dr.SetField("人次数", l.renci);
                 dr.SetField("处方数", l.total);
                 dr.SetField("自费", l.zifei);
                 dr.SetField("医保", l.yibao);
@@ -205,6 +211,7 @@ namespace JKD.ViewModels
                 dr.SetField("精二", l.jinger);
                 dr.SetField("麻醉", l.mazui);
                 dr.SetField("急诊", l.jizhen);
+                dr.SetField("静滴", l.jingdi);
                 HzByDoctor.Rows.Add(dr);
                 
                
@@ -224,88 +231,90 @@ namespace JKD.ViewModels
         }
         #endregion
 
-        private string ImportData(string filename)
-        {
-            DataTable dt = SqlHelper.ExecuteTable("select opertime from cfhead");
-            Dictionary<string, bool> dic = new Dictionary<string, bool>();
-            foreach (DataRow dr in dt.Rows)
-            {
-                string val = Convert.ToString(dr[0]);
-                dic[val] = true;
-            }
-            XmlDocument doc = new XmlDocument();
+        //private string ImportData(string filename)
+        //{
+        //    DataTable dt = SqlHelper.ExecuteTable("select opertime from cfhead");
+        //    Dictionary<string, bool> dic = new Dictionary<string, bool>();
+        //    foreach (DataRow dr in dt.Rows)
+        //    {
+        //        string val = Convert.ToString(dr[0]);
+        //        dic[val] = true;
+        //    }
+        //    XmlDocument doc = new XmlDocument();
 
-            doc.Load(filename);
-            int num01 = 0;
-            int num02 = 0;
-            foreach (XmlNode cf in doc.SelectNodes("//NewDataSet"))
-            {
-                XmlNode cfinfo = cf.SelectSingleNode("诊断信息");
-                string opertime = cfinfo.SelectSingleNode("操作时间").InnerText;
-                bool flag = false;
-                flag = dic.TryGetValue(opertime, out flag);
-                if (flag) continue;
-                string cftype = cfinfo.SelectSingleNode("处方类型名称").InnerText;
-                string hospital = cfinfo.SelectSingleNode("单位名称").InnerText;
-                string cardid = cfinfo.SelectSingleNode("卡号").InnerText;
-                string pid = cfinfo.SelectSingleNode("门诊号").InnerText;
-                string patient = cfinfo.SelectSingleNode("姓名").InnerText;
-                string age = cfinfo.SelectSingleNode("年龄").InnerText;
-                string doctor = cfinfo.SelectSingleNode("医生").InnerText;
-                string disease = cfinfo.SelectSingleNode("诊断").InnerText;
-                string disease2 = cfinfo.SelectSingleNode("辅助信息").InnerText;
-                string feibie = cfinfo.SelectSingleNode("费别").InnerText;
-                string phone = cfinfo.SelectSingleNode("联系电话").InnerText;
-                string address = cfinfo.SelectSingleNode("居住地址").InnerText;
-                double totalprice = Convert.ToDouble(cfinfo.SelectSingleNode("总金额").InnerText);
+        //    doc.Load(filename);
+        //    int num01 = 0;
+        //    int num02 = 0;
+        //    foreach (XmlNode cf in doc.SelectNodes("//NewDataSet"))
+        //    {
+        //        XmlNode cfinfo = cf.SelectSingleNode("诊断信息");
+        //        string opertime = cfinfo.SelectSingleNode("操作时间").InnerText;
+        //        bool flag = false;
+        //        flag = dic.TryGetValue(opertime, out flag);
+        //        if (flag) continue;
+        //        string cftype = cfinfo.SelectSingleNode("处方类型名称").InnerText;
+        //        string hospital = cfinfo.SelectSingleNode("单位名称").InnerText;
+        //        string cardid = cfinfo.SelectSingleNode("卡号").InnerText;
+        //        string pid = cfinfo.SelectSingleNode("门诊号").InnerText;
+        //        string patient = cfinfo.SelectSingleNode("姓名").InnerText;
+        //        string age = cfinfo.SelectSingleNode("年龄").InnerText;
+        //        string doctor = cfinfo.SelectSingleNode("医生").InnerText;
+        //        string disease = cfinfo.SelectSingleNode("诊断").InnerText;
+        //        string disease2 = cfinfo.SelectSingleNode("辅助信息").InnerText;
+        //        string feibie = cfinfo.SelectSingleNode("费别").InnerText;
+        //        string phone = cfinfo.SelectSingleNode("联系电话").InnerText;
+        //        string address = cfinfo.SelectSingleNode("居住地址").InnerText;
+        //        double totalprice = Convert.ToDouble(cfinfo.SelectSingleNode("总金额").InnerText);
 
-                string did = cfinfo.SelectSingleNode("身份证号").InnerText;
-                string sql01 = $@"insert into  cfhead(cftype,hospital,cardid,pid,patient,age,doctor,disease,disease2,feibie,phone,address,totalprice,opertime,did)
-                values('{cftype}','{hospital}','{cardid}','{pid}','{patient}','{age}','{doctor}','{disease}','{disease2}','{feibie}','{phone}','{address}',{totalprice},'{opertime}','{did}')";
-                Debug.WriteLine(sql01);
-                num01 += SqlHelper.ExecuteNoQuery(sql01);
-                XmlNodeList cfdetail = cf.SelectNodes("处方信息");
-                string sql02 = string.Empty;
-                foreach (XmlNode c in cfdetail)
-                {
-                    string gid = c.SelectSingleNode("组号").InnerText;
-                    string drug = c.SelectSingleNode("名称").InnerText;
-                    string spci = c.SelectSingleNode("规格").InnerText;
-                    string cishu = c.SelectSingleNode("每日次数").InnerText;
-                    double yongliang = Convert.ToDouble(c.SelectSingleNode("每次用量").InnerText);
-                    string danwei = c.SelectSingleNode("用量单位").InnerText;
-                    string yongfa = c.SelectSingleNode("用法").InnerText;
-                    double quantity = Convert.ToDouble(c.SelectSingleNode("数量").InnerText);
-                    string unit = c.SelectSingleNode("单位").InnerText;
-                    double unitprice = Convert.ToDouble(c.SelectSingleNode("单价").InnerText);
-                    sql02 += $"('{gid}','{drug}','{spci}','{cishu}',{yongliang},'{danwei}','{yongfa}',{quantity},'{unit}',{unitprice},'{opertime}'),";
-                }
-                string sql = "insert into cfdetail(gid,drug,spci,cishu,yongliang,danwei,yongfa,quantity,unit,unitprice,opertime) values";
-                Debug.WriteLine((sql + sql02).TrimEnd(new Char[] { ',' }));
-                string newsql = (sql + sql02).TrimEnd(new Char[] { ',' });
-                num02 += SqlHelper.ExecuteNoQuery(newsql);
+        //        string did = cfinfo.SelectSingleNode("身份证号").InnerText;
+        //        string sql01 = $@"insert into  cfhead(cftype,hospital,cardid,pid,patient,age,doctor,disease,disease2,feibie,phone,address,totalprice,opertime,did)
+        //        values('{cftype}','{hospital}','{cardid}','{pid}','{patient}','{age}','{doctor}','{disease}','{disease2}','{feibie}','{phone}','{address}',{totalprice},'{opertime}','{did}')";
+        //        Debug.WriteLine(sql01);
+        //        num01 += SqlHelper.ExecuteNoQuery(sql01);
+        //        XmlNodeList cfdetail = cf.SelectNodes("处方信息");
+        //        string sql02 = string.Empty;
+        //        foreach (XmlNode c in cfdetail)
+        //        {
+        //            string gid = c.SelectSingleNode("组号").InnerText;
+        //            string drug = c.SelectSingleNode("名称").InnerText;
+        //            string spci = c.SelectSingleNode("规格").InnerText;
+        //            string cishu = c.SelectSingleNode("每日次数").InnerText;
+        //            double yongliang = Convert.ToDouble(c.SelectSingleNode("每次用量").InnerText);
+        //            string danwei = c.SelectSingleNode("用量单位").InnerText;
+        //            string yongfa = c.SelectSingleNode("用法").InnerText;
+        //            double quantity = Convert.ToDouble(c.SelectSingleNode("数量").InnerText);
+        //            string unit = c.SelectSingleNode("单位").InnerText;
+        //            double unitprice = Convert.ToDouble(c.SelectSingleNode("单价").InnerText);
+        //            sql02 += $"('{gid}','{drug}','{spci}','{cishu}',{yongliang},'{danwei}','{yongfa}',{quantity},'{unit}',{unitprice},'{opertime}'),";
+        //        }
+        //        string sql = "insert into cfdetail(gid,drug,spci,cishu,yongliang,danwei,yongfa,quantity,unit,unitprice,opertime) values";
+        //        Debug.WriteLine((sql + sql02).TrimEnd(new Char[] { ',' }));
+        //        string newsql = (sql + sql02).TrimEnd(new Char[] { ',' });
+        //        num02 += SqlHelper.ExecuteNoQuery(newsql);
 
-            }
-            if (num01 == 0) return string.Format("从({0})中,没有数据进行更新", filename);
-            return string.Format("从({2})中,导入处方数为：{0},处方明细数为：{1}", num01, num02, filename);
-        }
+        //    }
+        //    if (num01 == 0) return string.Format("从({0})中,没有数据进行更新", filename);
+        //    return string.Format("从({2})中,导入处方数为：{0},处方明细数为：{1}", num01, num02, filename);
+        //}
 
         #region 单击导入按钮
         public void Import()
         {
-            OpenFileDialog ofd = new OpenFileDialog()
-            {
-                Filter = "XML文件|*.xml",
-                InitialDirectory = @"\\172.20.81.139\chufang"
-            };
-            DialogResult dr = ofd.ShowDialog();
-            if (dr == DialogResult.OK)
-            {
-                //string info = ImportData(ofd.FileName);
-                //MessageBox.Show(info, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Dictionary<string, int> result = new ImportData().Import(ofd.FileName);
-                MessageBox.Show(string.Format("处方数：{0}，处方明细数{1}", result["处方数"], result["处方明细数"]), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            Dictionary<string, int> result= new ImportData().AutoImportData();
+            MessageBox.Show(string.Format("处方数:{0}，处方明细数:{1}", result["处方数"], result["处方明细数"]), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //OpenFileDialog ofd = new OpenFileDialog()
+            //{
+            //    Filter = "XML文件|*.xml",
+            //    InitialDirectory = @"\\172.20.81.139\chufang"
+            //};
+            //DialogResult dr = ofd.ShowDialog();
+            //if (dr == DialogResult.OK)
+            //{
+            //    //string info = ImportData(ofd.FileName);
+            //    //MessageBox.Show(info, "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    Dictionary<string, int> result = new ImportData().Import(ofd.FileName);
+            //    MessageBox.Show(string.Format("处方数：{0}，处方明细数{1}", result["处方数"], result["处方明细数"]), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
         }
         #endregion
 
