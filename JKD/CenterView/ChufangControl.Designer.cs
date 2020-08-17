@@ -190,6 +190,7 @@
             this.gridColumn16,
             this.gridColumn17,
             this.gridColumn19});
+            this.gridView2.DetailHeight = 437;
             this.gridView2.GridControl = this.gridControl1;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.Editable = false;
@@ -208,19 +209,21 @@
             this.gridColumn11.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn11.Caption = "组号";
             this.gridColumn11.FieldName = "gid";
+            this.gridColumn11.MinWidth = 27;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 0;
-            this.gridColumn11.Width = 30;
+            this.gridColumn11.Width = 40;
             // 
             // gridColumn12
             // 
             this.gridColumn12.Caption = "药品名称";
             this.gridColumn12.FieldName = "drug";
+            this.gridColumn12.MinWidth = 27;
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 1;
-            this.gridColumn12.Width = 250;
+            this.gridColumn12.Width = 333;
             // 
             // gridColumn13
             // 
@@ -228,10 +231,11 @@
             this.gridColumn13.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn13.Caption = "规格";
             this.gridColumn13.FieldName = "spci";
+            this.gridColumn13.MinWidth = 27;
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 2;
-            this.gridColumn13.Width = 150;
+            this.gridColumn13.Width = 200;
             // 
             // gridColumn14
             // 
@@ -239,10 +243,11 @@
             this.gridColumn14.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn14.Caption = "单位";
             this.gridColumn14.FieldName = "unit";
+            this.gridColumn14.MinWidth = 27;
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.Visible = true;
             this.gridColumn14.VisibleIndex = 3;
-            this.gridColumn14.Width = 30;
+            this.gridColumn14.Width = 40;
             // 
             // gridColumn15
             // 
@@ -250,10 +255,11 @@
             this.gridColumn15.DisplayFormat.FormatString = "C2";
             this.gridColumn15.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn15.FieldName = "unitprice";
+            this.gridColumn15.MinWidth = 27;
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.Visible = true;
             this.gridColumn15.VisibleIndex = 4;
-            this.gridColumn15.Width = 61;
+            this.gridColumn15.Width = 81;
             // 
             // gridColumn16
             // 
@@ -265,19 +271,21 @@
             this.gridColumn16.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.gridColumn16.Caption = "用法";
             this.gridColumn16.FieldName = "yongfa";
+            this.gridColumn16.MinWidth = 27;
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 5;
-            this.gridColumn16.Width = 150;
+            this.gridColumn16.Width = 200;
             // 
             // gridColumn17
             // 
             this.gridColumn17.Caption = "数量";
             this.gridColumn17.FieldName = "quantity";
+            this.gridColumn17.MinWidth = 27;
             this.gridColumn17.Name = "gridColumn17";
             this.gridColumn17.Visible = true;
             this.gridColumn17.VisibleIndex = 6;
-            this.gridColumn17.Width = 50;
+            this.gridColumn17.Width = 67;
             // 
             // gridColumn19
             // 
@@ -285,12 +293,13 @@
             this.gridColumn19.DisplayFormat.FormatString = "c2";
             this.gridColumn19.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn19.FieldName = "gridColumn19";
+            this.gridColumn19.MinWidth = 27;
             this.gridColumn19.Name = "gridColumn19";
             this.gridColumn19.UnboundExpression = "[quantity] * [unitprice]";
             this.gridColumn19.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.gridColumn19.Visible = true;
             this.gridColumn19.VisibleIndex = 7;
-            this.gridColumn19.Width = 50;
+            this.gridColumn19.Width = 67;
             // 
             // gridControl1
             // 
@@ -298,17 +307,19 @@
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.EmbeddedNavigator.Appearance.BackColor = System.Drawing.Color.Azure;
             this.gridControl1.EmbeddedNavigator.Appearance.Options.UseBackColor = true;
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             gridLevelNode1.LevelTemplate = this.gridView2;
             gridLevelNode1.RelationName = "Detail";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gridControl1.Location = new System.Drawing.Point(3, 3);
+            this.gridControl1.Location = new System.Drawing.Point(4, 4);
             this.gridControl1.LookAndFeel.SkinName = "Office 2010 Blue";
             this.gridControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.gridControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1303, 289);
+            this.gridControl1.Size = new System.Drawing.Size(1738, 361);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.Tag = "处方头汇总表";
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -344,6 +355,7 @@
             this.gridColumn8,
             this.fei_bei,
             this.total_price});
+            this.gridView1.DetailHeight = 437;
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             gridFormatRule1.Column = this.total_price;
             gridFormatRule1.ColumnApplyTo = this.total_price;
@@ -358,7 +370,7 @@
             this.gridView1.FormatRules.Add(gridFormatRule1);
             this.gridView1.FormatRules.Add(gridFormatRule2);
             this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.IndicatorWidth = 50;
+            this.gridView1.IndicatorWidth = 67;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
             this.gridView1.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
@@ -389,21 +401,23 @@
             this.opertime.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.opertime.Caption = "发药时间";
             this.opertime.FieldName = "opertime";
+            this.opertime.MinWidth = 27;
             this.opertime.Name = "opertime";
             this.opertime.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "发药时间", "处方数：{0}")});
             this.opertime.Visible = true;
             this.opertime.VisibleIndex = 0;
-            this.opertime.Width = 150;
+            this.opertime.Width = 200;
             // 
             // gridColumn29
             // 
             this.gridColumn29.Caption = "科室";
             this.gridColumn29.FieldName = "department";
-            this.gridColumn29.MinWidth = 75;
+            this.gridColumn29.MinWidth = 100;
             this.gridColumn29.Name = "gridColumn29";
             this.gridColumn29.Visible = true;
             this.gridColumn29.VisibleIndex = 1;
+            this.gridColumn29.Width = 100;
             // 
             // gridColumn2
             // 
@@ -411,10 +425,11 @@
             this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn2.Caption = "处方类型";
             this.gridColumn2.FieldName = "cftype";
+            this.gridColumn2.MinWidth = 27;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 92;
+            this.gridColumn2.Width = 123;
             // 
             // gridColumn3
             // 
@@ -422,9 +437,10 @@
             this.gridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn3.Caption = "卡号";
             this.gridColumn3.FieldName = "cardid";
-            this.gridColumn3.MaxWidth = 132;
+            this.gridColumn3.MaxWidth = 176;
+            this.gridColumn3.MinWidth = 27;
             this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Width = 132;
+            this.gridColumn3.Width = 176;
             // 
             // gridColumn4
             // 
@@ -432,11 +448,12 @@
             this.gridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn4.Caption = "门诊号";
             this.gridColumn4.FieldName = "pid";
-            this.gridColumn4.MaxWidth = 132;
+            this.gridColumn4.MaxWidth = 176;
+            this.gridColumn4.MinWidth = 27;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 123;
+            this.gridColumn4.Width = 164;
             // 
             // gridColumn5
             // 
@@ -444,11 +461,12 @@
             this.gridColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn5.Caption = "患者";
             this.gridColumn5.FieldName = "patient";
-            this.gridColumn5.MaxWidth = 132;
+            this.gridColumn5.MaxWidth = 176;
+            this.gridColumn5.MinWidth = 27;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 123;
+            this.gridColumn5.Width = 164;
             // 
             // gridColumn28
             // 
@@ -456,11 +474,11 @@
             this.gridColumn28.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn28.Caption = "性别";
             this.gridColumn28.FieldName = "gender";
-            this.gridColumn28.MinWidth = 19;
+            this.gridColumn28.MinWidth = 25;
             this.gridColumn28.Name = "gridColumn28";
             this.gridColumn28.Visible = true;
             this.gridColumn28.VisibleIndex = 5;
-            this.gridColumn28.Width = 66;
+            this.gridColumn28.Width = 88;
             // 
             // gridColumn6
             // 
@@ -468,11 +486,12 @@
             this.gridColumn6.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn6.Caption = "年龄";
             this.gridColumn6.FieldName = "age";
-            this.gridColumn6.MaxWidth = 90;
+            this.gridColumn6.MaxWidth = 120;
+            this.gridColumn6.MinWidth = 27;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 6;
-            this.gridColumn6.Width = 83;
+            this.gridColumn6.Width = 111;
             // 
             // gridColumn7
             // 
@@ -480,11 +499,12 @@
             this.gridColumn7.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn7.Caption = "医生";
             this.gridColumn7.FieldName = "doctor";
-            this.gridColumn7.MaxWidth = 90;
+            this.gridColumn7.MaxWidth = 120;
+            this.gridColumn7.MinWidth = 27;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 7;
-            this.gridColumn7.Width = 83;
+            this.gridColumn7.Width = 111;
             // 
             // gridColumn8
             // 
@@ -492,11 +512,12 @@
             this.gridColumn8.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.gridColumn8.Caption = "诊断";
             this.gridColumn8.FieldName = "disease";
-            this.gridColumn8.MaxWidth = 200;
+            this.gridColumn8.MaxWidth = 267;
+            this.gridColumn8.MinWidth = 27;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 8;
-            this.gridColumn8.Width = 187;
+            this.gridColumn8.Width = 249;
             // 
             // fei_bei
             // 
@@ -504,11 +525,12 @@
             this.fei_bei.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.fei_bei.Caption = "费别";
             this.fei_bei.FieldName = "feibie";
-            this.fei_bei.MaxWidth = 80;
+            this.fei_bei.MaxWidth = 107;
+            this.fei_bei.MinWidth = 27;
             this.fei_bei.Name = "fei_bei";
             this.fei_bei.Visible = true;
             this.fei_bei.VisibleIndex = 9;
-            this.fei_bei.Width = 74;
+            this.fei_bei.Width = 99;
             // 
             // total_price
             // 
@@ -516,21 +538,23 @@
             this.total_price.DisplayFormat.FormatString = "C2";
             this.total_price.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.total_price.FieldName = "totalprice";
-            this.total_price.MaxWidth = 200;
+            this.total_price.MaxWidth = 267;
+            this.total_price.MinWidth = 27;
             this.total_price.Name = "total_price";
             this.total_price.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "totalprice", "{0:C2}")});
             this.total_price.Visible = true;
             this.total_price.VisibleIndex = 10;
-            this.total_price.Width = 195;
+            this.total_price.Width = 260;
             // 
             // sidePanel3
             // 
             this.sidePanel3.Controls.Add(this.xtraTabControl1);
             this.sidePanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sidePanel3.Location = new System.Drawing.Point(0, 60);
+            this.sidePanel3.Location = new System.Drawing.Point(0, 75);
+            this.sidePanel3.Margin = new System.Windows.Forms.Padding(4);
             this.sidePanel3.Name = "sidePanel3";
-            this.sidePanel3.Size = new System.Drawing.Size(1315, 478);
+            this.sidePanel3.Size = new System.Drawing.Size(1753, 597);
             this.sidePanel3.TabIndex = 5;
             this.sidePanel3.Text = "sidePanel3";
             // 
@@ -582,10 +606,11 @@
             new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "导出汇总", -1, true, true, editorButtonImageOptions5, serializableAppearanceObject5, "", "处方汇总", null)});
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
             this.xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.True;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1315, 478);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1753, 597);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -601,8 +626,9 @@
             this.xtraTabPage1.Appearance.Header.Options.UseBackColor = true;
             this.xtraTabPage1.Controls.Add(this.panel2);
             this.xtraTabPage1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1309, 446);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1746, 558);
             this.xtraTabPage1.Text = "门诊处方明细表";
             // 
             // panel2
@@ -611,8 +637,9 @@
             this.panel2.Controls.Add(this.sidePanel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1309, 446);
+            this.panel2.Size = new System.Drawing.Size(1746, 558);
             this.panel2.TabIndex = 4;
             // 
             // tableLayoutPanel1
@@ -624,13 +651,13 @@
             this.tableLayoutPanel1.Controls.Add(this.lblTotlprice, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1309, 446);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1746, 558);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // xtraTabControl2
@@ -642,10 +669,11 @@
             this.xtraTabControl2.CustomHeaderButtons.AddRange(new DevExpress.XtraTab.Buttons.CustomHeaderButton[] {
             new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "查看历史处方", -1, true, true, editorButtonImageOptions6, serializableAppearanceObject6, "", null, null)});
             this.xtraTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl2.Location = new System.Drawing.Point(3, 322);
+            this.xtraTabControl2.Location = new System.Drawing.Point(4, 403);
+            this.xtraTabControl2.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.xtraTabPage3;
-            this.xtraTabControl2.Size = new System.Drawing.Size(1303, 121);
+            this.xtraTabControl2.Size = new System.Drawing.Size(1738, 151);
             this.xtraTabControl2.TabIndex = 0;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage3});
@@ -654,17 +682,20 @@
             // 
             this.xtraTabPage3.Controls.Add(this.gridControl3);
             this.xtraTabPage3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1297, 92);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1731, 115);
             this.xtraTabPage3.Text = "门诊处方明细表";
             // 
             // gridControl3
             // 
             this.gridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl3.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl3.Location = new System.Drawing.Point(0, 0);
             this.gridControl3.MainView = this.gridView4;
+            this.gridControl3.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(1297, 92);
+            this.gridControl3.Size = new System.Drawing.Size(1731, 115);
             this.gridControl3.TabIndex = 0;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -687,6 +718,7 @@
             this.gridColumn25,
             this.gridColumn18,
             this.gridColumn27});
+            this.gridView4.DetailHeight = 437;
             this.gridView4.GridControl = this.gridControl3;
             this.gridView4.Name = "gridView4";
             this.gridView4.OptionsBehavior.Editable = false;
@@ -701,35 +733,39 @@
             // 
             this.gridColumn1.Caption = "编号";
             this.gridColumn1.FieldName = "id";
+            this.gridColumn1.MinWidth = 27;
             this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Width = 50;
+            this.gridColumn1.Width = 67;
             // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "分组号";
             this.gridColumn9.FieldName = "gid";
+            this.gridColumn9.MinWidth = 27;
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 0;
-            this.gridColumn9.Width = 100;
+            this.gridColumn9.Width = 133;
             // 
             // gridColumn10
             // 
             this.gridColumn10.Caption = "药品名称";
             this.gridColumn10.FieldName = "drug";
+            this.gridColumn10.MinWidth = 27;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 1;
-            this.gridColumn10.Width = 200;
+            this.gridColumn10.Width = 267;
             // 
             // gridColumn20
             // 
             this.gridColumn20.Caption = "规格";
             this.gridColumn20.FieldName = "spci";
+            this.gridColumn20.MinWidth = 27;
             this.gridColumn20.Name = "gridColumn20";
             this.gridColumn20.Visible = true;
             this.gridColumn20.VisibleIndex = 2;
-            this.gridColumn20.Width = 200;
+            this.gridColumn20.Width = 267;
             // 
             // gridColumn26
             // 
@@ -737,62 +773,71 @@
             this.gridColumn26.DisplayFormat.FormatString = "c2";
             this.gridColumn26.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn26.FieldName = "unitprice";
+            this.gridColumn26.MinWidth = 27;
             this.gridColumn26.Name = "gridColumn26";
             this.gridColumn26.Visible = true;
             this.gridColumn26.VisibleIndex = 3;
+            this.gridColumn26.Width = 100;
             // 
             // gridColumn21
             // 
             this.gridColumn21.Caption = "次数";
             this.gridColumn21.FieldName = "cishu";
+            this.gridColumn21.MinWidth = 27;
             this.gridColumn21.Name = "gridColumn21";
             this.gridColumn21.Visible = true;
             this.gridColumn21.VisibleIndex = 4;
-            this.gridColumn21.Width = 155;
+            this.gridColumn21.Width = 207;
             // 
             // gridColumn22
             // 
             this.gridColumn22.Caption = "用量";
             this.gridColumn22.FieldName = "yongliang";
+            this.gridColumn22.MinWidth = 27;
             this.gridColumn22.Name = "gridColumn22";
             this.gridColumn22.Visible = true;
             this.gridColumn22.VisibleIndex = 5;
-            this.gridColumn22.Width = 155;
+            this.gridColumn22.Width = 207;
             // 
             // gridColumn23
             // 
             this.gridColumn23.Caption = "用量单位";
             this.gridColumn23.FieldName = "danwei";
+            this.gridColumn23.MinWidth = 27;
             this.gridColumn23.Name = "gridColumn23";
             this.gridColumn23.Visible = true;
             this.gridColumn23.VisibleIndex = 6;
-            this.gridColumn23.Width = 155;
+            this.gridColumn23.Width = 207;
             // 
             // gridColumn24
             // 
             this.gridColumn24.Caption = "用法";
             this.gridColumn24.FieldName = "yongfa";
+            this.gridColumn24.MinWidth = 27;
             this.gridColumn24.Name = "gridColumn24";
             this.gridColumn24.Visible = true;
             this.gridColumn24.VisibleIndex = 7;
-            this.gridColumn24.Width = 155;
+            this.gridColumn24.Width = 207;
             // 
             // gridColumn25
             // 
             this.gridColumn25.Caption = "数量";
             this.gridColumn25.FieldName = "quantity";
+            this.gridColumn25.MinWidth = 27;
             this.gridColumn25.Name = "gridColumn25";
             this.gridColumn25.Visible = true;
             this.gridColumn25.VisibleIndex = 8;
-            this.gridColumn25.Width = 171;
+            this.gridColumn25.Width = 228;
             // 
             // gridColumn18
             // 
             this.gridColumn18.Caption = "单位";
             this.gridColumn18.FieldName = "unit";
+            this.gridColumn18.MinWidth = 27;
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.Visible = true;
             this.gridColumn18.VisibleIndex = 9;
+            this.gridColumn18.Width = 100;
             // 
             // gridColumn27
             // 
@@ -800,11 +845,13 @@
             this.gridColumn27.DisplayFormat.FormatString = "c2";
             this.gridColumn27.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn27.FieldName = "gridColumn27";
+            this.gridColumn27.MinWidth = 27;
             this.gridColumn27.Name = "gridColumn27";
             this.gridColumn27.UnboundExpression = "[unitprice] * [quantity]";
             this.gridColumn27.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.gridColumn27.Visible = true;
             this.gridColumn27.VisibleIndex = 10;
+            this.gridColumn27.Width = 100;
             // 
             // lblTotlprice
             // 
@@ -827,31 +874,32 @@
             this.lblTotlprice.AutoEllipsis = true;
             this.lblTotlprice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTotlprice.LineLocation = DevExpress.XtraEditors.LineLocation.Bottom;
-            this.lblTotlprice.Location = new System.Drawing.Point(5, 300);
-            this.lblTotlprice.Margin = new System.Windows.Forms.Padding(5);
-            this.lblTotlprice.MaximumSize = new System.Drawing.Size(1500, 25);
-            this.lblTotlprice.MinimumSize = new System.Drawing.Size(1100, 25);
+            this.lblTotlprice.Location = new System.Drawing.Point(7, 375);
+            this.lblTotlprice.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.lblTotlprice.MaximumSize = new System.Drawing.Size(2000, 31);
+            this.lblTotlprice.MinimumSize = new System.Drawing.Size(1467, 31);
             this.lblTotlprice.Name = "lblTotlprice";
-            this.lblTotlprice.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lblTotlprice.Size = new System.Drawing.Size(1299, 25);
+            this.lblTotlprice.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.lblTotlprice.Size = new System.Drawing.Size(1732, 31);
             this.lblTotlprice.TabIndex = 2;
             this.lblTotlprice.Text = "处方数：";
             this.lblTotlprice.UseMnemonic = false;
             // 
             // sidePanel2
             // 
-            this.sidePanel2.Location = new System.Drawing.Point(0, 438);
-            this.sidePanel2.Margin = new System.Windows.Forms.Padding(12);
+            this.sidePanel2.Location = new System.Drawing.Point(0, 548);
+            this.sidePanel2.Margin = new System.Windows.Forms.Padding(16, 15, 16, 15);
             this.sidePanel2.Name = "sidePanel2";
-            this.sidePanel2.Size = new System.Drawing.Size(1310, 8);
+            this.sidePanel2.Size = new System.Drawing.Size(1747, 10);
             this.sidePanel2.TabIndex = 5;
             this.sidePanel2.Text = "sidePanel2";
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.gridSplitContainer1);
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1309, 446);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1746, 558);
             this.xtraTabPage2.Text = "门诊处方汇总表（按日）";
             // 
             // gridSplitContainer1
@@ -859,18 +907,21 @@
             this.gridSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSplitContainer1.Grid = this.gridControl2;
             this.gridSplitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.gridSplitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.gridSplitContainer1.Name = "gridSplitContainer1";
             this.gridSplitContainer1.Panel1.Controls.Add(this.gridControl2);
-            this.gridSplitContainer1.Size = new System.Drawing.Size(1309, 446);
+            this.gridSplitContainer1.Size = new System.Drawing.Size(1746, 558);
             this.gridSplitContainer1.TabIndex = 0;
             // 
             // gridControl2
             // 
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.gridView3;
+            this.gridControl2.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1309, 446);
+            this.gridControl2.Size = new System.Drawing.Size(1746, 558);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.Tag = "处方统计表";
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -899,6 +950,7 @@
             this.EkCount,
             this.JsCount,
             this.JeCount});
+            this.gridView3.DetailHeight = 437;
             this.gridView3.GridControl = this.gridControl2;
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
@@ -912,11 +964,13 @@
             // 
             this.Riqi.Caption = "日期";
             this.Riqi.FieldName = "Riqi";
+            this.Riqi.MinWidth = 27;
             this.Riqi.Name = "Riqi";
             this.Riqi.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "Riqi", "小计[{0:N0}]天：")});
             this.Riqi.Visible = true;
             this.Riqi.VisibleIndex = 0;
+            this.Riqi.Width = 100;
             // 
             // TotalPrice
             // 
@@ -924,11 +978,13 @@
             this.TotalPrice.DisplayFormat.FormatString = "{0:C2}";
             this.TotalPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TotalPrice.FieldName = "TotalPrice";
+            this.TotalPrice.MinWidth = 27;
             this.TotalPrice.Name = "TotalPrice";
             this.TotalPrice.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalPrice", "{0:C2}")});
             this.TotalPrice.Visible = true;
             this.TotalPrice.VisibleIndex = 1;
+            this.TotalPrice.Width = 100;
             // 
             // MaxPrice
             // 
@@ -936,11 +992,13 @@
             this.MaxPrice.DisplayFormat.FormatString = "{0:C2}";
             this.MaxPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.MaxPrice.FieldName = "MaxPrice";
+            this.MaxPrice.MinWidth = 27;
             this.MaxPrice.Name = "MaxPrice";
             this.MaxPrice.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Max, "MaxPrice", "{0:C2}")});
             this.MaxPrice.Visible = true;
             this.MaxPrice.VisibleIndex = 2;
+            this.MaxPrice.Width = 100;
             // 
             // MinPrice
             // 
@@ -948,11 +1006,13 @@
             this.MinPrice.DisplayFormat.FormatString = "{0:C2}";
             this.MinPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.MinPrice.FieldName = "MinPrice";
+            this.MinPrice.MinWidth = 27;
             this.MinPrice.Name = "MinPrice";
             this.MinPrice.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Min, "MinPrice", "{0:C2}")});
             this.MinPrice.Visible = true;
             this.MinPrice.VisibleIndex = 3;
+            this.MinPrice.Width = 100;
             // 
             // AvgPrice
             // 
@@ -960,11 +1020,13 @@
             this.AvgPrice.DisplayFormat.FormatString = "{0:C2}";
             this.AvgPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.AvgPrice.FieldName = "AvgPrice";
+            this.AvgPrice.MinWidth = 27;
             this.AvgPrice.Name = "AvgPrice";
             this.AvgPrice.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Average, "AvgPrice", "{0:C2}")});
             this.AvgPrice.Visible = true;
             this.AvgPrice.VisibleIndex = 4;
+            this.AvgPrice.Width = 100;
             // 
             // CfCount
             // 
@@ -972,11 +1034,13 @@
             this.CfCount.DisplayFormat.FormatString = "{0:N0}";
             this.CfCount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.CfCount.FieldName = "CfCount";
+            this.CfCount.MinWidth = 27;
             this.CfCount.Name = "CfCount";
             this.CfCount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CfCount", "{0:N0}")});
             this.CfCount.Visible = true;
             this.CfCount.VisibleIndex = 5;
+            this.CfCount.Width = 100;
             // 
             // MzCount
             // 
@@ -984,11 +1048,13 @@
             this.MzCount.DisplayFormat.FormatString = "{0:N0}";
             this.MzCount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.MzCount.FieldName = "MzCount";
+            this.MzCount.MinWidth = 27;
             this.MzCount.Name = "MzCount";
             this.MzCount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MzCount", "{0:N0}")});
             this.MzCount.Visible = true;
             this.MzCount.VisibleIndex = 6;
+            this.MzCount.Width = 100;
             // 
             // YbCount
             // 
@@ -996,11 +1062,13 @@
             this.YbCount.DisplayFormat.FormatString = "{0:N0}";
             this.YbCount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.YbCount.FieldName = "YbCount";
+            this.YbCount.MinWidth = 27;
             this.YbCount.Name = "YbCount";
             this.YbCount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "YbCount", "{0:N0}")});
             this.YbCount.Visible = true;
             this.YbCount.VisibleIndex = 7;
+            this.YbCount.Width = 100;
             // 
             // ZfCount
             // 
@@ -1008,11 +1076,13 @@
             this.ZfCount.DisplayFormat.FormatString = "{0:N0}";
             this.ZfCount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.ZfCount.FieldName = "ZfCount";
+            this.ZfCount.MinWidth = 27;
             this.ZfCount.Name = "ZfCount";
             this.ZfCount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ZfCount", "{0:N0}")});
             this.ZfCount.Visible = true;
             this.ZfCount.VisibleIndex = 8;
+            this.ZfCount.Width = 100;
             // 
             // ZcyCount
             // 
@@ -1020,11 +1090,13 @@
             this.ZcyCount.DisplayFormat.FormatString = "{0:N0}";
             this.ZcyCount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.ZcyCount.FieldName = "ZcyCount";
+            this.ZcyCount.MinWidth = 27;
             this.ZcyCount.Name = "ZcyCount";
             this.ZcyCount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ZcyCount", "{0:N0}")});
             this.ZcyCount.Visible = true;
             this.ZcyCount.VisibleIndex = 9;
+            this.ZcyCount.Width = 100;
             // 
             // JdCount
             // 
@@ -1032,11 +1104,13 @@
             this.JdCount.DisplayFormat.FormatString = "{0:N0}";
             this.JdCount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.JdCount.FieldName = "JdCount";
+            this.JdCount.MinWidth = 27;
             this.JdCount.Name = "JdCount";
             this.JdCount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "JdCount", "{0:N0}")});
             this.JdCount.Visible = true;
             this.JdCount.VisibleIndex = 10;
+            this.JdCount.Width = 100;
             // 
             // EkCount
             // 
@@ -1044,11 +1118,13 @@
             this.EkCount.DisplayFormat.FormatString = "{0:N0}";
             this.EkCount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.EkCount.FieldName = "EkCount";
+            this.EkCount.MinWidth = 27;
             this.EkCount.Name = "EkCount";
             this.EkCount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "EkCount", "{0:N0}")});
             this.EkCount.Visible = true;
             this.EkCount.VisibleIndex = 11;
+            this.EkCount.Width = 100;
             // 
             // JsCount
             // 
@@ -1056,50 +1132,56 @@
             this.JsCount.DisplayFormat.FormatString = "{0:N0}";
             this.JsCount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.JsCount.FieldName = "JsCount";
+            this.JsCount.MinWidth = 27;
             this.JsCount.Name = "JsCount";
             this.JsCount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "JsCount", "{0:N0}")});
             this.JsCount.Visible = true;
             this.JsCount.VisibleIndex = 12;
+            this.JsCount.Width = 100;
             // 
             // JeCount
             // 
             this.JeCount.Caption = "精二";
             this.JeCount.FieldName = "JeCount";
+            this.JeCount.MinWidth = 27;
             this.JeCount.Name = "JeCount";
             this.JeCount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "JeCount", "{0:N0}")});
             this.JeCount.Visible = true;
             this.JeCount.VisibleIndex = 13;
+            this.JeCount.Width = 100;
             // 
             // xtraTabPage4
             // 
             this.xtraTabPage4.Controls.Add(this.gridControl4);
-            this.xtraTabPage4.Margin = new System.Windows.Forms.Padding(2);
+            this.xtraTabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(1309, 446);
+            this.xtraTabPage4.Size = new System.Drawing.Size(1746, 558);
             this.xtraTabPage4.Text = "处方统计（按医生）";
             // 
             // gridControl4
             // 
             this.gridControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl4.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
+            this.gridControl4.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridControl4.Location = new System.Drawing.Point(0, 0);
             this.gridControl4.MainView = this.gridView5;
-            this.gridControl4.Margin = new System.Windows.Forms.Padding(2);
+            this.gridControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(1309, 446);
+            this.gridControl4.Size = new System.Drawing.Size(1746, 558);
             this.gridControl4.TabIndex = 0;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
             // 
             // gridView5
             // 
-            this.gridView5.DetailHeight = 280;
             this.gridView5.GridControl = this.gridControl4;
             this.gridView5.Name = "gridView5";
+            this.gridView5.OptionsBehavior.AlignGroupSummaryInGroupRow = DevExpress.Utils.DefaultBoolean.True;
             this.gridView5.OptionsBehavior.Editable = false;
-            this.gridView5.OptionsView.ShowGroupPanel = false;
+            this.gridView5.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways;
+            this.gridView5.OptionsView.ShowFooter = true;
+            this.gridView5.OptionsView.ShowGroupPanelColumnsAsSingleRow = true;
             // 
             // 缴款表TableAdapter1
             // 
@@ -1117,8 +1199,9 @@
             this.sidePanel1.Controls.Add(this.groupControl1);
             this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.sidePanel1.Location = new System.Drawing.Point(0, 0);
+            this.sidePanel1.Margin = new System.Windows.Forms.Padding(4);
             this.sidePanel1.Name = "sidePanel1";
-            this.sidePanel1.Size = new System.Drawing.Size(1315, 60);
+            this.sidePanel1.Size = new System.Drawing.Size(1753, 75);
             this.sidePanel1.TabIndex = 3;
             this.sidePanel1.Text = "sidePanel1";
             // 
@@ -1133,8 +1216,9 @@
             this.groupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImageOptions.Image")));
             this.groupControl1.Controls.Add(this.flowLayoutPanel1);
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1315, 61);
+            this.groupControl1.Size = new System.Drawing.Size(1753, 76);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "条件过滤";
             // 
@@ -1155,9 +1239,10 @@
             this.flowLayoutPanel1.Controls.Add(this.txtDoctor);
             this.flowLayoutPanel1.Controls.Add(this.btnQuery);
             this.flowLayoutPanel1.Controls.Add(this.tsIsall);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 27);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 34);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1316, 38);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1755, 48);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // labelControl1
@@ -1170,9 +1255,10 @@
             this.labelControl1.AppearanceDisabled.Options.UseForeColor = true;
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl1.Location = new System.Drawing.Point(3, 3);
+            this.labelControl1.Location = new System.Drawing.Point(4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(68, 26);
+            this.labelControl1.Size = new System.Drawing.Size(84, 32);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "日期，起";
             this.labelControl1.UseMnemonic = false;
@@ -1181,8 +1267,8 @@
             // 
             this.dateBegin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateBegin.EditValue = null;
-            this.dateBegin.Location = new System.Drawing.Point(77, 3);
-            this.dateBegin.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            this.dateBegin.Location = new System.Drawing.Point(96, 4);
+            this.dateBegin.Margin = new System.Windows.Forms.Padding(4, 4, 20, 4);
             this.dateBegin.Name = "dateBegin";
             this.dateBegin.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dateBegin.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -1200,7 +1286,7 @@
             this.dateBegin.Properties.EditFormat.FormatString = "yyyy-MM-dd";
             this.dateBegin.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateBegin.Properties.Mask.EditMask = "yyyy-MM-dd";
-            this.dateBegin.Size = new System.Drawing.Size(110, 22);
+            this.dateBegin.Size = new System.Drawing.Size(147, 26);
             this.dateBegin.TabIndex = 9;
             // 
             // labelControl2
@@ -1213,9 +1299,10 @@
             this.labelControl2.AppearanceDisabled.Options.UseForeColor = true;
             this.labelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl2.Location = new System.Drawing.Point(205, 3);
+            this.labelControl2.Location = new System.Drawing.Point(267, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(17, 26);
+            this.labelControl2.Size = new System.Drawing.Size(21, 32);
             this.labelControl2.TabIndex = 10;
             this.labelControl2.Text = "讫";
             // 
@@ -1223,7 +1310,8 @@
             // 
             this.dateEnd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateEnd.EditValue = null;
-            this.dateEnd.Location = new System.Drawing.Point(228, 3);
+            this.dateEnd.Location = new System.Drawing.Point(296, 4);
+            this.dateEnd.Margin = new System.Windows.Forms.Padding(4);
             this.dateEnd.Name = "dateEnd";
             this.dateEnd.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dateEnd.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -1244,13 +1332,14 @@
             this.dateEnd.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.dateEnd.Properties.Mask.EditMask = "yyyy-MM-dd";
             this.dateEnd.Properties.MinValue = new System.DateTime(2020, 1, 17, 0, 0, 0, 0);
-            this.dateEnd.Size = new System.Drawing.Size(124, 22);
+            this.dateEnd.Size = new System.Drawing.Size(165, 26);
             this.dateEnd.TabIndex = 11;
             // 
             // toggleSwitch1
             // 
             this.toggleSwitch1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toggleSwitch1.Location = new System.Drawing.Point(358, 3);
+            this.toggleSwitch1.Location = new System.Drawing.Point(469, 4);
+            this.toggleSwitch1.Margin = new System.Windows.Forms.Padding(4);
             this.toggleSwitch1.Name = "toggleSwitch1";
             this.toggleSwitch1.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.toggleSwitch1.Properties.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
@@ -1267,7 +1356,7 @@
             this.toggleSwitch1.Properties.EditValueChangedDelay = 10;
             this.toggleSwitch1.Properties.OffText = "日期快捷选择";
             this.toggleSwitch1.Properties.OnText = "日期自由选择";
-            this.toggleSwitch1.Size = new System.Drawing.Size(153, 26);
+            this.toggleSwitch1.Size = new System.Drawing.Size(191, 32);
             this.toggleSwitch1.TabIndex = 34;
             this.toggleSwitch1.Toggled += new System.EventHandler(this.toggleSwitch1_Toggled);
             // 
@@ -1281,16 +1370,18 @@
             this.labelControl5.AppearanceDisabled.ForeColor = System.Drawing.Color.Silver;
             this.labelControl5.AppearanceDisabled.Options.UseForeColor = true;
             this.labelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelControl5.Location = new System.Drawing.Point(517, 8);
+            this.labelControl5.Location = new System.Drawing.Point(668, 10);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(102, 16);
+            this.labelControl5.Size = new System.Drawing.Size(126, 20);
             this.labelControl5.TabIndex = 41;
             this.labelControl5.Text = "日期快速选择";
             // 
             // comDoctor
             // 
             this.comDoctor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comDoctor.Location = new System.Drawing.Point(625, 3);
+            this.comDoctor.Location = new System.Drawing.Point(802, 4);
+            this.comDoctor.Margin = new System.Windows.Forms.Padding(4);
             this.comDoctor.Name = "comDoctor";
             this.comDoctor.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.comDoctor.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
@@ -1325,7 +1416,7 @@
             "上月",
             "当年"});
             this.comDoctor.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comDoctor.Size = new System.Drawing.Size(105, 24);
+            this.comDoctor.Size = new System.Drawing.Size(140, 28);
             this.comDoctor.TabIndex = 33;
             // 
             // labelControl3
@@ -1336,24 +1427,25 @@
             this.labelControl3.Appearance.Options.UseForeColor = true;
             this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl3.Location = new System.Drawing.Point(736, 3);
+            this.labelControl3.Location = new System.Drawing.Point(950, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(34, 26);
+            this.labelControl3.Size = new System.Drawing.Size(42, 32);
             this.labelControl3.TabIndex = 35;
             this.labelControl3.Text = "患者";
             // 
             // txtPatient
             // 
             this.txtPatient.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPatient.Location = new System.Drawing.Point(776, 3);
-            this.txtPatient.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            this.txtPatient.Location = new System.Drawing.Point(1000, 4);
+            this.txtPatient.Margin = new System.Windows.Forms.Padding(4, 4, 20, 4);
             this.txtPatient.Name = "txtPatient";
             this.txtPatient.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtPatient.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.txtPatient.Properties.Appearance.Options.UseFont = true;
             this.txtPatient.Properties.Appearance.Options.UseForeColor = true;
             this.txtPatient.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtPatient.Size = new System.Drawing.Size(97, 22);
+            this.txtPatient.Size = new System.Drawing.Size(129, 26);
             this.txtPatient.TabIndex = 36;
             // 
             // labelControl4
@@ -1364,24 +1456,25 @@
             this.labelControl4.Appearance.Options.UseForeColor = true;
             this.labelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl4.Location = new System.Drawing.Point(891, 3);
+            this.labelControl4.Location = new System.Drawing.Point(1153, 4);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(34, 26);
+            this.labelControl4.Size = new System.Drawing.Size(42, 32);
             this.labelControl4.TabIndex = 37;
             this.labelControl4.Text = "医生";
             // 
             // txtDoctor
             // 
             this.txtDoctor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDoctor.Location = new System.Drawing.Point(931, 3);
-            this.txtDoctor.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            this.txtDoctor.Location = new System.Drawing.Point(1203, 4);
+            this.txtDoctor.Margin = new System.Windows.Forms.Padding(4, 4, 20, 4);
             this.txtDoctor.Name = "txtDoctor";
             this.txtDoctor.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtDoctor.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.txtDoctor.Properties.Appearance.Options.UseFont = true;
             this.txtDoctor.Properties.Appearance.Options.UseForeColor = true;
             this.txtDoctor.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtDoctor.Size = new System.Drawing.Size(79, 22);
+            this.txtDoctor.Size = new System.Drawing.Size(105, 26);
             this.txtDoctor.TabIndex = 38;
             // 
             // btnQuery
@@ -1395,20 +1488,22 @@
             this.btnQuery.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.btnQuery.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnQuery.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnQuery.ImageOptions.Image")));
-            this.btnQuery.Location = new System.Drawing.Point(1028, 3);
+            this.btnQuery.Location = new System.Drawing.Point(1332, 4);
+            this.btnQuery.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuery.Name = "btnQuery";
-            this.btnQuery.Size = new System.Drawing.Size(60, 26);
+            this.btnQuery.Size = new System.Drawing.Size(68, 32);
             this.btnQuery.TabIndex = 40;
             this.btnQuery.Text = "查询";
             // 
             // tsIsall
             // 
             this.tsIsall.EditValue = true;
-            this.tsIsall.Location = new System.Drawing.Point(1094, 3);
+            this.tsIsall.Location = new System.Drawing.Point(1408, 4);
+            this.tsIsall.Margin = new System.Windows.Forms.Padding(4);
             this.tsIsall.Name = "tsIsall";
             this.tsIsall.Properties.OffText = "查重";
             this.tsIsall.Properties.OnText = "全部";
-            this.tsIsall.Size = new System.Drawing.Size(113, 25);
+            this.tsIsall.Size = new System.Drawing.Size(151, 31);
             this.tsIsall.TabIndex = 42;
             // 
             // dateEdit1
@@ -1433,12 +1528,13 @@
             // 
             // ChufangControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.sidePanel3);
             this.Controls.Add(this.sidePanel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChufangControl";
-            this.Size = new System.Drawing.Size(1315, 538);
+            this.Size = new System.Drawing.Size(1753, 672);
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

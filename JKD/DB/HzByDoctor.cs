@@ -12,21 +12,41 @@ namespace JKD.DB
     {
         public  DataTable GetDataTable(string BeginTime,String EndTime)
         {
-            List<string> li = new DbContext().Db.SqlQueryable<Cfhead>("select distinct doctor from cfhead order by doctor")
-                .Select<string>(item => item.doctor).ToList();
-            StringBuilder sb = new StringBuilder();
-            sb.Append("SELECT SUBSTR(opertime,1,10) as '日期' ,feibie as '费别'");
-            li.ForEach(item => sb.Append($",SUM(if(doctor='{item}',1,NULL)) AS '{item}'"));
-            sb.Append($@"FROM cfhead where opertime >= concat('{BeginTime}', ' 00:00:01') and opertime <= concat('{ EndTime}', ' 23:59:59')
-                        GROUP BY SUBSTR(opertime, 1, 10), feibie order by SUBSTR(opertime, 1, 10) desc ");
+             BeginTime += " 00:00:00";
+            EndTime += " 23:59:59";
 
-            //string sqlstr = $@"SELECT SUBSTR(opertime,1,10) as '日期' ,feibie as '费别',SUM(if(doctor='陈刚',1,NULL)) AS '陈刚',
-            //            SUM(if(doctor='徐春华',1,NULL)) AS '徐春华',SUM(if(doctor='倪小备',1,NULL)) AS '倪晓备',
-            //            SUM(if (doctor = '陆惠琳',1,NULL)) AS '陆惠琳',SUM(if (doctor = '胡云丹',1,NULL)) AS '胡云丹',
-            //            SUM(if (doctor = '胡培红',1,NULL)) AS '胡培红',SUM(if (doctor = '陈要刚',1,NULL)) AS '陈要刚'
-            //            FROM cfhead where opertime >= concat('{BeginTime}',' 00:00:01') and opertime <= concat('{ EndTime}',' 23:59:59')
-            //            GROUP BY SUBSTR(opertime, 1, 10),feibie order by SUBSTR(opertime, 1, 10) desc ";
-            DataTable dt = new DbContext().Db.SqlQueryable<Object>(sb.ToString()).ToDataTable();
+            string mysql = $@"select substr(g.opertime,1,10) AS '日期',department AS '科室',doctor AS '医生',
+                            count(distinct pid) AS '人次数',
+                            count(feibie) as '处方数',
+                            convert(max(totalprice),decimal(12,2)) as '最大金额',
+                            convert(min(totalprice),decimal(12,2)) as '最小金额',
+                            convert(avg(totalprice),decimal(12,2)) as '平均金额',
+                            count(if (feibie = '医保',1,null)) as '医保',
+                            count(if (feibie = '自费',1,null)) as '自费',
+                            count(if (cftype = '普通',1,null)) as '普通',
+                            count(if (cftype = '儿科',1,null)) as '儿科',
+                            count(if (cftype = '精二',1,null)) as '精二',
+                            count(if (cftype = '麻醉',1,null)) as '麻醉',
+                            count(if (cftype = '急诊',1,null)) as '急诊',
+                            count(if (zcy > 0,1,null)) AS '中成药',
+                            count(if (jingdi > 0,1,null)) AS '静滴' ,
+                            count(if (js > 0,1,null)) AS '激素' ,
+                            count(if (kjs > 0,1,null)) AS '抗菌素'
+                            from
+                             (
+                                select f.opertime,totalprice, department, f.pid, f.cftype, feibie, doctor, zcy, jingdi, js, kjs from 
+                                    (select * from cfhead where opertime >='{BeginTime}' and opertime <= '{EndTime}' ) f left  join
+                            (
+
+                                select a.opertime, count(if (a.yongfa = '静滴',1,null)) jingdi ,count(if (b.cate = '中成药',1,null)) zcy, count(if (b.cata = '激素',1,null)) js,
+	                            count(if (b.cata = '抗菌素',1,null)) kjs
+                                   from cfdetail a left join drug b on a.drug = b.name and a.unitprice = b.unitprice
+
+                                group by a.opertime
+	                            )  e on f.opertime = e.opertime
+                            ) g
+                            group by substr(g.opertime,1,10),g.department,g.doctor";
+            DataTable dt = new DbContext().Db.SqlQueryable<Object>(mysql.ToString()).ToDataTable();
             return dt;
         }
     }
