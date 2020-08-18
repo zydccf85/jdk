@@ -48,7 +48,7 @@ namespace JKD.ViewModels
         public virtual string Jeycount { get; set; }
         public virtual string Ekcount { get; set; }
         public virtual string Jscount { get; set; }
-        public virtual string SelectDate { get; set; } = "当天";
+        public virtual string SelectDate { get; set; } = "当日";
         public virtual string YibaoAndzifeicount { get; set; }
         public virtual string Huizong { get; set; }
         public virtual Cfhead SelectRow { get; set; }
@@ -139,7 +139,8 @@ namespace JKD.ViewModels
         #region 单击查询按钮
         public void Query()
         {
-            //SplashScreenManager.ShowForm(typeof(WaitForm1));
+            Debug.WriteLine(this.BeginTime);
+            Debug.WriteLine(this.EndTime);
             SelectRow = null;
             cfhead = new CfheadManager().GetListByCondition(BeginTime, EndTime, Doctor, Patient);
             if (this.IsAll)
@@ -149,14 +150,27 @@ namespace JKD.ViewModels
             }
 
             Dv = new HuiZongManager().GetListByCondition(this.BeginTime, this.EndTime, this.Patient, this.Doctor);
-            HzByDoctor = new HzByDoctor().GetDataTable(BeginTime, EndTime);
+            HzByDoctor = new HzByDoctor().GetDataTable(BeginTime, EndTime,Doctor,Patient);
             
             if (HzByDoctor.Rows.Count == 0) return;
             HZ = new HuiZong()
             {
                 Riqi = cfhead.Select(it => it.opertime).Min() + "至" + cfhead.Select(it => it.opertime).Max(),
+                TotalPrice= Convert.ToDouble(HzByDoctor.Compute("sum(金额)", "")),
                 MaxPrice = Convert.ToDouble(HzByDoctor.Compute("MAX(最大金额)", "")),
                 MinPrice = Convert.ToDouble(HzByDoctor.Compute("MIN(最小金额)", "")),
+                AvgPrice = Convert.ToDouble(HzByDoctor.Compute("Avg(平均金额)", "")),
+                CfCount = Convert.ToInt32(HzByDoctor.Compute("sum(处方数)", "")),
+                MzCount = Convert.ToInt32(HzByDoctor.Compute("sum(人次数)", "")),
+                YbCount = Convert.ToInt32(HzByDoctor.Compute("sum(医保)", "")),
+                ZfCount = Convert.ToInt32(HzByDoctor.Compute("sum(自费)", "")),
+                ZcyCount = Convert.ToInt32(HzByDoctor.Compute("sum(中成药)", "")),
+                JdCount = Convert.ToInt32(HzByDoctor.Compute("sum(静滴)", "")),
+                JeCount = Convert.ToInt32(HzByDoctor.Compute("sum(精二)", "")),
+                EkCount = Convert.ToInt32(HzByDoctor.Compute("sum(儿科)", "")),
+                JsCount = Convert.ToInt32(HzByDoctor.Compute("sum(激素)", "")),
+                KjyCount  = Convert.ToInt32(HzByDoctor.Compute("sum(抗菌素)", "")),
+                JzCount = Convert.ToInt32(HzByDoctor.Compute("sum(急诊)", "")),
 
 
             };
@@ -179,53 +193,7 @@ namespace JKD.ViewModels
 
             //};
             Huizong = HZ.ToString();
-            //cfhead.ForEach(item => item.cfDetails = new CfdeatilManager().GetListByOpertime(item.opertime));
-            //var temp = cfhead.GroupBy(i => new { opertime = i.opertime.Substring(0, 10), department = i.department, doctor = i.doctor })
-            //    .Select(x => new { opertime = x.Key.opertime, doctor = x.Key.doctor, department = x.Key.department,
-            //        renci = x.GroupBy(z => z.pid).Count(),
-            //       total = x.Count(),
-            //        yibao = x.Count(z => z.feibie == "医保"), zifei = x.Count(z => z.feibie == "自费"),
-            //        butong = x.Count(z => z.cftype == "普通"),
-            //        erke = x.Count(z => z.cftype == "儿科"),
-            //        jinger = x.Count(z => z.cftype == "精二"),
-            //        mazui = x.Count(z => z.cftype == "麻醉"),
-            //        jizhen = x.Count(z => z.cftype == "急诊"),
-            //        jingdi = x.Count(z => z.cfDetails.Any(u => u.yongfa == "静滴") == true)
-            //    }).OrderByDescending(item=>item.opertime).ThenByDescending(item=>item.department);
-            //HzByDoctor = new DataTable();
-            //HzByDoctor.Columns.Add("发药日期", typeof(String));
-            //HzByDoctor.Columns.Add("科室", typeof(String));
-            //HzByDoctor.Columns.Add("医生", typeof(String));
-            //HzByDoctor.Columns.Add("人次数", typeof(int));
-            //HzByDoctor.Columns.Add("处方数", typeof(int));
-            //HzByDoctor.Columns.Add("自费", typeof(int));
-            //HzByDoctor.Columns.Add("医保", typeof(int));
-            //HzByDoctor.Columns.Add("普通", typeof(int));
-            //HzByDoctor.Columns.Add("儿科", typeof(int));
-            //HzByDoctor.Columns.Add("精二", typeof(int));
-            //HzByDoctor.Columns.Add("麻醉", typeof(int));
-            //HzByDoctor.Columns.Add("急诊", typeof(int));
-            //HzByDoctor.Columns.Add("静滴", typeof(int));
-            //foreach (var l in temp)
-            //{
-            //     DataRow dr = HzByDoctor.NewRow();
-            //    dr.SetField("发药日期",l.opertime);
-            //    dr.SetField("科室", l.department);
-            //    dr.SetField("医生", l.doctor);
-            //    dr.SetField("人次数", l.renci);
-            //    dr.SetField("处方数", l.total);
-            //    dr.SetField("自费", l.zifei);
-            //    dr.SetField("医保", l.yibao);
-            //    dr.SetField("普通", l.butong);
-            //    dr.SetField("儿科", l.erke);
-            //    dr.SetField("精二", l.jinger);
-            //    dr.SetField("麻醉", l.mazui);
-            //    dr.SetField("急诊", l.jizhen);
-            //    dr.SetField("静滴", l.jingdi);
-            //    HzByDoctor.Rows.Add(dr);
-
-
-            //}
+       
 
         }
         #endregion
@@ -267,7 +235,7 @@ namespace JKD.ViewModels
         {
             SplashScreenManager.ShowForm(typeof(WaitForm1));
             FMRpt0 rep = new FMRpt0(HZ);
-            rep.ExportToPdf(@"C:\Users\Public\处方封面\" + BeginTime + "至" + EndTime + ".pdf");
+           // rep.ExportToPdf(@"C:\Users\Public\处方封面\" + BeginTime + "至" + EndTime + ".pdf");
             //rep.ShowPreview();
             SplashScreenManager.CloseForm();
             rep.ShowPreviewDialog();

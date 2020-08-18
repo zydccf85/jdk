@@ -10,14 +10,16 @@ namespace JKD.DB
 {
     public class HzByDoctor
     {
-        public  DataTable GetDataTable(string BeginTime,String EndTime)
+        public  DataTable GetDataTable(string BeginTime,String EndTime,string doctor ,string patient)
         {
              BeginTime += " 00:00:00";
             EndTime += " 23:59:59";
-
+            if (doctor == null) doctor = string.Empty;
+            if (patient == null) patient = string.Empty;
             string mysql = $@"select substr(g.opertime,1,10) AS '日期',department AS '科室',doctor AS '医生',
                             count(distinct pid) AS '人次数',
                             count(feibie) as '处方数',
+                            convert(sum(totalprice),decimal(12,2)) as '金额',
                             convert(max(totalprice),decimal(12,2)) as '最大金额',
                             convert(min(totalprice),decimal(12,2)) as '最小金额',
                             convert(avg(totalprice),decimal(12,2)) as '平均金额',
@@ -35,7 +37,9 @@ namespace JKD.DB
                             from
                              (
                                 select f.opertime,totalprice, department, f.pid, f.cftype, feibie, doctor, zcy, jingdi, js, kjs from 
-                                    (select * from cfhead where opertime >='{BeginTime}' and opertime <= '{EndTime}' ) f left  join
+                                    (select * from cfhead where opertime >='{BeginTime}' and opertime <= '{EndTime}' and doctor like concat('%','{doctor}','%')
+                            and  patient like concat('%','{patient}','%')  and enable=1 )
+                                f left  join
                             (
 
                                 select a.opertime, count(if (a.yongfa = '静滴',1,null)) jingdi ,count(if (b.cate = '中成药',1,null)) zcy, count(if (b.cata = '激素',1,null)) js,
@@ -45,7 +49,7 @@ namespace JKD.DB
                                 group by a.opertime
 	                            )  e on f.opertime = e.opertime
                             ) g
-                            group by substr(g.opertime,1,10),g.department,g.doctor";
+                            group by substr(g.opertime,1,10),g.department,g.doctor order by substr(g.opertime,1,10) desc ";
             DataTable dt = new DbContext().Db.SqlQueryable<Object>(mysql.ToString()).ToDataTable();
             return dt;
         }

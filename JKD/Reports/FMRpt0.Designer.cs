@@ -82,6 +82,11 @@
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.lblsignature = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrTableRow9 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lbJzcount = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblKjycount = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -91,7 +96,7 @@
             this.xrLine1,
             this.xrTable1,
             this.lbldate});
-            this.Detail.HeightF = 579.0834F;
+            this.Detail.HeightF = 553.875F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -105,8 +110,8 @@
             // 
             // xrTable1
             // 
-            this.xrTable1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 65.54167F);
+            this.xrTable1.Font = new System.Drawing.Font("宋体", 8F);
+            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 50.54166F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1,
@@ -116,8 +121,9 @@
             this.xrTableRow5,
             this.xrTableRow6,
             this.xrTableRow7,
-            this.xrTableRow8});
-            this.xrTable1.SizeF = new System.Drawing.SizeF(501.9999F, 500F);
+            this.xrTableRow8,
+            this.xrTableRow9});
+            this.xrTable1.SizeF = new System.Drawing.SizeF(501.9999F, 488.3333F);
             this.xrTable1.StylePriority.UseFont = false;
             // 
             // xrTableRow1
@@ -780,7 +786,7 @@
             // 
             this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.lblId});
-            this.TopMargin.HeightF = 45.70834F;
+            this.TopMargin.HeightF = 46F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -820,7 +826,7 @@
             this.lblTitle.SizeF = new System.Drawing.SizeF(502F, 89F);
             this.lblTitle.StylePriority.UseFont = false;
             this.lblTitle.StylePriority.UseTextAlignment = false;
-            this.lblTitle.Text = "川姜镇卫生院（姜灶门诊部）门诊处方统计封面";
+            this.lblTitle.Text = "南通市通州区川姜镇卫生院\r\n门诊处方统计封面";
             this.lblTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // BottomMargin
@@ -862,6 +868,84 @@
             this.lblsignature.StylePriority.UseFont = false;
             this.lblsignature.StylePriority.UseForeColor = false;
             this.lblsignature.Text = "xxx";
+            // 
+            // xrTableRow9
+            // 
+            this.xrTableRow9.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell12,
+            this.lbJzcount,
+            this.xrTableCell16,
+            this.lblKjycount});
+            this.xrTableRow9.Name = "xrTableRow9";
+            this.xrTableRow9.Weight = 1D;
+            // 
+            // xrTableCell12
+            // 
+            this.xrTableCell12.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell12.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell12.Multiline = true;
+            this.xrTableCell12.Name = "xrTableCell12";
+            this.xrTableCell12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrTableCell12.StylePriority.UseBorders = false;
+            this.xrTableCell12.StylePriority.UseFont = false;
+            this.xrTableCell12.StylePriority.UsePadding = false;
+            this.xrTableCell12.StylePriority.UseTextAlignment = false;
+            this.xrTableCell12.Text = "急 诊";
+            this.xrTableCell12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell12.Weight = 1.17552671452226D;
+            // 
+            // lbJzcount
+            // 
+            this.lbJzcount.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lbJzcount.Font = new System.Drawing.Font("宋体", 14F);
+            this.lbJzcount.Multiline = true;
+            this.lbJzcount.Name = "lbJzcount";
+            this.lbJzcount.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lbJzcount.StylePriority.UseBorders = false;
+            this.lbJzcount.StylePriority.UseFont = false;
+            this.lbJzcount.StylePriority.UsePadding = false;
+            this.lbJzcount.StylePriority.UseTextAlignment = false;
+            this.lbJzcount.Text = "lbJzcount";
+            this.lbJzcount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lbJzcount.Weight = 1.29157386697457D;
+            // 
+            // xrTableCell16
+            // 
+            this.xrTableCell16.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell16.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell16.Multiline = true;
+            this.xrTableCell16.Name = "xrTableCell16";
+            this.xrTableCell16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrTableCell16.StylePriority.UseBorders = false;
+            this.xrTableCell16.StylePriority.UseFont = false;
+            this.xrTableCell16.StylePriority.UsePadding = false;
+            this.xrTableCell16.StylePriority.UseTextAlignment = false;
+            this.xrTableCell16.Text = "抗菌素";
+            this.xrTableCell16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell16.Weight = 1.57124696529124D;
+            // 
+            // lblKjycount
+            // 
+            this.lblKjycount.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblKjycount.Font = new System.Drawing.Font("宋体", 14F);
+            this.lblKjycount.Multiline = true;
+            this.lblKjycount.Name = "lblKjycount";
+            this.lblKjycount.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblKjycount.StylePriority.UseBorders = false;
+            this.lblKjycount.StylePriority.UseFont = false;
+            this.lblKjycount.StylePriority.UsePadding = false;
+            this.lblKjycount.StylePriority.UseTextAlignment = false;
+            this.lblKjycount.Text = "lblKjycount";
+            this.lblKjycount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblKjycount.Weight = 1.06505709334131D;
             // 
             // FMRpt0
             // 
@@ -942,5 +1026,10 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell35;
         private DevExpress.XtraReports.UI.XRTableCell lblJScount;
         private DevExpress.XtraReports.UI.XRLabel lblId;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow9;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell12;
+        private DevExpress.XtraReports.UI.XRTableCell lbJzcount;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell16;
+        private DevExpress.XtraReports.UI.XRTableCell lblKjycount;
     }
 }

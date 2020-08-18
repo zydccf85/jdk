@@ -119,20 +119,24 @@
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.sidePanel1 = new DevExpress.XtraEditors.SidePanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.dateBegin = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.dateEnd = new DevExpress.XtraEditors.DateEdit();
-            this.toggleSwitch1 = new DevExpress.XtraEditors.ToggleSwitch();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.comDoctor = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtPatient = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txtDoctor = new DevExpress.XtraEditors.TextEdit();
-            this.btnQuery = new DevExpress.XtraEditors.SimpleButton();
-            this.tsIsall = new DevExpress.XtraEditors.ToggleSwitch();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.deBegin = new DevExpress.XtraEditors.DateEdit();
+            this.tsUnique = new DevExpress.XtraEditors.ToggleSwitch();
+            this.tsAll = new DevExpress.XtraEditors.ToggleSwitch();
+            this.cbeDate = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.sbQuery = new DevExpress.XtraEditors.SimpleButton();
+            this.deEnd = new DevExpress.XtraEditors.DateEdit();
+            this.teDoctor = new DevExpress.XtraEditors.TextEdit();
+            this.tePatient = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -161,16 +165,26 @@
             this.sidePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateBegin.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateBegin.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEnd.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEnd.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comDoctor.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPatient.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDoctor.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tsIsall.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deBegin.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deBegin.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tsUnique.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tsAll.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbeDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deEnd.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deEnd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teDoctor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePatient.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             this.SuspendLayout();
@@ -190,7 +204,7 @@
             this.gridColumn16,
             this.gridColumn17,
             this.gridColumn19});
-            this.gridView2.DetailHeight = 437;
+            this.gridView2.DetailHeight = 524;
             this.gridView2.GridControl = this.gridControl1;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.Editable = false;
@@ -307,19 +321,16 @@
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.EmbeddedNavigator.Appearance.BackColor = System.Drawing.Color.Azure;
             this.gridControl1.EmbeddedNavigator.Appearance.Options.UseBackColor = true;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             gridLevelNode1.LevelTemplate = this.gridView2;
             gridLevelNode1.RelationName = "Detail";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gridControl1.Location = new System.Drawing.Point(4, 4);
-            this.gridControl1.LookAndFeel.SkinName = "Office 2010 Blue";
-            this.gridControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-            this.gridControl1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.gridControl1.Location = new System.Drawing.Point(4, 5);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1738, 361);
+            this.gridControl1.Size = new System.Drawing.Size(1738, 422);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.Tag = "处方头汇总表";
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -355,7 +366,7 @@
             this.gridColumn8,
             this.fei_bei,
             this.total_price});
-            this.gridView1.DetailHeight = 437;
+            this.gridView1.DetailHeight = 524;
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             gridFormatRule1.Column = this.total_price;
             gridFormatRule1.ColumnApplyTo = this.total_price;
@@ -551,10 +562,10 @@
             // 
             this.sidePanel3.Controls.Add(this.xtraTabControl1);
             this.sidePanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sidePanel3.Location = new System.Drawing.Point(0, 75);
-            this.sidePanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.sidePanel3.Location = new System.Drawing.Point(0, 113);
+            this.sidePanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sidePanel3.Name = "sidePanel3";
-            this.sidePanel3.Size = new System.Drawing.Size(1753, 597);
+            this.sidePanel3.Size = new System.Drawing.Size(1753, 693);
             this.sidePanel3.TabIndex = 5;
             this.sidePanel3.Text = "sidePanel3";
             // 
@@ -606,11 +617,11 @@
             new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "导出汇总", -1, true, true, editorButtonImageOptions5, serializableAppearanceObject5, "", "处方汇总", null)});
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
             this.xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.True;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1753, 597);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1753, 693);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -626,9 +637,9 @@
             this.xtraTabPage1.Appearance.Header.Options.UseBackColor = true;
             this.xtraTabPage1.Controls.Add(this.panel2);
             this.xtraTabPage1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1746, 558);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1746, 654);
             this.xtraTabPage1.Text = "门诊处方明细表";
             // 
             // panel2
@@ -637,9 +648,9 @@
             this.panel2.Controls.Add(this.sidePanel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1746, 558);
+            this.panel2.Size = new System.Drawing.Size(1746, 654);
             this.panel2.TabIndex = 4;
             // 
             // tableLayoutPanel1
@@ -655,9 +666,9 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1746, 558);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1746, 654);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // xtraTabControl2
@@ -669,11 +680,11 @@
             this.xtraTabControl2.CustomHeaderButtons.AddRange(new DevExpress.XtraTab.Buttons.CustomHeaderButton[] {
             new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "查看历史处方", -1, true, true, editorButtonImageOptions6, serializableAppearanceObject6, "", null, null)});
             this.xtraTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl2.Location = new System.Drawing.Point(4, 403);
-            this.xtraTabControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.xtraTabControl2.Location = new System.Drawing.Point(4, 473);
+            this.xtraTabControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.xtraTabPage3;
-            this.xtraTabControl2.Size = new System.Drawing.Size(1738, 151);
+            this.xtraTabControl2.Size = new System.Drawing.Size(1738, 176);
             this.xtraTabControl2.TabIndex = 0;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage3});
@@ -682,20 +693,20 @@
             // 
             this.xtraTabPage3.Controls.Add(this.gridControl3);
             this.xtraTabPage3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(4);
+            this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1731, 115);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1731, 140);
             this.xtraTabPage3.Text = "门诊处方明细表";
             // 
             // gridControl3
             // 
             this.gridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl3.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl3.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl3.Location = new System.Drawing.Point(0, 0);
             this.gridControl3.MainView = this.gridView4;
-            this.gridControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(1731, 115);
+            this.gridControl3.Size = new System.Drawing.Size(1731, 140);
             this.gridControl3.TabIndex = 0;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -718,7 +729,7 @@
             this.gridColumn25,
             this.gridColumn18,
             this.gridColumn27});
-            this.gridView4.DetailHeight = 437;
+            this.gridView4.DetailHeight = 524;
             this.gridView4.GridControl = this.gridControl3;
             this.gridView4.Name = "gridView4";
             this.gridView4.OptionsBehavior.Editable = false;
@@ -874,32 +885,32 @@
             this.lblTotlprice.AutoEllipsis = true;
             this.lblTotlprice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTotlprice.LineLocation = DevExpress.XtraEditors.LineLocation.Bottom;
-            this.lblTotlprice.Location = new System.Drawing.Point(7, 375);
-            this.lblTotlprice.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.lblTotlprice.MaximumSize = new System.Drawing.Size(2000, 31);
-            this.lblTotlprice.MinimumSize = new System.Drawing.Size(1467, 31);
+            this.lblTotlprice.Location = new System.Drawing.Point(7, 439);
+            this.lblTotlprice.Margin = new System.Windows.Forms.Padding(7);
+            this.lblTotlprice.MaximumSize = new System.Drawing.Size(2000, 37);
+            this.lblTotlprice.MinimumSize = new System.Drawing.Size(1467, 37);
             this.lblTotlprice.Name = "lblTotlprice";
             this.lblTotlprice.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.lblTotlprice.Size = new System.Drawing.Size(1732, 31);
+            this.lblTotlprice.Size = new System.Drawing.Size(1732, 37);
             this.lblTotlprice.TabIndex = 2;
             this.lblTotlprice.Text = "处方数：";
             this.lblTotlprice.UseMnemonic = false;
             // 
             // sidePanel2
             // 
-            this.sidePanel2.Location = new System.Drawing.Point(0, 548);
-            this.sidePanel2.Margin = new System.Windows.Forms.Padding(16, 15, 16, 15);
+            this.sidePanel2.Location = new System.Drawing.Point(0, 658);
+            this.sidePanel2.Margin = new System.Windows.Forms.Padding(16, 18, 16, 18);
             this.sidePanel2.Name = "sidePanel2";
-            this.sidePanel2.Size = new System.Drawing.Size(1747, 10);
+            this.sidePanel2.Size = new System.Drawing.Size(1747, 12);
             this.sidePanel2.TabIndex = 5;
             this.sidePanel2.Text = "sidePanel2";
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.gridSplitContainer1);
-            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1746, 558);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1746, 654);
             this.xtraTabPage2.Text = "门诊处方汇总表（按日）";
             // 
             // gridSplitContainer1
@@ -907,21 +918,21 @@
             this.gridSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSplitContainer1.Grid = this.gridControl2;
             this.gridSplitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.gridSplitContainer1.Margin = new System.Windows.Forms.Padding(4);
+            this.gridSplitContainer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridSplitContainer1.Name = "gridSplitContainer1";
             this.gridSplitContainer1.Panel1.Controls.Add(this.gridControl2);
-            this.gridSplitContainer1.Size = new System.Drawing.Size(1746, 558);
+            this.gridSplitContainer1.Size = new System.Drawing.Size(1746, 654);
             this.gridSplitContainer1.TabIndex = 0;
             // 
             // gridControl2
             // 
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.gridView3;
-            this.gridControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1746, 558);
+            this.gridControl2.Size = new System.Drawing.Size(1746, 654);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.Tag = "处方统计表";
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -950,7 +961,7 @@
             this.EkCount,
             this.JsCount,
             this.JeCount});
-            this.gridView3.DetailHeight = 437;
+            this.gridView3.DetailHeight = 524;
             this.gridView3.GridControl = this.gridControl2;
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
@@ -1157,7 +1168,7 @@
             this.xtraTabPage4.Controls.Add(this.gridControl4);
             this.xtraTabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(1746, 558);
+            this.xtraTabPage4.Size = new System.Drawing.Size(1746, 654);
             this.xtraTabPage4.Text = "处方统计（按医生）";
             // 
             // gridControl4
@@ -1168,13 +1179,14 @@
             this.gridControl4.MainView = this.gridView5;
             this.gridControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(1746, 558);
+            this.gridControl4.Size = new System.Drawing.Size(1746, 654);
             this.gridControl4.TabIndex = 0;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
             // 
             // gridView5
             // 
+            this.gridView5.DetailHeight = 420;
             this.gridView5.GridControl = this.gridControl4;
             this.gridView5.Name = "gridView5";
             this.gridView5.OptionsBehavior.AlignGroupSummaryInGroupRow = DevExpress.Utils.DefaultBoolean.True;
@@ -1194,14 +1206,16 @@
             // 
             // sidePanel1
             // 
+            this.sidePanel1.Appearance.BackColor = System.Drawing.Color.White;
             this.sidePanel1.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.sidePanel1.Appearance.Options.UseBackColor = true;
             this.sidePanel1.Appearance.Options.UseBorderColor = true;
             this.sidePanel1.Controls.Add(this.groupControl1);
             this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.sidePanel1.Location = new System.Drawing.Point(0, 0);
-            this.sidePanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.sidePanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sidePanel1.Name = "sidePanel1";
-            this.sidePanel1.Size = new System.Drawing.Size(1753, 75);
+            this.sidePanel1.Size = new System.Drawing.Size(1753, 113);
             this.sidePanel1.TabIndex = 3;
             this.sidePanel1.Text = "sidePanel1";
             // 
@@ -1214,297 +1228,254 @@
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("微软雅黑", 11F);
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImageOptions.Image")));
-            this.groupControl1.Controls.Add(this.flowLayoutPanel1);
+            this.groupControl1.Controls.Add(this.layoutControl1);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1753, 76);
+            this.groupControl1.Size = new System.Drawing.Size(1753, 112);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "条件过滤";
             // 
-            // flowLayoutPanel1
+            // layoutControl1
             // 
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Snow;
-            this.flowLayoutPanel1.Controls.Add(this.labelControl1);
-            this.flowLayoutPanel1.Controls.Add(this.dateBegin);
-            this.flowLayoutPanel1.Controls.Add(this.labelControl2);
-            this.flowLayoutPanel1.Controls.Add(this.dateEnd);
-            this.flowLayoutPanel1.Controls.Add(this.toggleSwitch1);
-            this.flowLayoutPanel1.Controls.Add(this.labelControl5);
-            this.flowLayoutPanel1.Controls.Add(this.comDoctor);
-            this.flowLayoutPanel1.Controls.Add(this.labelControl3);
-            this.flowLayoutPanel1.Controls.Add(this.txtPatient);
-            this.flowLayoutPanel1.Controls.Add(this.labelControl4);
-            this.flowLayoutPanel1.Controls.Add(this.txtDoctor);
-            this.flowLayoutPanel1.Controls.Add(this.btnQuery);
-            this.flowLayoutPanel1.Controls.Add(this.tsIsall);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 34);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1755, 48);
-            this.flowLayoutPanel1.TabIndex = 3;
+            this.layoutControl1.BackColor = System.Drawing.Color.Transparent;
+            this.layoutControl1.Controls.Add(this.deBegin);
+            this.layoutControl1.Controls.Add(this.tsUnique);
+            this.layoutControl1.Controls.Add(this.tsAll);
+            this.layoutControl1.Controls.Add(this.cbeDate);
+            this.layoutControl1.Controls.Add(this.sbQuery);
+            this.layoutControl1.Controls.Add(this.deEnd);
+            this.layoutControl1.Controls.Add(this.teDoctor);
+            this.layoutControl1.Controls.Add(this.tePatient);
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl1.Location = new System.Drawing.Point(2, 33);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(603, 302, 812, 500);
+            this.layoutControl1.Root = this.layoutControlGroup1;
+            this.layoutControl1.Size = new System.Drawing.Size(1749, 77);
+            this.layoutControl1.TabIndex = 4;
+            this.layoutControl1.Text = "layoutControl1";
             // 
-            // labelControl1
+            // deBegin
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.AppearanceDisabled.ForeColor = System.Drawing.Color.Silver;
-            this.labelControl1.AppearanceDisabled.Options.UseForeColor = true;
-            this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl1.Location = new System.Drawing.Point(4, 4);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(84, 32);
-            this.labelControl1.TabIndex = 2;
-            this.labelControl1.Text = "日期，起";
-            this.labelControl1.UseMnemonic = false;
-            // 
-            // dateBegin
-            // 
-            this.dateBegin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateBegin.EditValue = null;
-            this.dateBegin.Location = new System.Drawing.Point(96, 4);
-            this.dateBegin.Margin = new System.Windows.Forms.Padding(4, 4, 20, 4);
-            this.dateBegin.Name = "dateBegin";
-            this.dateBegin.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dateBegin.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dateBegin.Properties.Appearance.Options.UseFont = true;
-            this.dateBegin.Properties.Appearance.Options.UseForeColor = true;
-            this.dateBegin.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.Silver;
-            this.dateBegin.Properties.AppearanceDisabled.Options.UseForeColor = true;
-            this.dateBegin.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.dateBegin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deBegin.EditValue = null;
+            this.deBegin.Location = new System.Drawing.Point(85, 20);
+            this.deBegin.Name = "deBegin";
+            this.deBegin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateBegin.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deBegin.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateBegin.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
-            this.dateBegin.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateBegin.Properties.EditFormat.FormatString = "yyyy-MM-dd";
-            this.dateBegin.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateBegin.Properties.Mask.EditMask = "yyyy-MM-dd";
-            this.dateBegin.Size = new System.Drawing.Size(147, 26);
-            this.dateBegin.TabIndex = 9;
+            this.deBegin.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.deBegin.Size = new System.Drawing.Size(168, 24);
+            this.deBegin.StyleController = this.layoutControl1;
+            this.deBegin.TabIndex = 19;
             // 
-            // labelControl2
+            // tsUnique
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.AppearanceDisabled.ForeColor = System.Drawing.Color.Silver;
-            this.labelControl2.AppearanceDisabled.Options.UseForeColor = true;
-            this.labelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl2.Location = new System.Drawing.Point(267, 4);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(21, 32);
-            this.labelControl2.TabIndex = 10;
-            this.labelControl2.Text = "讫";
+            this.tsUnique.Location = new System.Drawing.Point(1408, 18);
+            this.tsUnique.Name = "tsUnique";
+            this.tsUnique.Properties.OffText = "查看重复项";
+            this.tsUnique.Properties.OnText = "全部";
+            this.tsUnique.Size = new System.Drawing.Size(323, 31);
+            this.tsUnique.StyleController = this.layoutControl1;
+            this.tsUnique.TabIndex = 18;
             // 
-            // dateEnd
+            // tsAll
             // 
-            this.dateEnd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateEnd.EditValue = null;
-            this.dateEnd.Location = new System.Drawing.Point(296, 4);
-            this.dateEnd.Margin = new System.Windows.Forms.Padding(4);
-            this.dateEnd.Name = "dateEnd";
-            this.dateEnd.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dateEnd.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dateEnd.Properties.Appearance.Options.UseFont = true;
-            this.dateEnd.Properties.Appearance.Options.UseForeColor = true;
-            this.dateEnd.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.Silver;
-            this.dateEnd.Properties.AppearanceDisabled.Options.UseForeColor = true;
-            this.dateEnd.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.dateEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.tsAll.Location = new System.Drawing.Point(512, 17);
+            this.tsAll.Name = "tsAll";
+            this.tsAll.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.tsAll.Properties.OffText = "日期范围选择";
+            this.tsAll.Properties.OnText = "日期快捷选择";
+            this.tsAll.Properties.Toggled += new System.EventHandler(this.tsAll_Properties_Toggled);
+            this.tsAll.Size = new System.Drawing.Size(199, 31);
+            this.tsAll.StyleController = this.layoutControl1;
+            this.tsAll.TabIndex = 17;
+            // 
+            // cbeDate
+            // 
+            this.cbeDate.Location = new System.Drawing.Point(823, 22);
+            this.cbeDate.Name = "cbeDate";
+            this.cbeDate.Properties.Appearance.Options.UseTextOptions = true;
+            this.cbeDate.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cbeDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEnd.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
-            this.dateEnd.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEnd.Properties.EditFormat.FormatString = "yyyy-MM-dd";
-            this.dateEnd.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEnd.Properties.LookAndFeel.SkinName = "Seven Classic";
-            this.dateEnd.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.dateEnd.Properties.Mask.EditMask = "yyyy-MM-dd";
-            this.dateEnd.Properties.MinValue = new System.DateTime(2020, 1, 17, 0, 0, 0, 0);
-            this.dateEnd.Size = new System.Drawing.Size(165, 26);
-            this.dateEnd.TabIndex = 11;
-            // 
-            // toggleSwitch1
-            // 
-            this.toggleSwitch1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toggleSwitch1.Location = new System.Drawing.Point(469, 4);
-            this.toggleSwitch1.Margin = new System.Windows.Forms.Padding(4);
-            this.toggleSwitch1.Name = "toggleSwitch1";
-            this.toggleSwitch1.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.toggleSwitch1.Properties.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.toggleSwitch1.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.toggleSwitch1.Properties.Appearance.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
-            this.toggleSwitch1.Properties.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.toggleSwitch1.Properties.Appearance.ForeColor = System.Drawing.Color.Purple;
-            this.toggleSwitch1.Properties.Appearance.Options.UseBackColor = true;
-            this.toggleSwitch1.Properties.Appearance.Options.UseBorderColor = true;
-            this.toggleSwitch1.Properties.Appearance.Options.UseFont = true;
-            this.toggleSwitch1.Properties.Appearance.Options.UseForeColor = true;
-            this.toggleSwitch1.Properties.AutoWidth = true;
-            this.toggleSwitch1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.toggleSwitch1.Properties.EditValueChangedDelay = 10;
-            this.toggleSwitch1.Properties.OffText = "日期快捷选择";
-            this.toggleSwitch1.Properties.OnText = "日期自由选择";
-            this.toggleSwitch1.Size = new System.Drawing.Size(191, 32);
-            this.toggleSwitch1.TabIndex = 34;
-            this.toggleSwitch1.Toggled += new System.EventHandler(this.toggleSwitch1_Toggled);
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.AppearanceDisabled.ForeColor = System.Drawing.Color.Silver;
-            this.labelControl5.AppearanceDisabled.Options.UseForeColor = true;
-            this.labelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelControl5.Location = new System.Drawing.Point(668, 10);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(126, 20);
-            this.labelControl5.TabIndex = 41;
-            this.labelControl5.Text = "日期快速选择";
-            // 
-            // comDoctor
-            // 
-            this.comDoctor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comDoctor.Location = new System.Drawing.Point(802, 4);
-            this.comDoctor.Margin = new System.Windows.Forms.Padding(4);
-            this.comDoctor.Name = "comDoctor";
-            this.comDoctor.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.comDoctor.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.comDoctor.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.comDoctor.Properties.Appearance.Options.UseBackColor = true;
-            this.comDoctor.Properties.Appearance.Options.UseFont = true;
-            this.comDoctor.Properties.Appearance.Options.UseForeColor = true;
-            this.comDoctor.Properties.Appearance.Options.UseTextOptions = true;
-            this.comDoctor.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.comDoctor.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.Silver;
-            this.comDoctor.Properties.AppearanceDisabled.Options.UseForeColor = true;
-            this.comDoctor.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.comDoctor.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.comDoctor.Properties.AppearanceDropDown.Options.UseTextOptions = true;
-            this.comDoctor.Properties.AppearanceDropDown.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.comDoctor.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.comDoctor.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.comDoctor.Properties.AppearanceItemSelected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.comDoctor.Properties.AppearanceItemSelected.Options.UseBackColor = true;
-            this.comDoctor.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
-            this.comDoctor.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.comDoctor.Properties.AutoComplete = false;
-            this.comDoctor.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.comDoctor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comDoctor.Properties.ItemPadding = new System.Windows.Forms.Padding(2);
-            this.comDoctor.Properties.Items.AddRange(new object[] {
+            this.cbeDate.Properties.Items.AddRange(new object[] {
             "当日",
             "昨天",
             "前天",
             "当月",
             "上月",
             "当年"});
-            this.comDoctor.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comDoctor.Size = new System.Drawing.Size(140, 28);
-            this.comDoctor.TabIndex = 33;
+            this.cbeDate.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbeDate.Size = new System.Drawing.Size(116, 24);
+            this.cbeDate.StyleController = this.layoutControl1;
+            this.cbeDate.TabIndex = 16;
             // 
-            // labelControl3
+            // sbQuery
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl3.Location = new System.Drawing.Point(950, 4);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(42, 32);
-            this.labelControl3.TabIndex = 35;
-            this.labelControl3.Text = "患者";
+            this.sbQuery.AllowHtmlTextInToolTip = DevExpress.Utils.DefaultBoolean.False;
+            this.sbQuery.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbQuery.ImageOptions.Image")));
+            this.sbQuery.Location = new System.Drawing.Point(1248, 20);
+            this.sbQuery.Name = "sbQuery";
+            this.sbQuery.Size = new System.Drawing.Size(142, 27);
+            this.sbQuery.StyleController = this.layoutControl1;
+            this.sbQuery.TabIndex = 15;
+            this.sbQuery.Text = "查询";
             // 
-            // txtPatient
+            // deEnd
             // 
-            this.txtPatient.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPatient.Location = new System.Drawing.Point(1000, 4);
-            this.txtPatient.Margin = new System.Windows.Forms.Padding(4, 4, 20, 4);
-            this.txtPatient.Name = "txtPatient";
-            this.txtPatient.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPatient.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtPatient.Properties.Appearance.Options.UseFont = true;
-            this.txtPatient.Properties.Appearance.Options.UseForeColor = true;
-            this.txtPatient.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtPatient.Size = new System.Drawing.Size(129, 26);
-            this.txtPatient.TabIndex = 36;
+            this.deEnd.EditValue = null;
+            this.deEnd.Location = new System.Drawing.Point(338, 20);
+            this.deEnd.Name = "deEnd";
+            this.deEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deEnd.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.deEnd.Size = new System.Drawing.Size(157, 24);
+            this.deEnd.StyleController = this.layoutControl1;
+            this.deEnd.TabIndex = 14;
             // 
-            // labelControl4
+            // teDoctor
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl4.Location = new System.Drawing.Point(1153, 4);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(42, 32);
-            this.labelControl4.TabIndex = 37;
-            this.labelControl4.Text = "医生";
+            this.teDoctor.Location = new System.Drawing.Point(1145, 22);
+            this.teDoctor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.teDoctor.Name = "teDoctor";
+            this.teDoctor.Size = new System.Drawing.Size(81, 24);
+            this.teDoctor.StyleController = this.layoutControl1;
+            this.teDoctor.TabIndex = 10;
             // 
-            // txtDoctor
+            // tePatient
             // 
-            this.txtDoctor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDoctor.Location = new System.Drawing.Point(1203, 4);
-            this.txtDoctor.Margin = new System.Windows.Forms.Padding(4, 4, 20, 4);
-            this.txtDoctor.Name = "txtDoctor";
-            this.txtDoctor.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtDoctor.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtDoctor.Properties.Appearance.Options.UseFont = true;
-            this.txtDoctor.Properties.Appearance.Options.UseForeColor = true;
-            this.txtDoctor.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtDoctor.Size = new System.Drawing.Size(105, 26);
-            this.txtDoctor.TabIndex = 38;
+            this.tePatient.Location = new System.Drawing.Point(998, 22);
+            this.tePatient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tePatient.Name = "tePatient";
+            this.tePatient.Size = new System.Drawing.Size(88, 24);
+            this.tePatient.StyleController = this.layoutControl1;
+            this.tePatient.TabIndex = 9;
             // 
-            // btnQuery
+            // layoutControlGroup1
             // 
-            this.btnQuery.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnQuery.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnQuery.Appearance.Options.UseFont = true;
-            this.btnQuery.Appearance.Options.UseForeColor = true;
-            this.btnQuery.AutoSize = true;
-            this.btnQuery.AutoWidthInLayoutControl = true;
-            this.btnQuery.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.btnQuery.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnQuery.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnQuery.ImageOptions.Image")));
-            this.btnQuery.Location = new System.Drawing.Point(1332, 4);
-            this.btnQuery.Margin = new System.Windows.Forms.Padding(4);
-            this.btnQuery.Name = "btnQuery";
-            this.btnQuery.Size = new System.Drawing.Size(68, 32);
-            this.btnQuery.TabIndex = 40;
-            this.btnQuery.Text = "查询";
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.layoutControlItem6,
+            this.layoutControlItem5,
+            this.layoutControlItem4,
+            this.layoutControlItem10,
+            this.layoutControlItem1,
+            this.layoutControlItem9});
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1749, 77);
+            this.layoutControlGroup1.TextVisible = false;
             // 
-            // tsIsall
+            // layoutControlItem2
             // 
-            this.tsIsall.EditValue = true;
-            this.tsIsall.Location = new System.Drawing.Point(1408, 4);
-            this.tsIsall.Margin = new System.Windows.Forms.Padding(4);
-            this.tsIsall.Name = "tsIsall";
-            this.tsIsall.Properties.OffText = "查重";
-            this.tsIsall.Properties.OnText = "全部";
-            this.tsIsall.Size = new System.Drawing.Size(151, 31);
-            this.tsIsall.TabIndex = 42;
+            this.layoutControlItem2.Control = this.deEnd;
+            this.layoutControlItem2.Location = new System.Drawing.Point(253, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.OptionsTableLayoutItem.ColumnIndex = 1;
+            this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
+            this.layoutControlItem2.Size = new System.Drawing.Size(242, 57);
+            this.layoutControlItem2.Text = "终止日期";
+            this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(60, 18);
+            this.layoutControlItem2.TextToControlDistance = 5;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.sbQuery;
+            this.layoutControlItem3.Location = new System.Drawing.Point(1228, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.OptionsTableLayoutItem.ColumnIndex = 6;
+            this.layoutControlItem3.Size = new System.Drawing.Size(162, 57);
+            this.layoutControlItem3.Spacing = new DevExpress.XtraLayout.Utils.Padding(8, 8, 8, 8);
+            this.layoutControlItem3.Text = "查询";
+            this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextToControlDistance = 0;
+            this.layoutControlItem3.TextVisible = false;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.layoutControlItem6.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem6.Control = this.teDoctor;
+            this.layoutControlItem6.Location = new System.Drawing.Point(1088, 0);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.OptionsTableLayoutItem.ColumnIndex = 5;
+            this.layoutControlItem6.Size = new System.Drawing.Size(140, 57);
+            this.layoutControlItem6.Spacing = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
+            this.layoutControlItem6.Text = "医生";
+            this.layoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(30, 18);
+            this.layoutControlItem6.TextToControlDistance = 5;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.layoutControlItem5.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem5.Control = this.tePatient;
+            this.layoutControlItem5.Location = new System.Drawing.Point(941, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.OptionsTableLayoutItem.ColumnIndex = 4;
+            this.layoutControlItem5.Size = new System.Drawing.Size(147, 57);
+            this.layoutControlItem5.Spacing = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
+            this.layoutControlItem5.Text = "患者";
+            this.layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(30, 18);
+            this.layoutControlItem5.TextToControlDistance = 5;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.cbeDate;
+            this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.layoutControlItem4.Location = new System.Drawing.Point(708, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.OptionsTableLayoutItem.ColumnIndex = 3;
+            this.layoutControlItem4.Size = new System.Drawing.Size(233, 57);
+            this.layoutControlItem4.Spacing = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
+            this.layoutControlItem4.Text = "日期快捷选择";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(90, 18);
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.tsUnique;
+            this.layoutControlItem10.Location = new System.Drawing.Point(1390, 0);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.OptionsTableLayoutItem.ColumnIndex = 7;
+            this.layoutControlItem10.Size = new System.Drawing.Size(339, 57);
+            this.layoutControlItem10.Spacing = new DevExpress.XtraLayout.Utils.Padding(6, 6, 6, 6);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem10.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.deBegin;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
+            this.layoutControlItem1.Size = new System.Drawing.Size(253, 57);
+            this.layoutControlItem1.Text = "起始日期";
+            this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(60, 18);
+            this.layoutControlItem1.TextToControlDistance = 5;
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.tsAll;
+            this.layoutControlItem9.Location = new System.Drawing.Point(495, 0);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem9.Size = new System.Drawing.Size(213, 57);
+            this.layoutControlItem9.Spacing = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem9.TextVisible = false;
             // 
             // dateEdit1
             // 
@@ -1523,18 +1494,20 @@
             this.dateEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateEdit1.Properties.Mask.EditMask = "";
             this.dateEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dateEdit1.Size = new System.Drawing.Size(1067, 26);
+            this.dateEdit1.Size = new System.Drawing.Size(1067, 30);
             this.dateEdit1.TabIndex = 4;
             // 
             // ChufangControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.Options.UseBackColor = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.sidePanel3);
             this.Controls.Add(this.sidePanel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ChufangControl";
-            this.Size = new System.Drawing.Size(1753, 672);
+            this.Size = new System.Drawing.Size(1753, 806);
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -1563,18 +1536,26 @@
             this.sidePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateBegin.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateBegin.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEnd.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEnd.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comDoctor.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPatient.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDoctor.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tsIsall.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.deBegin.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deBegin.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tsUnique.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tsAll.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbeDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deEnd.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deEnd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teDoctor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tePatient.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -1588,19 +1569,6 @@
         private DevExpress.Utils.MVVM.MVVMContext mvvmContext;
         private DevExpress.XtraEditors.SidePanel sidePanel1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.DateEdit dateBegin;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.DateEdit dateEnd;
-        private DevExpress.XtraEditors.ToggleSwitch toggleSwitch1;
-        private DevExpress.XtraEditors.ComboBoxEdit comDoctor;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit txtPatient;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit txtDoctor;
-        private DevExpress.XtraEditors.SimpleButton btnQuery;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
         private System.Windows.Forms.Panel panel2;
@@ -1645,7 +1613,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn JeCount;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
         private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
-        private DevExpress.XtraEditors.ToggleSwitch tsIsall;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
         private DevExpress.XtraGrid.GridControl gridControl4;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
@@ -1669,5 +1636,23 @@
         private DevExpress.XtraEditors.SidePanel sidePanel2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraEditors.TextEdit teDoctor;
+        private DevExpress.XtraEditors.TextEdit tePatient;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraEditors.ToggleSwitch tsUnique;
+        private DevExpress.XtraEditors.ToggleSwitch tsAll;
+        private DevExpress.XtraEditors.ComboBoxEdit cbeDate;
+        private DevExpress.XtraEditors.SimpleButton sbQuery;
+        private DevExpress.XtraEditors.DateEdit deEnd;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraEditors.DateEdit deBegin;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }

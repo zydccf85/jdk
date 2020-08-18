@@ -27,7 +27,7 @@ using DevExpress.XtraGrid.Views.Base;
 
 namespace JKD.CenterView
 {
-    public partial class ChufangControl : UserControl
+    public partial class ChufangControl : XtraUserControl
     {
        
         public FyFormViewModel FFVM;
@@ -40,19 +40,34 @@ namespace JKD.CenterView
         {
            InitializeComponent();
             FFVM = mvvmContext.GetViewModel<FyFormViewModel>();
-            mvvmContext.SetBinding(this.dateEnd, e => e.Text, "EndTime");
-            mvvmContext.SetBinding(this.dateBegin, e => e.Text, "BeginTime");
-            mvvmContext.SetBinding(this.txtDoctor, e => e.EditValue, "Doctor");
-            mvvmContext.SetBinding(this.txtPatient, e => e.EditValue, "Patient");
+            //mvvmContext.SetBinding(this.dateEnd, e => e.Text, "EndTime");
+            //mvvmContext.SetBinding(this.dateBegin, e => e.Text, "BeginTime");
+            //mvvmContext.SetBinding(this.txtDoctor, e => e.EditValue, "Doctor");
+            //mvvmContext.SetBinding(this.txtPatient, e => e.EditValue, "Patient");
+            //mvvmContext.SetBinding(this.gridControl1, e => e.DataSource, "cfhead");
+            //mvvmContext.SetBinding(this.gridControl2, e => e.DataSource, "Dv");
+            //mvvmContext.SetBinding(this.gridControl3, e => e.DataSource, "CfDetailList");
+            //mvvmContext.SetBinding(this.gridControl4, e => e.DataSource, "HzByDoctor");
+            //mvvmContext.SetBinding(this.tsIsall, e => e.IsOn, "IsAll");
+            //mvvmContext.SetBinding(this.xtraTabControl1.CustomHeaderButtons[0], e => e.Enabled, "IsEnable");
+            //mvvmContext.BindCommand<FyFormViewModel>(this.btnQuery, x => x.Query());
+            //mvvmContext.SetBinding(this.comDoctor, e => e.Text, "SelectDate");
+            //mvvmContext.SetBinding(this.lblTotlprice, e => e.Text, "Huizong");
+
+            mvvmContext.SetBinding(this.deBegin, e => e.Text, "BeginTime");
+            mvvmContext.SetBinding(this.deEnd, e => e.Text, "EndTime");
+            mvvmContext.SetBinding(this.teDoctor, e => e.EditValue, "Doctor");
+            mvvmContext.SetBinding(this.tePatient, e => e.EditValue, "Patient");
             mvvmContext.SetBinding(this.gridControl1, e => e.DataSource, "cfhead");
             mvvmContext.SetBinding(this.gridControl2, e => e.DataSource, "Dv");
             mvvmContext.SetBinding(this.gridControl3, e => e.DataSource, "CfDetailList");
             mvvmContext.SetBinding(this.gridControl4, e => e.DataSource, "HzByDoctor");
-            mvvmContext.SetBinding(this.tsIsall, e => e.IsOn, "IsAll");
+            mvvmContext.SetBinding(this.tsUnique, e => e.IsOn, "IsAll");
             mvvmContext.SetBinding(this.xtraTabControl1.CustomHeaderButtons[0], e => e.Enabled, "IsEnable");
-            mvvmContext.BindCommand<FyFormViewModel>(this.btnQuery, x => x.Query());
-           
-           
+            mvvmContext.BindCommand<FyFormViewModel>(this.sbQuery, x => x.Query());
+            mvvmContext.SetBinding(this.cbeDate, e => e.Text, "SelectDate");
+            mvvmContext.SetBinding(this.lblTotlprice, e => e.Text, "Huizong");
+
             mvvmContext.WithEvent<FyFormViewModel, CustomHeaderButtonEventArgs>(xtraTabControl1, "CustomHeaderButtonClick")
                 .EventToCommand(x=>x.Refresh(),args=>args.Button.Caption=="同步数据");
             mvvmContext.WithEvent<FyFormViewModel, CustomHeaderButtonEventArgs>(xtraTabControl1, "CustomHeaderButtonClick")
@@ -67,8 +82,7 @@ namespace JKD.CenterView
                .EventToCommand(x=>x.ShowHistory(),args=>args.Clicks==2);
             mvvmContext.WithEvent<FyFormViewModel, CustomHeaderButtonEventArgs>(xtraTabControl2, "CustomHeaderButtonClick")
               .EventToCommand(x=>x.ShowHistory(), args => args.Button.Caption == "查看历史处方");
-            mvvmContext.SetBinding(this.comDoctor, e => e.Text, "SelectDate");
-            mvvmContext.SetBinding(this.lblTotlprice, e => e.Text, "Huizong");
+            
 
             mvvmContext.WithEvent<FyFormViewModel, FocusedRowChangedEventArgs>(gridView1, "FocusedRowChanged")
                .EventToCommand(x =>x.ChangeRow(gridView1), args=>gridView1);
@@ -76,7 +90,9 @@ namespace JKD.CenterView
 
             // mvvmContext.BindCommand<FyFormViewModel>(this.btnDelete, x => x.DeleteRow());
             Init();
-            this.toggleSwitch1_Toggled(this.toggleSwitch1, new EventArgs());
+          
+            this.toggleSwitch1_Toggled(this.tsAll, new EventArgs());
+            layoutControlItem1.Enabled = layoutControlItem2.Enabled = false;
         }
         private void Init()
         {
@@ -183,19 +199,19 @@ namespace JKD.CenterView
 
         private void toggleSwitch1_Toggled(object sender, EventArgs e)
         {
-            ToggleSwitch ts = sender as ToggleSwitch;
-            if (ts.IsOn)
-            {
-                dateEnd.Enabled = dateBegin.Enabled = labelControl1.Enabled = labelControl2.Enabled = true;
-                comDoctor.Enabled = labelControl5.Enabled = false;
-                FyFormViewModel ffvm = mvvmContext.GetViewModel<FyFormViewModel>();
-                ffvm.SelectDate = string.Empty;
-            }
-            else
-            {
-                dateEnd.Enabled = dateBegin.Enabled = labelControl1.Enabled = labelControl2.Enabled = false;
-                comDoctor.Enabled = labelControl5.Enabled = true;
-            }
+            //ToggleSwitch ts = sender as ToggleSwitch;
+            //if (ts.IsOn)
+            //{
+            //    dateEnd.Enabled = dateBegin.Enabled = labelControl1.Enabled = labelControl2.Enabled = true;
+            //    comDoctor.Enabled = labelControl5.Enabled = false;
+            //    FyFormViewModel ffvm = mvvmContext.GetViewModel<FyFormViewModel>();
+            //    ffvm.SelectDate = string.Empty;
+            //}
+            //else
+            //{
+            //    dateEnd.Enabled = dateBegin.Enabled = labelControl1.Enabled = labelControl2.Enabled = false;
+            //    comDoctor.Enabled = labelControl5.Enabled = true;
+            //}
         }
 
        
@@ -205,6 +221,11 @@ namespace JKD.CenterView
           
         }
 
-        
+        private void tsAll_Properties_Toggled(object sender, EventArgs e)
+        {
+            ToggleSwitch ts = sender as ToggleSwitch;
+            layoutControlItem1.Enabled = layoutControlItem2.Enabled = ts.IsOn;
+            layoutControlItem4.Enabled = !ts.IsOn;
+        }
     }
 }

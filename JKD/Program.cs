@@ -32,7 +32,7 @@ namespace JKD
         static void Main()
         {
             WindowsFormsSettings.DefaultFont = new System.Drawing.Font("宋体", 11);
-            WindowsFormsSettings.DefaultMenuFont = new System.Drawing.Font("微软雅黑", 11);
+           // WindowsFormsSettings.DefaultMenuFont = new System.Drawing.Font("微软雅黑", 11);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             CultureInfo culture = CultureInfo.CreateSpecificCulture("zh-Hans");

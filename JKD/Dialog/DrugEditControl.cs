@@ -44,7 +44,7 @@ namespace JKD.Dialog
             {
                 comboBoxEdit2.Properties.Items.Add(dr.Field<string>("name"));
             }
-           
+            comboBoxEdit2.Text = drug.cata;
 
         }
         //根据药品名称，自动生成搜索码

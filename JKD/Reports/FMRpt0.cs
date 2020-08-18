@@ -37,6 +37,8 @@ namespace JKD.Reports
             lblJEcount.Text = HZ.JeCount.ToString();
             lblJDcount.Text = HZ.JdCount.ToString();
             lblJScount.Text = HZ.JsCount.ToString();
+            lbJzcount.Text = HZ.JzCount.ToString();
+            lblKjycount.Text = HZ.KjyCount.ToString();
 
             //HZdata = new Dictionary<string, decimal>()
             //{
