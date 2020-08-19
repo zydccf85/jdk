@@ -54,6 +54,16 @@ namespace JKD.DB
             return new DbContext().Db.SqlQueryable<Cfhead>("select distinct opertime from cfhead").Select(item => item.opertime).ToList();
         }
 
+        public List<Cfhead> GetSame(string BeginTime,string  EndTime,string Doctor, string Patient)
+        {
+            string mysql =$@"select * from cfhead where enable = 1
+        and pid in (select pid from cfhead where enable = 1 and opertime >= '{BeginTime}' and opertime <='{EndTime}'
+       and doctor like concat('%','{Doctor}','%')  and patient like concat('%','{Patient}','%') 
+        group by pid ,totalprice having count(*) > 1)";
+            List<Cfhead> li = new DbContext().Db.SqlQueryable<Cfhead>(mysql).ToList();
+            return li;
+        }
+
     }
         
 }

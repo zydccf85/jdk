@@ -40,19 +40,6 @@ namespace JKD.CenterView
         {
            InitializeComponent();
             FFVM = mvvmContext.GetViewModel<FyFormViewModel>();
-            //mvvmContext.SetBinding(this.dateEnd, e => e.Text, "EndTime");
-            //mvvmContext.SetBinding(this.dateBegin, e => e.Text, "BeginTime");
-            //mvvmContext.SetBinding(this.txtDoctor, e => e.EditValue, "Doctor");
-            //mvvmContext.SetBinding(this.txtPatient, e => e.EditValue, "Patient");
-            //mvvmContext.SetBinding(this.gridControl1, e => e.DataSource, "cfhead");
-            //mvvmContext.SetBinding(this.gridControl2, e => e.DataSource, "Dv");
-            //mvvmContext.SetBinding(this.gridControl3, e => e.DataSource, "CfDetailList");
-            //mvvmContext.SetBinding(this.gridControl4, e => e.DataSource, "HzByDoctor");
-            //mvvmContext.SetBinding(this.tsIsall, e => e.IsOn, "IsAll");
-            //mvvmContext.SetBinding(this.xtraTabControl1.CustomHeaderButtons[0], e => e.Enabled, "IsEnable");
-            //mvvmContext.BindCommand<FyFormViewModel>(this.btnQuery, x => x.Query());
-            //mvvmContext.SetBinding(this.comDoctor, e => e.Text, "SelectDate");
-            //mvvmContext.SetBinding(this.lblTotlprice, e => e.Text, "Huizong");
 
             mvvmContext.SetBinding(this.deBegin, e => e.Text, "BeginTime");
             mvvmContext.SetBinding(this.deEnd, e => e.Text, "EndTime");
@@ -88,7 +75,6 @@ namespace JKD.CenterView
                .EventToCommand(x =>x.ChangeRow(gridView1), args=>gridView1);
 
 
-            // mvvmContext.BindCommand<FyFormViewModel>(this.btnDelete, x => x.DeleteRow());
             Init();
           
             this.toggleSwitch1_Toggled(this.tsAll, new EventArgs());
@@ -96,7 +82,9 @@ namespace JKD.CenterView
         }
         private void Init()
         {
+           
             GridFormatRule gridFormatRule = new GridFormatRule();
+           
             FormatConditionRuleExpression formatConditionRuleExpression = new FormatConditionRuleExpression();
             gridFormatRule.Column = this.gridView1.Columns["cftype"];
             // gridFormatRule.ApplyToRow = true;

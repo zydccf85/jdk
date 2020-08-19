@@ -139,14 +139,11 @@ namespace JKD.ViewModels
         #region 单击查询按钮
         public void Query()
         {
-            Debug.WriteLine(this.BeginTime);
-            Debug.WriteLine(this.EndTime);
             SelectRow = null;
             cfhead = new CfheadManager().GetListByCondition(BeginTime, EndTime, Doctor, Patient);
             if (this.IsAll)
             {
-                List<string> pids = new CfheadManager().GetPidNotUnique();
-                cfhead = cfhead.Where(item => pids.Contains(item.pid)).ToList();
+                cfhead = new CfheadManager().GetSame(BeginTime, EndTime, Doctor, Patient);
             }
 
             Dv = new HuiZongManager().GetListByCondition(this.BeginTime, this.EndTime, this.Patient, this.Doctor);
@@ -174,24 +171,6 @@ namespace JKD.ViewModels
 
 
             };
-            //HZ = new HuiZong()
-            //{
-            //    Riqi = cfhead.Select(it => it.opertime).Min() + "至" + cfhead.Select(it => it.opertime).Max(),
-            //    TotalPrice = Dv.Sum(i => i.TotalPrice),
-            //    MaxPrice = Dv.Max(i => i.MaxPrice),
-            //    MinPrice = Dv.Min(i => i.MinPrice),
-            //    AvgPrice = Dv.Average(i => i.AvgPrice),
-            //    CfCount = Dv.Sum(i => i.CfCount),
-            //    MzCount = Dv.Sum(i => i.MzCount),
-            //    YbCount = Dv.Sum(i => i.YbCount),
-            //    ZfCount = Dv.Sum(i => i.ZfCount),
-            //    ZcyCount = Dv.Sum(i => i.ZcyCount),
-            //    JdCount = Dv.Sum(i => i.JdCount),
-            //    JeCount = Dv.Sum(i => i.JeCount),
-            //    EkCount = Dv.Sum(i => i.EkCount),
-            //    JsCount = Dv.Sum(i => i.JsCount)
-
-            //};
             Huizong = HZ.ToString();
        
 
