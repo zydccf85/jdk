@@ -8,6 +8,10 @@ using JKD.CenterView;
 using JKD.DB;
 using DevExpress.XtraEditors;
 using JKD.Models;
+using System.IO;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace JKD.ViewModels
 {
@@ -22,6 +26,11 @@ namespace JKD.ViewModels
         public virtual string RPassword { get; set; }
         public virtual string RRepeatPassword { get; set; }
         public UserManager um = new UserManager();
+        public virtual List<string> Usernames { get; set; } =new  List<string>();
+        public LoginFrmViewModel()
+        {
+            ReadUsername();
+        }
         #region 登录
         public void handleOk(LoginFrm form)
         {
@@ -37,6 +46,9 @@ namespace JKD.ViewModels
                         form.Close();
                     };
                     mf.Show();
+                    Usernames.Add(Username);
+                    Usernames = Usernames.Distinct<string>().ToList();
+                    WriteUsername();
                     break;
                 case LoginStatus.UsernameErr:
                     XtraMessageBox.Show("用户名错误，请重新输入", "信息提示");
@@ -102,11 +114,6 @@ namespace JKD.ViewModels
         }
         #endregion
 
-
-
-
-
-
         #region 初始化SplashScreen
         private void IninConfig()
         {
@@ -124,6 +131,45 @@ namespace JKD.ViewModels
 
             SplashScreenManager.Default.SendCommand(null, "数据更新完成,100");
             SplashScreenManager.CloseForm();
+        }
+        #endregion
+
+        #region 从指定文件读取用户名
+        public void ReadUsername()
+        {
+            string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+            string mypath = Path.Combine(baseDir, "username.txt");
+            if (!File.Exists(mypath))
+            {
+                File.Create(mypath);
+            }
+            else
+            {
+                using (StreamReader sr = new StreamReader(mypath))
+                {
+                    List<string> u = new List<string>();
+                    while (sr.Peek() > 0)
+                    {
+                        u.Add(sr.ReadLine());
+                    }
+                    u.Reverse();
+                    Usernames.AddRange(u);
+                }
+
+            }
+        }
+        #endregion
+        #region 将用户名写入指定文件中
+        public void WriteUsername()
+        {
+            string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+            string mypath = Path.Combine(baseDir, "username.txt");
+
+            using (StreamWriter sw = new StreamWriter(mypath))
+            {
+                Usernames.ForEach(item => sw.WriteLine(item));
+            }
+
         }
         #endregion
 

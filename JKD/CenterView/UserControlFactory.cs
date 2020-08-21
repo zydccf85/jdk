@@ -11,21 +11,9 @@ namespace JKD.CenterView
 {
     public class UserControlFactory
     {
-        //public static Dictionary<string, Control> dic = new Dictionary<string, Control>()
-        //{
-        //    {"处方明细",new ChufangControl() },
-        //    {"缴款记录",new  JkControl() },
-        //    { "药品明细",new DrugUserControl()}
-        //};
+        
         public static Control CreateInstance(string name)
         {
-            //Control con = null;
-            //if( dic.TryGetValue(name,out con))
-            //{
-            //    con.Dock = DockStyle.Fill;
-            //    return con;
-            //}
-            //return null;
             Control con = null;
 
             switch (name)
@@ -40,7 +28,10 @@ namespace JKD.CenterView
                     con = new DrugUserControl();
                     break;
                 case "处方统计":
-                    con = new CftongjiControl1();
+                    con = new CftongjiControl();
+                    break;
+                case "人员明细":
+                    con = new EmployeeControl();
                     break;
 
             }

@@ -17,11 +17,11 @@ using DevExpress.XtraTab.ViewInfo;
 
 namespace JKD.CenterView
 {
-    public partial class CftongjiControl1 : DevExpress.XtraEditors.XtraUserControl
+    public partial class CftongjiControl : DevExpress.XtraEditors.XtraUserControl
     {
         public List<HuiZong> ds;
         public List<HuiZong> all;
-        public CftongjiControl1()
+        public CftongjiControl()
         {
             InitializeComponent();
             all = new HuiZongManager().GetListAll();

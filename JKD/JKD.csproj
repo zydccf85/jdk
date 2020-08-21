@@ -210,11 +210,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CenterView\CftongjiControl1.cs">
+    <Compile Include="CenterView\CftongjiControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CenterView\CftongjiControl1.Designer.cs">
-      <DependentUpon>CftongjiControl1.cs</DependentUpon>
+    <Compile Include="CenterView\CftongjiControl.Designer.cs">
+      <DependentUpon>CftongjiControl.cs</DependentUpon>
     </Compile>
     <Compile Include="CenterView\ChufangControl.cs">
       <SubType>UserControl</SubType>
@@ -230,6 +230,12 @@
     </Compile>
     <Compile Include="CenterView\DrugUserControl.Designer.cs">
       <DependentUpon>DrugUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CenterView\EmployeeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CenterView\EmployeeControl.Designer.cs">
+      <DependentUpon>EmployeeControl.cs</DependentUpon>
     </Compile>
     <Compile Include="CenterView\JkControl.cs">
       <SubType>UserControl</SubType>
@@ -274,6 +280,7 @@
     <Compile Include="DB\DbContext.cs" />
     <Compile Include="DB\DbSet.cs" />
     <Compile Include="DB\DrugManager.cs" />
+    <Compile Include="DB\EmployeeManager.cs" />
     <Compile Include="DB\HuiZongManager.cs" />
     <Compile Include="DB\HzByDoctor.cs" />
     <Compile Include="DB\UserManager.cs" />
@@ -308,6 +315,7 @@
     <Compile Include="MainFrm.Designer.cs">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Service\ImportData.cs" />
     <Compile Include="DB\VaccountManager.cs" />
     <Compile Include="FyForm.cs">
@@ -387,14 +395,17 @@
     <Compile Include="WaitForm1.Designer.cs">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CenterView\CftongjiControl1.resx">
-      <DependentUpon>CftongjiControl1.cs</DependentUpon>
+    <EmbeddedResource Include="CenterView\CftongjiControl.resx">
+      <DependentUpon>CftongjiControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CenterView\ChufangControl.resx">
       <DependentUpon>ChufangControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CenterView\DrugUserControl.resx">
       <DependentUpon>DrugUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CenterView\EmployeeControl.resx">
+      <DependentUpon>EmployeeControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CenterView\JkControl.resx">
       <DependentUpon>JkControl.cs</DependentUpon>

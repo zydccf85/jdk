@@ -27,22 +27,11 @@ namespace JKD
             InitializeComponent();
             mvvmContext1.ViewModelType = typeof(LoginFrmViewModel);
             Init();
-            //btnOK.Click += (s, e) =>
-            //{
-            //    this.Hide();
-            //    IninConfig();
-            //    MainFrm mf = new MainFrm();
-            //    mf.Show();
-            //    mf.FormClosed += (ss, ee) =>
-            //    {
-            //        this.Close();
-            //    };
-               
-            //};
         }
         public void Init()
         {
             mvvmContext1.SetBinding(teUsername, e => e.Text, "Username");
+            mvvmContext1.GetViewModel<LoginFrmViewModel>().Usernames.ForEach(item=>teUsername.Properties.Items.Add(item));
             mvvmContext1.SetBinding(tePsw, e => e.Text, "Password");
             mvvmContext1.SetBinding(teRname, e => e.Text, "RName");
             mvvmContext1.SetBinding(teRusername, e => e.Text, "RUsername");
@@ -51,6 +40,7 @@ namespace JKD
             mvvmContext1.BindCommand<LoginFrmViewModel,LoginFrm>(btnOK, (x,p)=> x.handleOk(p),x=>this);
             mvvmContext1.BindCommand<LoginFrmViewModel>(btnRegister, x=>x.handleRegister());
             mvvmContext1.BindCommand<LoginFrmViewModel>(btnReset, x => x.handleReset());
+
         }
         public void SelectAll(string tename)
         {
@@ -65,6 +55,7 @@ namespace JKD
             }
             
         }
+        
 
        
         
