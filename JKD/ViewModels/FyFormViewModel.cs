@@ -19,6 +19,7 @@ using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using JKD.DB;
 using DevExpress.Data.Helpers;
+using System.Drawing;
 
 namespace JKD.ViewModels
 {
@@ -226,7 +227,12 @@ namespace JKD.ViewModels
         {
 
              Dictionary<string,int> result = new ImportData().AutoImportData();
-            MessageBox.Show(string.Format("处方数:{0}，处方明细数:{1}", result["处方数"], result["处方明细数"]), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if(result != null)
+            {
+                MessageBox.Show(string.Format("处方数:{0}，处方明细数:{1}", result["处方数"], result["处方明细数"]), "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
+           
         }
         #endregion
 
