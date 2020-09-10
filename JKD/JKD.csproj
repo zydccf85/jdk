@@ -225,6 +225,12 @@
     <Compile Include="CenterView\CustomeTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CenterView\DrugTJControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CenterView\DrugTJControl.Designer.cs">
+      <DependentUpon>DrugTJControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CenterView\DrugUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -280,6 +286,7 @@
     <Compile Include="DB\DbContext.cs" />
     <Compile Include="DB\DbSet.cs" />
     <Compile Include="DB\DrugManager.cs" />
+    <Compile Include="DB\DrugTJManager.cs" />
     <Compile Include="DB\EmployeeManager.cs" />
     <Compile Include="DB\HuiZongManager.cs" />
     <Compile Include="DB\HzByDoctor.cs" />
@@ -401,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CenterView\ChufangControl.resx">
       <DependentUpon>ChufangControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CenterView\DrugTJControl.resx">
+      <DependentUpon>DrugTJControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CenterView\DrugUserControl.resx">
       <DependentUpon>DrugUserControl.cs</DependentUpon>

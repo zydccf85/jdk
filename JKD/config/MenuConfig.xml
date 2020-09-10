@@ -6,6 +6,7 @@
   <menu name="处方">
     <subItem>处方明细</subItem>
     <subItem>处方统计</subItem>
+    <subItem>药品使用情况统计</subItem>
   </menu>
 
   <menu name="人员">

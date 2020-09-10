@@ -30,6 +30,9 @@ namespace JKD.CenterView
                 case "处方统计":
                     con = new CftongjiControl();
                     break;
+                case "药品使用情况统计":
+                    con = new DrugTJControl();
+                    break;
                 case "人员明细":
                     con = new EmployeeControl();
                     break;
