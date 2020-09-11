@@ -33,6 +33,13 @@
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.noDocumentsView1 = new DevExpress.XtraBars.Docking2010.Views.NoDocuments.NoDocumentsView(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
@@ -54,13 +61,8 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -86,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            this.dockPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // documentManager1
@@ -109,6 +112,8 @@
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
@@ -121,10 +126,88 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.AllowCellMerge = true;
             this.gridView1.OptionsView.ShowFooter = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn1.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridColumn1.Caption = "起止时间";
+            this.gridColumn1.FieldName = "time";
+            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 94;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "药品代码";
+            this.gridColumn2.FieldName = "code";
+            this.gridColumn2.MinWidth = 25;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 94;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "名称";
+            this.gridColumn3.FieldName = "name";
+            this.gridColumn3.MinWidth = 25;
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 94;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "规格";
+            this.gridColumn4.FieldName = "spci";
+            this.gridColumn4.MinWidth = 25;
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 94;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "单价";
+            this.gridColumn5.FieldName = "unitprice";
+            this.gridColumn5.MinWidth = 25;
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 94;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "医生";
+            this.gridColumn6.FieldName = "doctor";
+            this.gridColumn6.MinWidth = 25;
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.Width = 94;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "数量";
+            this.gridColumn7.FieldName = "quantity";
+            this.gridColumn7.MinWidth = 25;
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.gridColumn7.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "quantity", "{0:N0}")});
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 6;
+            this.gridColumn7.Width = 94;
             // 
             // dockManager1
             // 
             this.dockManager1.Form = this;
+            this.dockManager1.HiddenPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
+            this.dockPanel2});
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
             this.dockPanel1});
             this.dockManager1.TopZIndexControls.AddRange(new string[] {
@@ -145,13 +228,16 @@
             this.dockPanel1.Controls.Add(this.dockPanel1_Container);
             this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Top;
             this.dockPanel1.ID = new System.Guid("67442fab-d3e7-4dc7-931e-121eb0c53b49");
+            this.dockPanel1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("dockPanel1.ImageOptions.Image")));
+            this.dockPanel1.ImageOptions.ImageIndex = 0;
+            this.dockPanel1.ImageOptions.ImageUri.Uri = "Add";
             this.dockPanel1.Location = new System.Drawing.Point(0, 0);
             this.dockPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.OriginalSize = new System.Drawing.Size(200, 99);
             this.dockPanel1.SavedSizeFactor = 0D;
             this.dockPanel1.Size = new System.Drawing.Size(1214, 99);
-            this.dockPanel1.Text = "dockPanel1";
+            this.dockPanel1.Text = "过滤条件";
             // 
             // dockPanel1_Container
             // 
@@ -330,80 +416,27 @@
             this.layoutControlItem6.Text = "药品";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(60, 18);
             // 
-            // gridColumn1
+            // dockPanel2
             // 
-            this.gridColumn1.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn1.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.gridColumn1.Caption = "起止时间";
-            this.gridColumn1.FieldName = "time";
-            this.gridColumn1.MinWidth = 25;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 94;
+            this.dockPanel2.Controls.Add(this.dockPanel2_Container);
+            this.dockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
+            this.dockPanel2.ID = new System.Guid("c98f8b0a-ac3a-4dff-b7c8-3cac6e8a865e");
+            this.dockPanel2.Location = new System.Drawing.Point(0, 430);
+            this.dockPanel2.Name = "dockPanel2";
+            this.dockPanel2.OriginalSize = new System.Drawing.Size(200, 200);
+            this.dockPanel2.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
+            this.dockPanel2.SavedIndex = 1;
+            this.dockPanel2.SavedSizeFactor = 1D;
+            this.dockPanel2.Size = new System.Drawing.Size(1214, 200);
+            this.dockPanel2.Text = "dockPanel2";
+            this.dockPanel2.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
             // 
-            // gridColumn2
+            // dockPanel2_Container
             // 
-            this.gridColumn2.Caption = "药品代码";
-            this.gridColumn2.FieldName = "code";
-            this.gridColumn2.MinWidth = 25;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 94;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "名称";
-            this.gridColumn3.FieldName = "name";
-            this.gridColumn3.MinWidth = 25;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 94;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "规格";
-            this.gridColumn4.FieldName = "spci";
-            this.gridColumn4.MinWidth = 25;
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 94;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "单价";
-            this.gridColumn5.FieldName = "unitprice";
-            this.gridColumn5.MinWidth = 25;
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 94;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "医生";
-            this.gridColumn6.FieldName = "doctor";
-            this.gridColumn6.MinWidth = 25;
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 94;
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.Caption = "数量";
-            this.gridColumn7.FieldName = "quantity";
-            this.gridColumn7.MinWidth = 25;
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.gridColumn7.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "quantity", "{0:N0}")});
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
-            this.gridColumn7.Width = 94;
+            this.dockPanel2_Container.Location = new System.Drawing.Point(5, 29);
+            this.dockPanel2_Container.Name = "dockPanel2_Container";
+            this.dockPanel2_Container.Size = new System.Drawing.Size(1204, 166);
+            this.dockPanel2_Container.TabIndex = 0;
             // 
             // DrugTJControl
             // 
@@ -438,6 +471,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            this.dockPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -475,5 +509,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel2;
+        private DevExpress.XtraBars.Docking.ControlContainer dockPanel2_Container;
     }
 }

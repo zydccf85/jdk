@@ -34,6 +34,7 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.lblMessage = new DevExpress.XtraEditors.LabelControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.btnReset = new DevExpress.XtraEditors.SimpleButton();
             this.btnRegister = new DevExpress.XtraEditors.SimpleButton();
@@ -48,8 +49,7 @@
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lblMessage = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.sbCancel = new DevExpress.XtraEditors.SimpleButton();
             this.tePsw = new DevExpress.XtraEditors.TextEdit();
             this.btnOK = new DevExpress.XtraEditors.SimpleButton();
             this.teUsername = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -128,7 +128,7 @@
             this.layoutControl1.Controls.Add(this.labelControl1);
             this.layoutControl1.Controls.Add(this.lblMessage);
             this.layoutControl1.Controls.Add(this.layoutControl2);
-            this.layoutControl1.Controls.Add(this.simpleButton1);
+            this.layoutControl1.Controls.Add(this.sbCancel);
             this.layoutControl1.Controls.Add(this.tePsw);
             this.layoutControl1.Controls.Add(this.btnOK);
             this.layoutControl1.Controls.Add(this.teUsername);
@@ -157,6 +157,15 @@
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 11;
             this.labelControl1.Text = "南通市通州区川姜镇卫生院(测试版) ";
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.Location = new System.Drawing.Point(24, 161);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(60, 18);
+            this.lblMessage.StyleController = this.layoutControl1;
+            this.lblMessage.TabIndex = 9;
+            this.lblMessage.Text = "信息提示";
             // 
             // layoutControl2
             // 
@@ -303,30 +312,23 @@
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
-            // lblMessage
+            // sbCancel
             // 
-            this.lblMessage.Location = new System.Drawing.Point(24, 161);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(60, 18);
-            this.lblMessage.StyleController = this.layoutControl1;
-            this.lblMessage.TabIndex = 9;
-            this.lblMessage.Text = "信息提示";
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(220, 176);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(149, 27);
-            this.simpleButton1.StyleController = this.layoutControl1;
-            this.simpleButton1.TabIndex = 8;
-            this.simpleButton1.Text = "取消";
+            this.sbCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbCancel.ImageOptions.Image")));
+            this.sbCancel.Location = new System.Drawing.Point(220, 176);
+            this.sbCancel.Name = "sbCancel";
+            this.sbCancel.Size = new System.Drawing.Size(149, 27);
+            this.sbCancel.StyleController = this.layoutControl1;
+            this.sbCancel.TabIndex = 8;
+            this.sbCancel.Text = "取消";
             // 
             // tePsw
             // 
             this.tePsw.Location = new System.Drawing.Point(85, 120);
             this.tePsw.Name = "tePsw";
             this.tePsw.Properties.PasswordChar = '*';
+            this.tePsw.Properties.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tePsw_Properties_KeyDown);
+            this.tePsw.Properties.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tePsw_Properties_KeyPress);
             this.tePsw.Size = new System.Drawing.Size(286, 24);
             this.tePsw.StyleController = this.layoutControl1;
             this.tePsw.TabIndex = 5;
@@ -433,7 +435,7 @@
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.simpleButton1;
+            this.layoutControlItem5.Control = this.sbCancel;
             this.layoutControlItem5.Location = new System.Drawing.Point(181, 108);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(183, 61);
@@ -563,7 +565,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton sbCancel;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.Utils.MVVM.MVVMContext mvvmContext1;

@@ -65,18 +65,19 @@ namespace JKD
 
             DataTable dt = SqlHelper.ExecuteTable("select * from menu");
             User u = AppDomain.CurrentDomain.GetData("user") as User;
-            foreach (DataRow item in dt.Select("upid is null and admin ="+u.isadmin))
+            string power = u.isadmin == 1 ?"admin =1":"common=1";
+            foreach (DataRow item in dt.Select("upid is null and "+power))
             {
                 BarSubItem bi = new BarSubItem();
                 bi.Caption = item.Field<string>("title");
                 if(dt.Select("upid =" + item.Field<int>("id")).Length == 0)
-                {
+                { 
                     bi.ItemClick += (s, e) =>
                     {
                         DialogFactory.CreateConfigControl();
                     };
                 }
-                foreach (DataRow item02 in dt.Select("upid ="+item.Field<int>("id")))
+                foreach (DataRow item02 in dt.Select("upid ="+item.Field<int>("id")+" and "+power))
                 {
                     BarButtonItem bii = new BarButtonItem();
                     bii.Caption = item02.Field<string>("title");

@@ -40,6 +40,10 @@ namespace JKD
             mvvmContext1.BindCommand<LoginFrmViewModel,LoginFrm>(btnOK, (x,p)=> x.handleOk(p),x=>this);
             mvvmContext1.BindCommand<LoginFrmViewModel>(btnRegister, x=>x.handleRegister());
             mvvmContext1.BindCommand<LoginFrmViewModel>(btnReset, x => x.handleReset());
+            sbCancel.Click += (s, e) =>
+            {
+                this.Close();
+            };
 
         }
         public void SelectAll(string tename)
@@ -55,10 +59,18 @@ namespace JKD
             }
             
         }
-        
 
-       
-        
+        private void tePsw_Properties_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
 
+        private void tePsw_Properties_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnOK.Focus();
+            }
+        }
     }
 }
