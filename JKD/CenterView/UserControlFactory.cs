@@ -36,6 +36,9 @@ namespace JKD.CenterView
                 case "人员明细":
                     con = new EmployeeControl();
                     break;
+                case "我的缴款":
+                    con = new MyJKControl();
+                    break;
 
             }
             if (con != null)

@@ -249,6 +249,12 @@
     <Compile Include="CenterView\JkControl.Designer.cs">
       <DependentUpon>JkControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CenterView\MyJKControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CenterView\MyJKControl.Designer.cs">
+      <DependentUpon>MyJKControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CenterView\MyLayoutControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -420,6 +426,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CenterView\JkControl.resx">
       <DependentUpon>JkControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CenterView\MyJKControl.resx">
+      <DependentUpon>MyJKControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Custom\CustomLayoutControl.resx">
       <DependentUpon>CustomLayoutControl.cs</DependentUpon>
