@@ -310,6 +310,12 @@
     <Compile Include="Dialog\DrugEditControl.Designer.cs">
       <DependentUpon>DrugEditControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialog\JKDControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialog\JKDControl.Designer.cs">
+      <DependentUpon>JKDControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialog\SearchControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -398,6 +404,7 @@
     <Compile Include="utils\AppconfigHelper.cs" />
     <Compile Include="utils\ExcelHelper.cs" />
     <Compile Include="utils\ImageConvert.cs" />
+    <Compile Include="utils\MoneyConvertChinese.cs" />
     <Compile Include="utils\PinyinHelper.cs" />
     <Compile Include="utils\RmbHelper.cs" />
     <Compile Include="ViewModels\FyFormViewModel.cs" />
@@ -447,6 +454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialog\DrugEditControl.resx">
       <DependentUpon>DrugEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\JKDControl.resx">
+      <DependentUpon>JKDControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialog\SearchControl.resx">
       <DependentUpon>SearchControl.cs</DependentUpon>

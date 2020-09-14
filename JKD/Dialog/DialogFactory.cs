@@ -77,11 +77,38 @@ namespace JKD.Dialog
                     if (count > 0)
                     {
                         XtraMessageBox.Show("更新成功", "信息提示");
+                       
                     }
 
                 };
             };
             XtraDialog.Show(xda);
+        }
+
+        //缴款单弹出对话框
+        public static void CreateJKDControl()
+        {
+            XtraDialogArgs xda = new XtraDialogArgs()
+            {
+                Caption = "缴款单明细",
+                Content = new JKDControl1(),
+                Buttons = new DialogResult[] { DialogResult.Cancel, DialogResult.OK },
+
+                
+            };
+            xda.Showing += (s, e) =>
+            {
+                e.Buttons[DialogResult.OK].Text = "保存";
+                e.Buttons[DialogResult.Cancel].Text = "取消";
+                
+                e.Buttons[DialogResult.OK].Click += (x, y) =>
+                {
+                    MessageBox.Show("none");
+
+                };
+            };
+                XtraDialog.Show(xda);
+            
         }
     }
 }

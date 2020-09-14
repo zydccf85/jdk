@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-
+using JKD.Dialog;
 namespace JKD.CenterView
 {
     public partial class MyJKControl : DevExpress.XtraEditors.XtraUserControl
@@ -30,12 +30,19 @@ namespace JKD.CenterView
                 this.cbeJKR.Properties.Items.Add(datarow["jkr"]);
             }
             this.cbeJKR.SelectedIndex = 0;
+            this.groupControl1.CustomButtonClick += (s, e) =>
+            {
+                if (e.Button.Properties.Caption == "新增") {
+                    DialogFactory.CreateJKDControl();
+                }
+                
+            };
 
         }
         public void RefeshData(Object sender,EventArgs e)
         {
             string sqlstr = $"select * from acctitle a inner join account b on a.aid = b.accid and" +
-                $" lrsj between '{deBegin.Text} 00:00:00' and '{deEnd.Text} 23:59:59' and jkr like '%{(cbeJKR.Text=="所有"?"":cbeJKR.Text)}%'";
+                $" lrsj between '{deBegin.Text} 00:00:00' and '{deEnd.Text} 23:59:59' and jkr like '%{((cbeJKR.Text=="所有" ||string.IsNullOrEmpty(cbeJKR.Text))?"":cbeJKR.Text)}%'";
             System.Diagnostics.Debug.WriteLine(sqlstr);
             gridControl1.DataSource = SqlHelper.ExecuteTable(sqlstr);
         }

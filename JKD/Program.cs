@@ -50,7 +50,6 @@ namespace JKD
             //    Application.Run(new NaviFrm());
             //}
             new ImportData().AutoImportData();
-            //new DataLoad().ImportDrug02(@"C:\Users\Administrator\Desktop\drug.xls");
             Application.Run(new LoginFrm());
             
         }
