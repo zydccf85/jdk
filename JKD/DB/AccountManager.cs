@@ -13,5 +13,17 @@ namespace JKD.DB
             List<string> li = new DbContext().accountDb.GetList(item=>item.isdelete==0).Where(item=>item != null).Select(item => item.jkr).Distinct().ToList<string>();
             return li;
         }
+        public int Save(Account acc)
+        {
+            return new DbContext().Db.Insertable<Account>(acc).IgnoreColumns("isdelete").ExecuteReturnIdentity();
+        }
+        public int Update(Account acc)
+        {
+            return new DbContext().Db.Updateable<Account>(acc).ExecuteCommand();
+        }
+        public int Delete(int? id)
+        {
+            return new DbContext().Db.Deleteable<Account>().In(id).ExecuteCommand();
+        }
     }
 }

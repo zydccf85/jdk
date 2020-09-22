@@ -20,6 +20,10 @@ using DevExpress.XtraGrid.Views.Grid;
 using JKD.DB;
 using DevExpress.Data.Helpers;
 using System.Drawing;
+using DevExpress.XtraReports.UserDesigner;
+using ICommandHandler = DevExpress.XtraReports.UserDesigner.ICommandHandler;
+using DevExpress.XtraBars;
+using System.IO;
 
 namespace JKD.ViewModels
 {
@@ -154,6 +158,7 @@ namespace JKD.ViewModels
             HZ = new HuiZong()
             {
                 Riqi = cfhead.Select(it => it.opertime).Min() + "至" + cfhead.Select(it => it.opertime).Max(),
+                MaxDate = cfhead.Select(it => it.opertime).Max().Split()[0],
                 TotalPrice= Convert.ToDouble(HzByDoctor.Compute("sum(金额)", "")),
                 MaxPrice = Convert.ToDouble(HzByDoctor.Compute("MAX(最大金额)", "")),
                 MinPrice = Convert.ToDouble(HzByDoctor.Compute("MIN(最小金额)", "")),
@@ -213,15 +218,16 @@ namespace JKD.ViewModels
         #region 打印处方封面
         public void Print()
         {
-            SplashScreenManager.ShowForm(typeof(WaitForm1));
-            FMRpt0 rep = new FMRpt0(HZ);
-           // rep.ExportToPdf(@"C:\Users\Public\处方封面\" + BeginTime + "至" + EndTime + ".pdf");
-            //rep.ShowPreview();
-            SplashScreenManager.CloseForm();
-            rep.ShowPreviewDialog();
+          
+            List<HuiZong> myli = new List<HuiZong>();
+            myli.Add(HZ);
+            XtraReport xr = new FMRpt0();
+            xr.DataSource = myli;
+            new MyReport(xr, "cffm.repx",true);
         }
+       
         #endregion
-
+        
         #region 同步数据
         public void Refresh()
         {

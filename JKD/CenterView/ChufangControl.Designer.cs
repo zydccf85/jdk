@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleDataBar formatConditionRuleDataBar1 = new DevExpress.XtraEditors.FormatConditionRuleDataBar();
@@ -133,9 +134,9 @@
             this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.缴款表TableAdapter1 = new JKD.jkdDataSetTableAdapters.缴款表TableAdapter();
-            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext();
+            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.sidePanel1 = new DevExpress.XtraEditors.SidePanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
@@ -341,14 +342,14 @@
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.EmbeddedNavigator.Appearance.BackColor = System.Drawing.Color.Azure;
             this.gridControl1.EmbeddedNavigator.Appearance.Options.UseBackColor = true;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5);
             gridLevelNode1.LevelTemplate = this.gridView2;
             gridLevelNode1.RelationName = "Detail";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
             this.gridControl1.Location = new System.Drawing.Point(5, 5);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(5);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1736, 422);
             this.gridControl1.TabIndex = 3;
@@ -584,7 +585,7 @@
             this.sidePanel3.Controls.Add(this.xtraTabControl1);
             this.sidePanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sidePanel3.Location = new System.Drawing.Point(0, 113);
-            this.sidePanel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.sidePanel3.Margin = new System.Windows.Forms.Padding(5);
             this.sidePanel3.Name = "sidePanel3";
             this.sidePanel3.Size = new System.Drawing.Size(1753, 693);
             this.sidePanel3.TabIndex = 5;
@@ -638,7 +639,7 @@
             new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "导出汇总", -1, true, true, editorButtonImageOptions5, serializableAppearanceObject5, "", "处方汇总", null)});
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(5);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
             this.xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.True;
@@ -658,7 +659,7 @@
             this.xtraTabPage1.Appearance.Header.Options.UseBackColor = true;
             this.xtraTabPage1.Controls.Add(this.panel2);
             this.xtraTabPage1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(5);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(1746, 654);
             this.xtraTabPage1.Text = "门诊处方明细表";
@@ -669,7 +670,7 @@
             this.panel2.Controls.Add(this.sidePanel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1746, 654);
             this.panel2.TabIndex = 4;
@@ -701,7 +702,7 @@
             new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "查看历史处方", -1, true, true, editorButtonImageOptions6, serializableAppearanceObject6, "", null, null)});
             this.xtraTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl2.Location = new System.Drawing.Point(5, 473);
-            this.xtraTabControl2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.xtraTabControl2.Margin = new System.Windows.Forms.Padding(5);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.xtraTabPage3;
             this.xtraTabControl2.Size = new System.Drawing.Size(1736, 176);
@@ -713,7 +714,7 @@
             // 
             this.xtraTabPage3.Controls.Add(this.gridControl3);
             this.xtraTabPage3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(5);
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(1729, 140);
             this.xtraTabPage3.Text = "门诊处方明细表";
@@ -721,10 +722,10 @@
             // gridControl3
             // 
             this.gridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl3.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gridControl3.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5);
             this.gridControl3.Location = new System.Drawing.Point(0, 0);
             this.gridControl3.MainView = this.gridView4;
-            this.gridControl3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gridControl3.Margin = new System.Windows.Forms.Padding(5);
             this.gridControl3.Name = "gridControl3";
             this.gridControl3.Size = new System.Drawing.Size(1729, 140);
             this.gridControl3.TabIndex = 0;
@@ -929,7 +930,7 @@
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.gridSplitContainer1);
-            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(5);
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1746, 654);
             this.xtraTabPage2.Text = "门诊处方汇总表（按日）";
@@ -939,7 +940,7 @@
             this.gridSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSplitContainer1.Grid = this.gridControl2;
             this.gridSplitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.gridSplitContainer1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gridSplitContainer1.Margin = new System.Windows.Forms.Padding(5);
             this.gridSplitContainer1.Name = "gridSplitContainer1";
             this.gridSplitContainer1.Panel1.Controls.Add(this.gridControl2);
             this.gridSplitContainer1.Size = new System.Drawing.Size(1746, 654);
@@ -948,10 +949,10 @@
             // gridControl2
             // 
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5);
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.gridView3;
-            this.gridControl2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gridControl2.Margin = new System.Windows.Forms.Padding(5);
             this.gridControl2.Name = "gridControl2";
             this.gridControl2.Size = new System.Drawing.Size(1746, 654);
             this.gridControl2.TabIndex = 0;
@@ -1485,7 +1486,7 @@
             this.sidePanel1.Controls.Add(this.groupControl1);
             this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.sidePanel1.Location = new System.Drawing.Point(0, 0);
-            this.sidePanel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.sidePanel1.Margin = new System.Windows.Forms.Padding(5);
             this.sidePanel1.Name = "sidePanel1";
             this.sidePanel1.Size = new System.Drawing.Size(1753, 113);
             this.sidePanel1.TabIndex = 3;
@@ -1503,7 +1504,7 @@
             this.groupControl1.Controls.Add(this.layoutControl1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(5);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1753, 112);
             this.groupControl1.TabIndex = 0;
@@ -1533,42 +1534,42 @@
             // deBegin
             // 
             this.deBegin.EditValue = null;
-            this.deBegin.Location = new System.Drawing.Point(86, 23);
+            this.deBegin.Location = new System.Drawing.Point(75, 10);
             this.deBegin.Name = "deBegin";
             this.deBegin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deBegin.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deBegin.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.deBegin.Size = new System.Drawing.Size(131, 24);
+            this.deBegin.Size = new System.Drawing.Size(151, 24);
             this.deBegin.StyleController = this.layoutControl1;
             this.deBegin.TabIndex = 19;
             // 
             // tsUnique
             // 
-            this.tsUnique.Location = new System.Drawing.Point(1530, 22);
+            this.tsUnique.Location = new System.Drawing.Point(1522, 10);
             this.tsUnique.Name = "tsUnique";
             this.tsUnique.Properties.OffText = "查看重复项";
             this.tsUnique.Properties.OnText = "全部";
-            this.tsUnique.Size = new System.Drawing.Size(200, 31);
+            this.tsUnique.Size = new System.Drawing.Size(217, 31);
             this.tsUnique.StyleController = this.layoutControl1;
             this.tsUnique.TabIndex = 18;
             // 
             // tsAll
             // 
-            this.tsAll.Location = new System.Drawing.Point(450, 21);
+            this.tsAll.Location = new System.Drawing.Point(442, 10);
             this.tsAll.Name = "tsAll";
             this.tsAll.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.tsAll.Properties.OffText = "日期范围选择";
             this.tsAll.Properties.OnText = "日期快捷选择";
             this.tsAll.Properties.Toggled += new System.EventHandler(this.tsAll_Properties_Toggled);
-            this.tsAll.Size = new System.Drawing.Size(202, 31);
+            this.tsAll.Size = new System.Drawing.Size(216, 31);
             this.tsAll.StyleController = this.layoutControl1;
             this.tsAll.TabIndex = 17;
             // 
             // cbeDate
             // 
-            this.cbeDate.Location = new System.Drawing.Point(764, 26);
+            this.cbeDate.Location = new System.Drawing.Point(751, 10);
             this.cbeDate.Name = "cbeDate";
             this.cbeDate.Properties.Appearance.Options.UseTextOptions = true;
             this.cbeDate.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -1582,7 +1583,7 @@
             "上月",
             "当年"});
             this.cbeDate.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbeDate.Size = new System.Drawing.Size(99, 24);
+            this.cbeDate.Size = new System.Drawing.Size(123, 24);
             this.cbeDate.StyleController = this.layoutControl1;
             this.cbeDate.TabIndex = 16;
             // 
@@ -1590,9 +1591,9 @@
             // 
             this.sbQuery.AllowHtmlTextInToolTip = DevExpress.Utils.DefaultBoolean.False;
             this.sbQuery.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbQuery.ImageOptions.Image")));
-            this.sbQuery.Location = new System.Drawing.Point(1317, 24);
+            this.sbQuery.Location = new System.Drawing.Point(1307, 10);
             this.sbQuery.Name = "sbQuery";
-            this.sbQuery.Size = new System.Drawing.Size(195, 27);
+            this.sbQuery.Size = new System.Drawing.Size(215, 27);
             this.sbQuery.StyleController = this.layoutControl1;
             this.sbQuery.TabIndex = 15;
             this.sbQuery.Text = "查询";
@@ -1600,32 +1601,32 @@
             // deEnd
             // 
             this.deEnd.EditValue = null;
-            this.deEnd.Location = new System.Drawing.Point(302, 23);
+            this.deEnd.Location = new System.Drawing.Point(291, 10);
             this.deEnd.Name = "deEnd";
             this.deEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deEnd.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.deEnd.Size = new System.Drawing.Size(131, 24);
+            this.deEnd.Size = new System.Drawing.Size(151, 24);
             this.deEnd.StyleController = this.layoutControl1;
             this.deEnd.TabIndex = 14;
             // 
             // teDoctor
             // 
-            this.teDoctor.Location = new System.Drawing.Point(1138, 26);
+            this.teDoctor.Location = new System.Drawing.Point(1125, 10);
             this.teDoctor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.teDoctor.Name = "teDoctor";
-            this.teDoctor.Size = new System.Drawing.Size(157, 24);
+            this.teDoctor.Size = new System.Drawing.Size(182, 24);
             this.teDoctor.StyleController = this.layoutControl1;
             this.teDoctor.TabIndex = 10;
             // 
             // tePatient
             // 
-            this.tePatient.Location = new System.Drawing.Point(922, 26);
+            this.tePatient.Location = new System.Drawing.Point(909, 10);
             this.tePatient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tePatient.Name = "tePatient";
-            this.tePatient.Size = new System.Drawing.Size(157, 24);
+            this.tePatient.Size = new System.Drawing.Size(181, 24);
             this.tePatient.StyleController = this.layoutControl1;
             this.tePatient.TabIndex = 9;
             // 
@@ -1652,8 +1653,8 @@
             this.layoutControlItem2.Location = new System.Drawing.Point(216, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.OptionsTableLayoutItem.ColumnIndex = 1;
-            this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
-            this.layoutControlItem2.Size = new System.Drawing.Size(216, 51);
+            this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlItem2.Size = new System.Drawing.Size(216, 57);
             this.layoutControlItem2.Text = "终止日期";
             this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(60, 18);
@@ -1662,11 +1663,11 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.sbQuery;
-            this.layoutControlItem3.Location = new System.Drawing.Point(1296, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(1297, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.OptionsTableLayoutItem.ColumnIndex = 6;
-            this.layoutControlItem3.Size = new System.Drawing.Size(215, 51);
-            this.layoutControlItem3.Spacing = new DevExpress.XtraLayout.Utils.Padding(8, 8, 8, 8);
+            this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlItem3.Size = new System.Drawing.Size(215, 57);
             this.layoutControlItem3.Text = "查询";
             this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -1681,8 +1682,8 @@
             this.layoutControlItem6.Location = new System.Drawing.Point(1080, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.OptionsTableLayoutItem.ColumnIndex = 5;
-            this.layoutControlItem6.Size = new System.Drawing.Size(216, 51);
-            this.layoutControlItem6.Spacing = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
+            this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlItem6.Size = new System.Drawing.Size(217, 57);
             this.layoutControlItem6.Text = "医生";
             this.layoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(30, 18);
@@ -1696,8 +1697,8 @@
             this.layoutControlItem5.Location = new System.Drawing.Point(864, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.OptionsTableLayoutItem.ColumnIndex = 4;
-            this.layoutControlItem5.Size = new System.Drawing.Size(216, 51);
-            this.layoutControlItem5.Spacing = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
+            this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlItem5.Size = new System.Drawing.Size(216, 57);
             this.layoutControlItem5.Text = "患者";
             this.layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(30, 18);
@@ -1710,19 +1711,19 @@
             this.layoutControlItem4.Location = new System.Drawing.Point(648, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.OptionsTableLayoutItem.ColumnIndex = 3;
-            this.layoutControlItem4.Size = new System.Drawing.Size(216, 51);
-            this.layoutControlItem4.Spacing = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
+            this.layoutControlItem4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlItem4.Size = new System.Drawing.Size(216, 57);
             this.layoutControlItem4.Text = "日期快捷选择";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(90, 18);
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.tsUnique;
-            this.layoutControlItem10.Location = new System.Drawing.Point(1511, 0);
+            this.layoutControlItem10.Location = new System.Drawing.Point(1512, 0);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.OptionsTableLayoutItem.ColumnIndex = 7;
-            this.layoutControlItem10.Size = new System.Drawing.Size(216, 51);
-            this.layoutControlItem10.Spacing = new DevExpress.XtraLayout.Utils.Padding(6, 6, 6, 6);
+            this.layoutControlItem10.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlItem10.Size = new System.Drawing.Size(217, 57);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
@@ -1731,8 +1732,8 @@
             this.layoutControlItem1.Control = this.deBegin;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
-            this.layoutControlItem1.Size = new System.Drawing.Size(216, 51);
+            this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlItem1.Size = new System.Drawing.Size(216, 57);
             this.layoutControlItem1.Text = "起始日期";
             this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(60, 18);
@@ -1744,8 +1745,8 @@
             this.layoutControlItem9.Location = new System.Drawing.Point(432, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.OptionsTableLayoutItem.ColumnIndex = 2;
-            this.layoutControlItem9.Size = new System.Drawing.Size(216, 51);
-            this.layoutControlItem9.Spacing = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
+            this.layoutControlItem9.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlItem9.Size = new System.Drawing.Size(216, 57);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
@@ -1777,7 +1778,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.sidePanel3);
             this.Controls.Add(this.sidePanel1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ChufangControl";
             this.Size = new System.Drawing.Size(1753, 806);
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();

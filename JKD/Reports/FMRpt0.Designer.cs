@@ -71,6 +71,11 @@
             this.lblJDcount = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell35 = new DevExpress.XtraReports.UI.XRTableCell();
             this.lblJScount = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow9 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lbJzcount = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblKjycount = new DevExpress.XtraReports.UI.XRTableCell();
             this.lbldate = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -82,11 +87,6 @@
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.lblsignature = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrTableRow9 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.lbJzcount = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.lblKjycount = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -159,6 +159,8 @@
             this.lblTotalPrice.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblTotalPrice.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TotalPrice]")});
             this.lblTotalPrice.Font = new System.Drawing.Font("宋体", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.lblTotalPrice.Multiline = true;
             this.lblTotalPrice.Name = "lblTotalPrice";
@@ -195,6 +197,8 @@
             this.lblMaxPrice.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblMaxPrice.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MaxPrice]")});
             this.lblMaxPrice.Font = new System.Drawing.Font("宋体", 12F);
             this.lblMaxPrice.Multiline = true;
             this.lblMaxPrice.Name = "lblMaxPrice";
@@ -205,7 +209,6 @@
             this.lblMaxPrice.StylePriority.UseTextAlignment = false;
             this.lblMaxPrice.Text = "lblMaxPrice";
             this.lblMaxPrice.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.lblMaxPrice.TextFormatString = "{0:c2}";
             this.lblMaxPrice.Weight = 0.866290368731199D;
             // 
             // xrTableRow2
@@ -274,6 +277,8 @@
             this.lblMinPrice.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblMinPrice.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MinPrice]")});
             this.lblMinPrice.Font = new System.Drawing.Font("宋体", 12F);
             this.lblMinPrice.Multiline = true;
             this.lblMinPrice.Name = "lblMinPrice";
@@ -353,6 +358,8 @@
             this.lblAvgPrice.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblAvgPrice.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AvgPrice]")});
             this.lblAvgPrice.Font = new System.Drawing.Font("宋体", 12F);
             this.lblAvgPrice.Multiline = true;
             this.lblAvgPrice.Name = "lblAvgPrice";
@@ -399,6 +406,8 @@
             this.lblCFcount.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblCFcount.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CFcount]")});
             this.lblCFcount.Font = new System.Drawing.Font("宋体", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.lblCFcount.Multiline = true;
             this.lblCFcount.Name = "lblCFcount";
@@ -434,6 +443,8 @@
             this.lblYBcount.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblYBcount.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[YBCount]")});
             this.lblYBcount.Font = new System.Drawing.Font("宋体", 14F);
             this.lblYBcount.Multiline = true;
             this.lblYBcount.Name = "lblYBcount";
@@ -512,6 +523,8 @@
             this.lblZFcount.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblZFcount.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ZFcount]")});
             this.lblZFcount.Font = new System.Drawing.Font("宋体", 14F);
             this.lblZFcount.Multiline = true;
             this.lblZFcount.Name = "lblZFcount";
@@ -556,6 +569,8 @@
             this.lblRenCiCount.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblRenCiCount.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MZcount]")});
             this.lblRenCiCount.Font = new System.Drawing.Font("宋体", 14F);
             this.lblRenCiCount.Multiline = true;
             this.lblRenCiCount.Name = "lblRenCiCount";
@@ -590,6 +605,8 @@
             this.lblEKcount.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblEKcount.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[EKcount]")});
             this.lblEKcount.Font = new System.Drawing.Font("宋体", 14F);
             this.lblEKcount.Multiline = true;
             this.lblEKcount.Name = "lblEKcount";
@@ -634,6 +651,8 @@
             this.lblZCYcount.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblZCYcount.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ZCYcount]")});
             this.lblZCYcount.Font = new System.Drawing.Font("宋体", 14F);
             this.lblZCYcount.Multiline = true;
             this.lblZCYcount.Name = "lblZCYcount";
@@ -668,6 +687,8 @@
             this.lblJEcount.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblJEcount.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[JEcount]")});
             this.lblJEcount.Font = new System.Drawing.Font("宋体", 14F);
             this.lblJEcount.Multiline = true;
             this.lblJEcount.Name = "lblJEcount";
@@ -712,6 +733,8 @@
             this.lblJDcount.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblJDcount.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[JDcount]")});
             this.lblJDcount.Font = new System.Drawing.Font("宋体", 14F);
             this.lblJDcount.Multiline = true;
             this.lblJDcount.Name = "lblJDcount";
@@ -746,6 +769,8 @@
             this.lblJScount.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblJScount.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[JScount]")});
             this.lblJScount.Font = new System.Drawing.Font("宋体", 14F);
             this.lblJScount.Multiline = true;
             this.lblJScount.Name = "lblJScount";
@@ -757,6 +782,88 @@
             this.lblJScount.Text = "lblJScount";
             this.lblJScount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.lblJScount.Weight = 1.06505709334131D;
+            // 
+            // xrTableRow9
+            // 
+            this.xrTableRow9.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell12,
+            this.lbJzcount,
+            this.xrTableCell16,
+            this.lblKjycount});
+            this.xrTableRow9.Name = "xrTableRow9";
+            this.xrTableRow9.Weight = 1D;
+            // 
+            // xrTableCell12
+            // 
+            this.xrTableCell12.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell12.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell12.Multiline = true;
+            this.xrTableCell12.Name = "xrTableCell12";
+            this.xrTableCell12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrTableCell12.StylePriority.UseBorders = false;
+            this.xrTableCell12.StylePriority.UseFont = false;
+            this.xrTableCell12.StylePriority.UsePadding = false;
+            this.xrTableCell12.StylePriority.UseTextAlignment = false;
+            this.xrTableCell12.Text = "急 诊";
+            this.xrTableCell12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell12.Weight = 1.17552671452226D;
+            // 
+            // lbJzcount
+            // 
+            this.lbJzcount.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lbJzcount.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Jzcount]")});
+            this.lbJzcount.Font = new System.Drawing.Font("宋体", 14F);
+            this.lbJzcount.Multiline = true;
+            this.lbJzcount.Name = "lbJzcount";
+            this.lbJzcount.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lbJzcount.StylePriority.UseBorders = false;
+            this.lbJzcount.StylePriority.UseFont = false;
+            this.lbJzcount.StylePriority.UsePadding = false;
+            this.lbJzcount.StylePriority.UseTextAlignment = false;
+            this.lbJzcount.Text = "lbJzcount";
+            this.lbJzcount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lbJzcount.Weight = 1.29157386697457D;
+            // 
+            // xrTableCell16
+            // 
+            this.xrTableCell16.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell16.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell16.Multiline = true;
+            this.xrTableCell16.Name = "xrTableCell16";
+            this.xrTableCell16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrTableCell16.StylePriority.UseBorders = false;
+            this.xrTableCell16.StylePriority.UseFont = false;
+            this.xrTableCell16.StylePriority.UsePadding = false;
+            this.xrTableCell16.StylePriority.UseTextAlignment = false;
+            this.xrTableCell16.Text = "抗菌素";
+            this.xrTableCell16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell16.Weight = 1.57124696529124D;
+            // 
+            // lblKjycount
+            // 
+            this.lblKjycount.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblKjycount.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Kjycount]")});
+            this.lblKjycount.Font = new System.Drawing.Font("宋体", 14F);
+            this.lblKjycount.Multiline = true;
+            this.lblKjycount.Name = "lblKjycount";
+            this.lblKjycount.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblKjycount.StylePriority.UseBorders = false;
+            this.lblKjycount.StylePriority.UseFont = false;
+            this.lblKjycount.StylePriority.UsePadding = false;
+            this.lblKjycount.StylePriority.UseTextAlignment = false;
+            this.lblKjycount.Text = "lblKjycount";
+            this.lblKjycount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblKjycount.Weight = 1.06505709334131D;
             // 
             // lbldate
             // 
@@ -869,84 +976,6 @@
             this.lblsignature.StylePriority.UseForeColor = false;
             this.lblsignature.Text = "xxx";
             // 
-            // xrTableRow9
-            // 
-            this.xrTableRow9.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell12,
-            this.lbJzcount,
-            this.xrTableCell16,
-            this.lblKjycount});
-            this.xrTableRow9.Name = "xrTableRow9";
-            this.xrTableRow9.Weight = 1D;
-            // 
-            // xrTableCell12
-            // 
-            this.xrTableCell12.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell12.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Bold);
-            this.xrTableCell12.Multiline = true;
-            this.xrTableCell12.Name = "xrTableCell12";
-            this.xrTableCell12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrTableCell12.StylePriority.UseBorders = false;
-            this.xrTableCell12.StylePriority.UseFont = false;
-            this.xrTableCell12.StylePriority.UsePadding = false;
-            this.xrTableCell12.StylePriority.UseTextAlignment = false;
-            this.xrTableCell12.Text = "急 诊";
-            this.xrTableCell12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell12.Weight = 1.17552671452226D;
-            // 
-            // lbJzcount
-            // 
-            this.lbJzcount.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lbJzcount.Font = new System.Drawing.Font("宋体", 14F);
-            this.lbJzcount.Multiline = true;
-            this.lbJzcount.Name = "lbJzcount";
-            this.lbJzcount.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lbJzcount.StylePriority.UseBorders = false;
-            this.lbJzcount.StylePriority.UseFont = false;
-            this.lbJzcount.StylePriority.UsePadding = false;
-            this.lbJzcount.StylePriority.UseTextAlignment = false;
-            this.lbJzcount.Text = "lbJzcount";
-            this.lbJzcount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.lbJzcount.Weight = 1.29157386697457D;
-            // 
-            // xrTableCell16
-            // 
-            this.xrTableCell16.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell16.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Bold);
-            this.xrTableCell16.Multiline = true;
-            this.xrTableCell16.Name = "xrTableCell16";
-            this.xrTableCell16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrTableCell16.StylePriority.UseBorders = false;
-            this.xrTableCell16.StylePriority.UseFont = false;
-            this.xrTableCell16.StylePriority.UsePadding = false;
-            this.xrTableCell16.StylePriority.UseTextAlignment = false;
-            this.xrTableCell16.Text = "抗菌素";
-            this.xrTableCell16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell16.Weight = 1.57124696529124D;
-            // 
-            // lblKjycount
-            // 
-            this.lblKjycount.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblKjycount.Font = new System.Drawing.Font("宋体", 14F);
-            this.lblKjycount.Multiline = true;
-            this.lblKjycount.Name = "lblKjycount";
-            this.lblKjycount.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblKjycount.StylePriority.UseBorders = false;
-            this.lblKjycount.StylePriority.UseFont = false;
-            this.lblKjycount.StylePriority.UsePadding = false;
-            this.lblKjycount.StylePriority.UseTextAlignment = false;
-            this.lblKjycount.Text = "lblKjycount";
-            this.lblKjycount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.lblKjycount.Weight = 1.06505709334131D;
-            // 
             // FMRpt0
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -957,7 +986,6 @@
             this.ReportFooter});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.excelDataSource1});
-            this.DataSource = this.excelDataSource1;
             this.Margins = new System.Drawing.Printing.Margins(36, 45, 46, 7);
             this.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 10, 10, 100F);
             this.PageHeight = 827;

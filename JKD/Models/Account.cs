@@ -18,7 +18,7 @@ namespace JKD.Models
            /// Default:
            /// Nullable:False
            /// </summary>           
-           public int id {get;set;}
+           public int? id {get;set;}
 
            /// <summary>
            /// Desc:

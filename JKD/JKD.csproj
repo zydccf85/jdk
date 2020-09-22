@@ -296,6 +296,7 @@
     <Compile Include="DB\EmployeeManager.cs" />
     <Compile Include="DB\HuiZongManager.cs" />
     <Compile Include="DB\HzByDoctor.cs" />
+    <Compile Include="DB\JkdManager.cs" />
     <Compile Include="DB\UserManager.cs" />
     <Compile Include="Dialog\ConfigControl.cs">
       <SubType>UserControl</SubType>
@@ -335,6 +336,13 @@
       <DependentUpon>MainFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Jkd.cs" />
+    <Compile Include="Reports\JdkRep.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JdkRep.Designer.cs">
+      <DependentUpon>JdkRep.cs</DependentUpon>
+    </Compile>
     <Compile Include="Service\ImportData.cs" />
     <Compile Include="DB\VaccountManager.cs" />
     <Compile Include="FyForm.cs">
@@ -383,6 +391,7 @@
     </Compile>
     <Compile Include="Service\DataLoad.cs" />
     <Compile Include="Service\LoginService.cs" />
+    <Compile Include="Service\MyReport.cs" />
     <Compile Include="ShowHistoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -496,6 +505,12 @@
     <EmbeddedResource Include="Reports\FMRpt0.resx">
       <DependentUpon>FMRpt0.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JdkRep.resx">
+      <DependentUpon>JdkRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\MyReport.resx">
+      <DependentUpon>MyReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ShowHistoryForm.resx">
       <DependentUpon>ShowHistoryForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -521,6 +536,7 @@
     </None>
     <None Include="JKD_TemporaryKey.pfx" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\JKD.Models.Jkd.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

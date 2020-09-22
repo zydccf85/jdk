@@ -86,12 +86,12 @@ namespace JKD.Dialog
         }
 
         //缴款单弹出对话框
-        public static void CreateJKDControl()
+        public static void CreateJKDControl(Account account)
         {
             XtraDialogArgs xda = new XtraDialogArgs()
             {
                 Caption = "缴款单明细",
-                Content = new JKDControl1(),
+                Content = new JKDControl1(account),
                 Buttons = new DialogResult[] { DialogResult.Cancel, DialogResult.OK },
 
                 

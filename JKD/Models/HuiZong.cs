@@ -24,6 +24,7 @@ namespace JKD.Models
         public int? JsCount { get; set; } = 0;
         public int? KjyCount { get; set; } = 0;
         public int? JzCount { get; set; } = 0;
+        public string MaxDate { get; set; }
         public override string ToString()
         {
             return string.Format(@"处方数量：{0:n0}（医保处方数：{1:n0}，自费处方数：{2:n0}），门诊人次数：{3:n0}，金额：{4:c2}（最大金额：{5:c2}，" +

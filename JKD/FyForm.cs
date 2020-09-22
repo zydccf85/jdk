@@ -244,10 +244,10 @@ namespace JKD
         private void simpleButton8_Click(object sender, EventArgs e)
         {
             FyFormViewModel ffvm = mvvmContext.GetViewModel<FyFormViewModel>();
-            FMRpt0 rep= new FMRpt0(ffvm.HZ );
-            rep.ExportToPdf(@"C:\Users\Public\处方封面\"+ffvm.BeginTime+"至"+ffvm.EndTime+".pdf");
-            //rep.ShowPreview();
-            rep.ShowPreviewDialog();
+          //  FMRpt0 rep= new FMRpt0(ffvm.HZ );
+            //rep.ExportToPdf(@"C:\Users\Public\处方封面\"+ffvm.BeginTime+"至"+ffvm.EndTime+".pdf");
+            ////rep.ShowPreview();
+            //rep.ShowPreviewDialog();
             
             
         }

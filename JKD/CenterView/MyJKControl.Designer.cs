@@ -217,8 +217,13 @@
             // 
             // gridView1
             // 
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsBehavior.ReadOnly = true;
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.FocusedRowObjectChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventHandler(this.gridView1_FocusedRowObjectChanged);
             // 
             // MyJKControl
             // 
