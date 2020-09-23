@@ -132,6 +132,8 @@ namespace JKD.Dialog
 
         private void sbPrint_Click(bool flag)
         {
+            myaccount.dysj = DateTime.Now;
+            new AccountManager().Update(myaccount);
             XtraReport xr = new JdkRep();
             List<Jkd> myjkd = new JkdManager().GetList(int.Parse(teID.Text.Trim()));
             MoneyConvertChinese mcc = new MoneyConvertChinese();

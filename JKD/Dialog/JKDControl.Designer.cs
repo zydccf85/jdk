@@ -58,10 +58,10 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.tabbedControlGroup2 = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -94,10 +94,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
@@ -268,7 +268,7 @@
             // 
             // textEdit1
             // 
-            this.textEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.jkdBindingSource, "dysj", true));
+            this.textEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.jkdBindingSource, "dysj", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "G"));
             this.textEdit1.EditValue = null;
             this.textEdit1.Location = new System.Drawing.Point(514, 12);
             this.textEdit1.Name = "textEdit1";
@@ -289,7 +289,7 @@
             // 
             // textEdit2
             // 
-            this.textEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.jkdBindingSource, "jkrq", true));
+            this.textEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.jkdBindingSource, "jkrq", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "d"));
             this.textEdit2.EditValue = null;
             this.textEdit2.Location = new System.Drawing.Point(284, 12);
             this.textEdit2.Name = "textEdit2";
@@ -418,16 +418,6 @@
             this.layoutControlGroup3.Size = new System.Drawing.Size(661, 94);
             this.layoutControlGroup3.Text = "缴款金额";
             // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.teJKR;
-            this.layoutControlItem7.Location = new System.Drawing.Point(232, 44);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(214, 50);
-            this.layoutControlItem7.Spacing = new DevExpress.XtraLayout.Utils.Padding(8, 8, 8, 8);
-            this.layoutControlItem7.Text = "缴款人*";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(72, 18);
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.lueZH;
@@ -457,6 +447,16 @@
             this.layoutControlItem8.Spacing = new DevExpress.XtraLayout.Utils.Padding(8, 8, 8, 8);
             this.layoutControlItem8.Text = "金 额*";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(72, 18);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.teJKR;
+            this.layoutControlItem7.Location = new System.Drawing.Point(232, 44);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(214, 50);
+            this.layoutControlItem7.Spacing = new DevExpress.XtraLayout.Utils.Padding(8, 8, 8, 8);
+            this.layoutControlItem7.Text = "缴款人*";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(72, 18);
             // 
             // layoutControlItem13
             // 
@@ -522,10 +522,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();

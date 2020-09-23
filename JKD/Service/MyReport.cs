@@ -29,12 +29,6 @@ namespace JKD.Service
                 xr.DataSource = ds;
                 
             }
-            else
-            {
-               // xr = new FMRpt0();
-                
-            }
-           // xr.DataSource = datasource;
             SplashScreenManager.CloseForm();
             if (flag== false)
             {
