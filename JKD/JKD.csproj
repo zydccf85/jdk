@@ -294,6 +294,8 @@
     <Compile Include="DB\DrugManager.cs" />
     <Compile Include="DB\DrugTJManager.cs" />
     <Compile Include="DB\EmployeeManager.cs" />
+    <Compile Include="DB\FyByDrugManager.cs" />
+    <Compile Include="DB\FyByPatientManager.cs" />
     <Compile Include="DB\HuiZongManager.cs" />
     <Compile Include="DB\HzByDoctor.cs" />
     <Compile Include="DB\JkdManager.cs" />
@@ -411,6 +413,7 @@
       <DependentUpon>TableControl.cs</DependentUpon>
     </Compile>
     <Compile Include="utils\AppconfigHelper.cs" />
+    <Compile Include="utils\DataTableToModel.cs" />
     <Compile Include="utils\ExcelHelper.cs" />
     <Compile Include="utils\ImageConvert.cs" />
     <Compile Include="utils\MoneyConvertChinese.cs" />

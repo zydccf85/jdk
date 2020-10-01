@@ -19,12 +19,8 @@ namespace JKD.Models
 
 
            }
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:False
-           /// </summary>           
-           public int id {get;set;}
+        [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
+        public int id {get;set;}
 
            /// <summary>
            /// Desc:

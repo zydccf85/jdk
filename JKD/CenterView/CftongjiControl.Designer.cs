@@ -52,7 +52,6 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jkdDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jkdDataSetBindingSource)).BeginInit();
@@ -77,15 +76,17 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1031, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1178, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 485);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 624);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1031, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1178, 0);
             // 
             // barDockControlLeft
             // 
@@ -93,15 +94,17 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 485);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 624);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1031, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(1178, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 485);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 624);
             // 
             // jkdDataSet
             // 
@@ -146,19 +149,20 @@
             this.xtraTabControl1.HeaderButtons = DevExpress.XtraTab.TabButtons.None;
             this.xtraTabControl1.HeaderButtonsShowMode = DevExpress.XtraTab.TabButtonShowMode.Always;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1031, 485);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1178, 624);
             this.xtraTabControl1.TabIndex = 6;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1,
-            this.xtraTabPage2});
+            this.xtraTabPage1});
             // 
             // xtraTabPage1
             // 
             this.xtraTabPage1.Controls.Add(this.chartControl1);
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1025, 456);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1171, 588);
             this.xtraTabPage1.Text = "处方量趋势图";
             // 
             // chartControl1
@@ -168,28 +172,24 @@
             this.chartControl1.Legend.Title.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.chartControl1.Legend.Title.Visible = true;
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
+            this.chartControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartControl1.Size = new System.Drawing.Size(1025, 456);
+            this.chartControl1.Size = new System.Drawing.Size(1171, 588);
             this.chartControl1.TabIndex = 3;
             // 
-            // xtraTabPage2
+            // CftongjiControl
             // 
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1025, 456);
-            this.xtraTabPage2.Text = "xtraTabPage2";
-            // 
-            // CftongjiControl1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Name = "CftongjiControl1";
-            this.Size = new System.Drawing.Size(1031, 485);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "CftongjiControl";
+            this.Size = new System.Drawing.Size(1178, 624);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jkdDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jkdDataSetBindingSource)).EndInit();
@@ -213,6 +213,5 @@
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
         private DevExpress.XtraCharts.ChartControl chartControl1;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
     }
 }

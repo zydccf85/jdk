@@ -20,8 +20,8 @@ namespace JKD.Models
            public Cfhead(){
 
            }
-                    
-           public int id {get;set;}
+        [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
+        public int id {get;set;}
          
            public string cftype {get;set;}
        

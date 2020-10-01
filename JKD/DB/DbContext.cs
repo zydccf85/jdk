@@ -16,7 +16,8 @@ namespace JKD.DB
             Db = new SqlSugarClient(new ConnectionConfig() {
                 ConnectionString = ConfigurationManager.ConnectionStrings["mysqlConnectionStr"].ConnectionString,
                 DbType = DbType.MySql,
-                IsAutoCloseConnection=true
+                IsAutoCloseConnection = true,
+                InitKeyType = InitKeyType.Attribute
             
             });
         }

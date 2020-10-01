@@ -41,19 +41,26 @@ namespace JKD
             CultureInfo.DefaultThreadCurrentCulture = culture;
             CultureInfo.DefaultThreadCurrentUICulture = culture;
             LoginFrm lf = new LoginFrm();
-            //lf.Show();
-            //if (lf.isSuccess)
-            //{
-            //    IninConfig();
-
-            //    SplashScreenManager.CloseForm();
-            //    Application.Run(new NaviFrm());
-            //}
-            new ImportData().AutoImportData();
+            //Test01();
+            ////new ImportData().AutoImportData();
             Application.Run(new LoginFrm());
             
         }
-      
+       private static void Test01()
+        {
+            DataTable dt01 = ExcelHelper.ImportExceltoDt(@"C:\Users\Administrator\Desktop\1.xls");
+            DataTable dt02 = ExcelHelper.ImportExceltoDt(@"C:\Users\Administrator\Desktop\2.xls");
+            DateTime? maxTime01 = new FyByPatientManager().GetMaxTime();
+            maxTime01 = maxTime01 == null ? DateTime.MinValue : maxTime01;
+            DateTime? maxTime02 = new FyByDrugManager().GetMaxTime();
+           
+            maxTime02 = maxTime02 == null ? DateTime.Now.AddYears(-10) : maxTime02;
+            List<fybypatient> li01 = DataTableToModel.ToListModel<fybypatient>(dt01).Where(item=>item.fytime> maxTime01).ToList();
+            List<fybydrug> li02 = DataTableToModel.ToListModel<fybydrug>(dt02).Where(item => item.fytime > maxTime02).ToList();
+            int count01 =  new FyByPatientManager().Insert(li01);
+            int count02 = new FyByDrugManager().Insert(li02);
+            MessageBox.Show($"成功更新表数据为{count01},{count02}");
+        }
         private static string ImportData(string filename)
         {
             DataTable dt = SqlHelper.ExecuteTable("select opertime from cfhead");

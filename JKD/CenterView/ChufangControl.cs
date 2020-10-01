@@ -40,7 +40,6 @@ namespace JKD.CenterView
         {
            InitializeComponent();
             FFVM = mvvmContext.GetViewModel<FyFormViewModel>();
-
             mvvmContext.SetBinding(this.deBegin, e => e.Text, "BeginTime");
             mvvmContext.SetBinding(this.deEnd, e => e.Text, "EndTime");
             mvvmContext.SetBinding(this.teDoctor, e => e.EditValue, "Doctor");
@@ -214,6 +213,11 @@ namespace JKD.CenterView
             ToggleSwitch ts = sender as ToggleSwitch;
             layoutControlItem1.Enabled = layoutControlItem2.Enabled = ts.IsOn;
             layoutControlItem4.Enabled = !ts.IsOn;
+        }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
