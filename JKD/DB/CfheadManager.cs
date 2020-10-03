@@ -63,6 +63,7 @@ namespace JKD.DB
             List<Cfhead> li = new DbContext().Db.SqlQueryable<Cfhead>(mysql).ToList();
             return li;
         }
+      
 
     }
         

@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Text;
 using System.Collections.Generic;
+using SqlSugar;
+
 namespace JKD.Models
 {
     ///<summary>

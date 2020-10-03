@@ -32,6 +32,8 @@
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DrugTJControl));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
@@ -56,6 +58,20 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -91,6 +107,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
+            this.xtraTabControl2.SuspendLayout();
+            this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
+            this.gridSplitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -150,7 +173,7 @@
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.OriginalSize = new System.Drawing.Size(200, 99);
             this.dockPanel1.SavedSizeFactor = 0D;
-            this.dockPanel1.Size = new System.Drawing.Size(1214, 99);
+            this.dockPanel1.Size = new System.Drawing.Size(1221, 99);
             this.dockPanel1.Text = "过滤条件";
             // 
             // dockPanel1_Container
@@ -158,7 +181,7 @@
             this.dockPanel1_Container.Controls.Add(this.layoutControl1);
             this.dockPanel1_Container.Location = new System.Drawing.Point(5, 27);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(1204, 65);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(1211, 65);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // layoutControl1
@@ -173,52 +196,52 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1204, 65);
+            this.layoutControl1.Size = new System.Drawing.Size(1211, 65);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // sbRefresh
             // 
             this.sbRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbRefresh.ImageOptions.Image")));
-            this.sbRefresh.Location = new System.Drawing.Point(1040, 12);
+            this.sbRefresh.Location = new System.Drawing.Point(1046, 12);
             this.sbRefresh.Name = "sbRefresh";
-            this.sbRefresh.Size = new System.Drawing.Size(152, 27);
+            this.sbRefresh.Size = new System.Drawing.Size(153, 27);
             this.sbRefresh.StyleController = this.layoutControl1;
-            this.sbRefresh.TabIndex = 8;
+            this.sbRefresh.TabIndex = 6;
             this.sbRefresh.Text = "更新数据";
             // 
             // sbQuery
             // 
             this.sbQuery.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbQuery.ImageOptions.Image")));
-            this.sbQuery.Location = new System.Drawing.Point(840, 12);
+            this.sbQuery.Location = new System.Drawing.Point(845, 12);
             this.sbQuery.Name = "sbQuery";
-            this.sbQuery.Size = new System.Drawing.Size(196, 27);
+            this.sbQuery.Size = new System.Drawing.Size(197, 27);
             this.sbQuery.StyleController = this.layoutControl1;
-            this.sbQuery.TabIndex = 7;
+            this.sbQuery.TabIndex = 5;
             this.sbQuery.Text = "查询";
             // 
             // beDoctor
             // 
-            this.beDoctor.Location = new System.Drawing.Point(718, 12);
+            this.beDoctor.Location = new System.Drawing.Point(722, 12);
             this.beDoctor.Name = "beDoctor";
             this.beDoctor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.beDoctor.Size = new System.Drawing.Size(118, 24);
+            this.beDoctor.Size = new System.Drawing.Size(119, 24);
             this.beDoctor.StyleController = this.layoutControl1;
-            this.beDoctor.TabIndex = 6;
+            this.beDoctor.TabIndex = 4;
             // 
             // deEnd
             // 
             this.deEnd.EditValue = null;
-            this.deEnd.Location = new System.Drawing.Point(268, 12);
+            this.deEnd.Location = new System.Drawing.Point(269, 12);
             this.deEnd.Name = "deEnd";
             this.deEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deEnd.Size = new System.Drawing.Size(135, 24);
+            this.deEnd.Size = new System.Drawing.Size(136, 24);
             this.deEnd.StyleController = this.layoutControl1;
-            this.deEnd.TabIndex = 5;
+            this.deEnd.TabIndex = 2;
             // 
             // deBegin
             // 
@@ -229,21 +252,21 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deBegin.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deBegin.Size = new System.Drawing.Size(126, 24);
+            this.deBegin.Size = new System.Drawing.Size(127, 24);
             this.deBegin.StyleController = this.layoutControl1;
-            this.deBegin.TabIndex = 4;
+            this.deBegin.TabIndex = 0;
             // 
             // lueDrug
             // 
             this.lueDrug.EditValue = "";
-            this.lueDrug.Location = new System.Drawing.Point(470, 12);
+            this.lueDrug.Location = new System.Drawing.Point(472, 12);
             this.lueDrug.Name = "lueDrug";
             this.lueDrug.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueDrug.Properties.PopupView = this.searchLookUpEdit1View;
-            this.lueDrug.Size = new System.Drawing.Size(181, 24);
+            this.lueDrug.Size = new System.Drawing.Size(183, 24);
             this.lueDrug.StyleController = this.layoutControl1;
-            this.lueDrug.TabIndex = 9;
+            this.lueDrug.TabIndex = 3;
             // 
             // searchLookUpEdit1View
             // 
@@ -265,7 +288,7 @@
             this.layoutControlItem5,
             this.layoutControlItem6});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1204, 65);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1211, 65);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -273,7 +296,7 @@
             this.layoutControlItem1.Control = this.deBegin;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(193, 28);
+            this.layoutControlItem1.Size = new System.Drawing.Size(194, 28);
             this.layoutControlItem1.Text = "起始时间";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(60, 18);
             // 
@@ -282,51 +305,51 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 28);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(193, 17);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(194, 17);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.deEnd;
-            this.layoutControlItem2.Location = new System.Drawing.Point(193, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(194, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(202, 45);
+            this.layoutControlItem2.Size = new System.Drawing.Size(203, 45);
             this.layoutControlItem2.Text = "终止时间";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(60, 18);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.beDoctor;
-            this.layoutControlItem3.Location = new System.Drawing.Point(643, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(647, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(185, 45);
+            this.layoutControlItem3.Size = new System.Drawing.Size(186, 45);
             this.layoutControlItem3.Text = "医生";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(60, 18);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.sbQuery;
-            this.layoutControlItem4.Location = new System.Drawing.Point(828, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(833, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(200, 45);
+            this.layoutControlItem4.Size = new System.Drawing.Size(201, 45);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.sbRefresh;
-            this.layoutControlItem5.Location = new System.Drawing.Point(1028, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(1034, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(156, 45);
+            this.layoutControlItem5.Size = new System.Drawing.Size(157, 45);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.lueDrug;
-            this.layoutControlItem6.Location = new System.Drawing.Point(395, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(397, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(248, 45);
+            this.layoutControlItem6.Size = new System.Drawing.Size(250, 45);
             this.layoutControlItem6.Text = "药品";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(60, 18);
             // 
@@ -336,7 +359,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 99);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1214, 531);
+            this.panelControl1.Size = new System.Drawing.Size(1221, 537);
             this.panelControl1.TabIndex = 3;
             // 
             // xtraTabControl1
@@ -351,17 +374,173 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(2, 2);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1210, 527);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1217, 533);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1});
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.gridControl1);
+            this.xtraTabPage1.Controls.Add(this.xtraTabControl2);
+            this.xtraTabPage1.Controls.Add(this.gridSplitContainer1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1203, 491);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1210, 497);
             this.xtraTabPage1.Text = "医生用药情况统计表";
+            // 
+            // xtraTabControl2
+            // 
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions2.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            this.xtraTabControl2.CustomHeaderButtons.AddRange(new DevExpress.XtraTab.Buttons.CustomHeaderButton[] {
+            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, editorButtonImageOptions2, serializableAppearanceObject2, "", null, null)});
+            this.xtraTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabControl2.Location = new System.Drawing.Point(0, 258);
+            this.xtraTabControl2.Name = "xtraTabControl2";
+            this.xtraTabControl2.SelectedTabPage = this.xtraTabPage2;
+            this.xtraTabControl2.Size = new System.Drawing.Size(1210, 239);
+            this.xtraTabControl2.TabIndex = 5;
+            this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage2});
+            // 
+            // xtraTabPage2
+            // 
+            this.xtraTabPage2.Controls.Add(this.gridControl2);
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(1203, 203);
+            this.xtraTabPage2.Text = "医生用药明细";
+            // 
+            // gridControl2
+            // 
+            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl2.Location = new System.Drawing.Point(0, 0);
+            this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.Size = new System.Drawing.Size(1203, 203);
+            this.gridControl2.TabIndex = 0;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn8,
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn11,
+            this.gridColumn12,
+            this.gridColumn13,
+            this.gridColumn14,
+            this.gridColumn15,
+            this.gridColumn16});
+            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "编号";
+            this.gridColumn8.FieldName = "id";
+            this.gridColumn8.MinWidth = 25;
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 0;
+            this.gridColumn8.Width = 94;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "患者";
+            this.gridColumn9.FieldName = "patient";
+            this.gridColumn9.MinWidth = 25;
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 1;
+            this.gridColumn9.Width = 94;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "性别";
+            this.gridColumn10.FieldName = "gender";
+            this.gridColumn10.MinWidth = 25;
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 2;
+            this.gridColumn10.Width = 94;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "年龄";
+            this.gridColumn11.FieldName = "age";
+            this.gridColumn11.MinWidth = 25;
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 3;
+            this.gridColumn11.Width = 94;
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "医生";
+            this.gridColumn12.FieldName = "doctor";
+            this.gridColumn12.MinWidth = 25;
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.Visible = true;
+            this.gridColumn12.VisibleIndex = 4;
+            this.gridColumn12.Width = 94;
+            // 
+            // gridColumn13
+            // 
+            this.gridColumn13.Caption = "诊断";
+            this.gridColumn13.FieldName = "disease";
+            this.gridColumn13.MinWidth = 25;
+            this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 5;
+            this.gridColumn13.Width = 94;
+            // 
+            // gridColumn14
+            // 
+            this.gridColumn14.Caption = "发药时间";
+            this.gridColumn14.DisplayFormat.FormatString = "G";
+            this.gridColumn14.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn14.FieldName = "fytime";
+            this.gridColumn14.MinWidth = 25;
+            this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.Visible = true;
+            this.gridColumn14.VisibleIndex = 6;
+            this.gridColumn14.Width = 94;
+            // 
+            // gridColumn15
+            // 
+            this.gridColumn15.Caption = "发药类型";
+            this.gridColumn15.FieldName = "fytype";
+            this.gridColumn15.MinWidth = 25;
+            this.gridColumn15.Name = "gridColumn15";
+            this.gridColumn15.Visible = true;
+            this.gridColumn15.VisibleIndex = 7;
+            this.gridColumn15.Width = 94;
+            // 
+            // gridColumn16
+            // 
+            this.gridColumn16.Caption = "更新时间";
+            this.gridColumn16.DisplayFormat.FormatString = "G";
+            this.gridColumn16.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn16.FieldName = "updatetime";
+            this.gridColumn16.MinWidth = 25;
+            this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.Visible = true;
+            this.gridColumn16.VisibleIndex = 8;
+            this.gridColumn16.Width = 94;
+            // 
+            // gridSplitContainer1
+            // 
+            this.gridSplitContainer1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gridSplitContainer1.Grid = this.gridControl1;
+            this.gridSplitContainer1.Horizontal = true;
+            this.gridSplitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.gridSplitContainer1.Name = "gridSplitContainer1";
+            this.gridSplitContainer1.Panel1.Controls.Add(this.gridControl1);
+            this.gridSplitContainer1.Size = new System.Drawing.Size(1210, 258);
+            this.gridSplitContainer1.TabIndex = 6;
             // 
             // gridControl1
             // 
@@ -369,7 +548,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1203, 491);
+            this.gridControl1.Size = new System.Drawing.Size(1210, 258);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -388,6 +567,7 @@
             this.gridColumn7});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.AllowCellMerge = true;
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
@@ -437,6 +617,8 @@
             // gridColumn5
             // 
             this.gridColumn5.Caption = "单价";
+            this.gridColumn5.DisplayFormat.FormatString = "C2";
+            this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn5.FieldName = "unitprice";
             this.gridColumn5.MinWidth = 25;
             this.gridColumn5.Name = "gridColumn5";
@@ -474,7 +656,7 @@
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.dockPanel1);
             this.Name = "DrugTJControl";
-            this.Size = new System.Drawing.Size(1214, 630);
+            this.Size = new System.Drawing.Size(1221, 636);
             this.Load += new System.EventHandler(this.DrugTJControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel2.ResumeLayout(false);
@@ -502,6 +684,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).EndInit();
+            this.xtraTabControl2.ResumeLayout(false);
+            this.xtraTabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
+            this.gridSplitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
@@ -544,5 +733,19 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraTab.XtraTabControl xtraTabControl2;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
+        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
     }
 }
