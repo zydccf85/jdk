@@ -60,6 +60,15 @@ namespace JKD.CenterView
                 if(e.Button.Caption == "导出数据")
                 {
                     gridView1.ExportToXlsx(@"C:\Users\Administrator\Desktop\yytj.xlsx");
+                }else if (e.Button.Caption == "展开")
+                {
+                    gridView1.ExpandAllGroups();
+                    e.Button.Caption = "收缩";
+                }
+                else if (e.Button.Caption == "收缩")
+                {
+                    gridView1.CollapseAllGroups();
+                    e.Button.Caption = "展开";
                 }
             };
             gridView1.RowCellClick += (s, e) =>
@@ -74,7 +83,6 @@ namespace JKD.CenterView
                 xtraTabControl2.TabPages[0].Text = $"医生用药明细　[{code},{drug},{spci},{unitprice},{quantity}]";
                gridControl2.DataSource = new FyByPatientManager().GetListByCondition(deBegin.Text + " 00:00:00", deEnd.Text + " 23:59:59", doctor, code);
             };
-            
             deBegin.EditValue = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
              deEnd.EditValue = DateTime.Now;
             lueDrug.Properties.DataSource = SqlHelper.ExecuteTable("select distinct name 名称,searchcode 搜索码 from drug");

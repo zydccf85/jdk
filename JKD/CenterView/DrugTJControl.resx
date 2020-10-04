@@ -184,6 +184,17 @@
   <data name="editorButtonImageOptions2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAjdEVYdFRpdGxlAEV4cGFuZEZpZWxkUGl2b3RUYWJsZTtFeHBhbmQ7nVYFNQAAARlJREFUOE9j
+        QAJMuV3WW/J6bP6DaBAfhEMSO//jwlA1cMCW2W75//bbVf9BNIgPxKxAzAfEwlgwSBwkz8CUWGe8Jane
+        5D8IH77fAqZBOKHWeCtQnhOIuYCYp2nirv/IGCgGNoAtqlwfbPP2a8UoGCQOkgcpAgJ018BdwOGXob4r
+        KFfzPwivOpcApkEYJA6SBykCAlacLgBiISCW80pV+T/vqP9/EA3iQ8UJugAUkiBF/A6RcrudY+X/g2gQ
+        H4g5sIU+DAPlwQbAAMwlUlAaxEe3FRnDXQADMJeA/AyiwekAiNmBGG8sEAvQXQNxwf///3FiNIA9FrBp
+        hGE0QJYLCOUFggYQjgVsGmEYCJBjAR2DxJmwaiQe/2cAAMa4QZZbzL6sAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="editorButtonImageOptions3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAmdEVYdFRpdGxlAENvbnRhY3Q7Q2FyZDtJbmZvO0RldGFpbDtQZXJzb247MubyWQAAAnVJREFU
         OE+l0+tP0lEYB/CzsrXW5f9x8q6X/gW9MTN1KqBIKd7diGwi4AUR5WJoAorEli1kK4vSZW5JoKK2Vm8q
         rQAvyB302/P7mZuZW239ts+e891znp1zXvwYfWfIWZJ3inN/kceMzuUXJlcQxodBGJxkcgVDjmUMOpag
