@@ -61,6 +61,16 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
@@ -74,16 +84,6 @@
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel2.SuspendLayout();
             this.dockPanel1.SuspendLayout();
@@ -112,13 +112,13 @@
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
             this.xtraTabControl2.SuspendLayout();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -372,7 +372,7 @@
             serializableAppearanceObject1.Image = ((System.Drawing.Image)(resources.GetObject("serializableAppearanceObject1.Image")));
             serializableAppearanceObject1.Options.UseImage = true;
             editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
-            editorButtonImageOptions2.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            editorButtonImageOptions2.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.xtraTabControl1.CustomHeaderButtons.AddRange(new DevExpress.XtraTab.Buttons.CustomHeaderButton[] {
             new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "导出数据", -1, true, true, editorButtonImageOptions1, serializableAppearanceObject1, "", null, null),
             new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Separator),
@@ -408,6 +408,128 @@
             this.splitContainerControl1.SplitterPosition = 279;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(1206, 279);
+            this.gridControl1.TabIndex = 7;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn7,
+            this.gridColumn17});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GroupCount = 1;
+            this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "quantity", this.gridColumn7, "(小计: {0:0.##})")});
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.AutoExpandAllGroups = true;
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsView.AllowCellMerge = true;
+            this.gridView1.OptionsView.ShowFooter = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn17, DevExpress.Data.ColumnSortOrder.Ascending)});
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn1.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridColumn1.Caption = "起止时间";
+            this.gridColumn1.FieldName = "time";
+            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Width = 94;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "药品代码";
+            this.gridColumn2.FieldName = "code";
+            this.gridColumn2.MinWidth = 25;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Width = 94;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "名称";
+            this.gridColumn3.FieldName = "name";
+            this.gridColumn3.MinWidth = 25;
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Width = 94;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "规格";
+            this.gridColumn4.FieldName = "spci";
+            this.gridColumn4.MinWidth = 25;
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Width = 94;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "单价";
+            this.gridColumn5.DisplayFormat.FormatString = "C2";
+            this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn5.FieldName = "unitprice";
+            this.gridColumn5.MinWidth = 25;
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Width = 94;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn6.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn6.Caption = "医生";
+            this.gridColumn6.FieldName = "doctor";
+            this.gridColumn6.MinWidth = 25;
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 0;
+            this.gridColumn6.Width = 94;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn7.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn7.Caption = "数量";
+            this.gridColumn7.DisplayFormat.FormatString = "N0";
+            this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn7.FieldName = "quantity";
+            this.gridColumn7.MinWidth = 25;
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.gridColumn7.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "quantity", "{0:N0}")});
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 1;
+            this.gridColumn7.Width = 94;
+            // 
+            // gridColumn17
+            // 
+            this.gridColumn17.Caption = "药品";
+            this.gridColumn17.FieldName = "gridColumn17";
+            this.gridColumn17.MinWidth = 25;
+            this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.UnboundExpression = "\'  代码:\' + [code] + \'  名称:\' + [name] + \'  规格:\' + [spci] + \'  单价:\' + [unitprice]";
+            this.gridColumn17.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn17.Visible = true;
+            this.gridColumn17.VisibleIndex = 3;
+            this.gridColumn17.Width = 94;
             // 
             // xtraTabControl2
             // 
@@ -553,128 +675,6 @@
             this.gridColumn16.VisibleIndex = 8;
             this.gridColumn16.Width = 94;
             // 
-            // gridControl1
-            // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1206, 279);
-            this.gridControl1.TabIndex = 7;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5,
-            this.gridColumn6,
-            this.gridColumn7,
-            this.gridColumn17});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.GroupCount = 1;
-            this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "quantity", this.gridColumn7, "(小计: {0:0.##})")});
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.AutoExpandAllGroups = true;
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsView.AllowCellMerge = true;
-            this.gridView1.OptionsView.ShowFooter = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn17, DevExpress.Data.ColumnSortOrder.Ascending)});
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn1.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.gridColumn1.Caption = "起止时间";
-            this.gridColumn1.FieldName = "time";
-            this.gridColumn1.MinWidth = 25;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Width = 94;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "药品代码";
-            this.gridColumn2.FieldName = "code";
-            this.gridColumn2.MinWidth = 25;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Width = 94;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "名称";
-            this.gridColumn3.FieldName = "name";
-            this.gridColumn3.MinWidth = 25;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Width = 94;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "规格";
-            this.gridColumn4.FieldName = "spci";
-            this.gridColumn4.MinWidth = 25;
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Width = 94;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "单价";
-            this.gridColumn5.DisplayFormat.FormatString = "C2";
-            this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn5.FieldName = "unitprice";
-            this.gridColumn5.MinWidth = 25;
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Width = 94;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn6.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn6.Caption = "医生";
-            this.gridColumn6.FieldName = "doctor";
-            this.gridColumn6.MinWidth = 25;
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 0;
-            this.gridColumn6.Width = 94;
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn7.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn7.Caption = "数量";
-            this.gridColumn7.DisplayFormat.FormatString = "N0";
-            this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn7.FieldName = "quantity";
-            this.gridColumn7.MinWidth = 25;
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.gridColumn7.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "quantity", "{0:N0}")});
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 1;
-            this.gridColumn7.Width = 94;
-            // 
-            // gridColumn17
-            // 
-            this.gridColumn17.Caption = "药品";
-            this.gridColumn17.FieldName = "gridColumn17";
-            this.gridColumn17.MinWidth = 25;
-            this.gridColumn17.Name = "gridColumn17";
-            this.gridColumn17.UnboundExpression = "\'  代码:\' + [code] + \'  名称:\' + [name] + \'  规格:\' + [spci] + \'  单价:\' + [unitprice]";
-            this.gridColumn17.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 3;
-            this.gridColumn17.Width = 94;
-            // 
             // DrugTJControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -712,13 +712,13 @@
             this.xtraTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).EndInit();
             this.xtraTabControl2.ResumeLayout(false);
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
