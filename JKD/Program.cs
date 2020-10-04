@@ -42,7 +42,7 @@ namespace JKD
             CultureInfo.DefaultThreadCurrentUICulture = culture;
             LoginFrm lf = new LoginFrm();
             //Test01();
-            ////new ImportData().AutoImportData();
+            new ImportData().AutoImportData();
             Application.Run(new LoginFrm());
             
         }

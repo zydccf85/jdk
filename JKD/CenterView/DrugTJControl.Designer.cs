@@ -81,6 +81,7 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel2.SuspendLayout();
             this.dockPanel1.SuspendLayout();
@@ -564,13 +565,20 @@
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6,
-            this.gridColumn7});
+            this.gridColumn7,
+            this.gridColumn17});
             this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GroupCount = 1;
+            this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "quantity", this.gridColumn7, "(数量: SUM={0:0.##})")});
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.AllowCellMerge = true;
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn17, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gridView1.CustomColumnGroup += new DevExpress.XtraGrid.Views.Base.CustomColumnSortEventHandler(this.gridView1_CustomColumnGroup);
             // 
             // gridColumn1
             // 
@@ -580,8 +588,6 @@
             this.gridColumn1.FieldName = "time";
             this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 94;
             // 
             // gridColumn2
@@ -590,8 +596,6 @@
             this.gridColumn2.FieldName = "code";
             this.gridColumn2.MinWidth = 25;
             this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
             this.gridColumn2.Width = 94;
             // 
             // gridColumn3
@@ -600,8 +604,6 @@
             this.gridColumn3.FieldName = "name";
             this.gridColumn3.MinWidth = 25;
             this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
             this.gridColumn3.Width = 94;
             // 
             // gridColumn4
@@ -610,8 +612,6 @@
             this.gridColumn4.FieldName = "spci";
             this.gridColumn4.MinWidth = 25;
             this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
             this.gridColumn4.Width = 94;
             // 
             // gridColumn5
@@ -622,8 +622,6 @@
             this.gridColumn5.FieldName = "unitprice";
             this.gridColumn5.MinWidth = 25;
             this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
             this.gridColumn5.Width = 94;
             // 
             // gridColumn6
@@ -633,12 +631,14 @@
             this.gridColumn6.MinWidth = 25;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.VisibleIndex = 0;
             this.gridColumn6.Width = 94;
             // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "数量";
+            this.gridColumn7.DisplayFormat.FormatString = "N0";
+            this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn7.FieldName = "quantity";
             this.gridColumn7.MinWidth = 25;
             this.gridColumn7.Name = "gridColumn7";
@@ -646,8 +646,20 @@
             this.gridColumn7.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "quantity", "{0:N0}")});
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
+            this.gridColumn7.VisibleIndex = 1;
             this.gridColumn7.Width = 94;
+            // 
+            // gridColumn17
+            // 
+            this.gridColumn17.Caption = "药品";
+            this.gridColumn17.FieldName = "gridColumn17";
+            this.gridColumn17.MinWidth = 25;
+            this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.UnboundExpression = "\'  代码:\' + [code] + \'  名称:\' + [name] + \'  规格:\' + [spci] + \'  单价:\' + [unitprice]";
+            this.gridColumn17.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn17.Visible = true;
+            this.gridColumn17.VisibleIndex = 3;
+            this.gridColumn17.Width = 94;
             // 
             // DrugTJControl
             // 
@@ -747,5 +759,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
     }
 }

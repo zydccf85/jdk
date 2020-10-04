@@ -81,8 +81,8 @@ namespace JKD.CenterView
             lueDrug.EditValue = "";
             lueDrug.Properties.DisplayMember = "名称";
             lueDrug.Properties.ValueMember = "名称";
-            
 
+          
 
         }
     
@@ -116,6 +116,10 @@ namespace JKD.CenterView
         private void xtraTabPage1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void gridView1_CustomColumnGroup(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnSortEventArgs e)
+        {
         }
     }
 }
