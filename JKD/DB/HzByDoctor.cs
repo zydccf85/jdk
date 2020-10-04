@@ -26,15 +26,25 @@ namespace JKD.DB
                             count(if (feibie = '医保',1,null)) as '医保',
                             count(distinct if (feibie = '医保', pid,null)) as '医保人次数',
                             count(if (feibie = '自费',1,null)) as '自费',
+                             count(distinct if (feibie = '自费', pid,null)) as '自费人次数',
                             count(if (cftype = '普通',1,null)) as '普通',
+                            count(distinct if (cftype = '普通', pid,null)) as '普通人次数',
                             count(if (cftype = '儿科',1,null)) as '儿科',
+                            count(distinct if (cftype = '儿科', pid,null)) as '儿科人次数',
                             count(if (cftype = '精二',1,null)) as '精二',
+                            count(distinct if (cftype = '精二', pid,null)) as '精二人次数',
                             count(if (cftype = '麻醉',1,null)) as '麻醉',
+                            count(distinct if (cftype = '麻醉', pid,null)) as '麻醉人次数',
                             count(if (cftype = '急诊',1,null)) as '急诊',
+                            count(distinct if (cftype = '急诊', pid,null)) as '急诊人次数',
                             count(if (zcy > 0,1,null)) AS '中成药',
+                            count(distinct if (zcy > 0,pid,null)) as '中成药人次数',
                             count(if (jingdi > 0,1,null)) AS '静滴' ,
+                            count(distinct if (jingdi > 0,pid,null)) as '静滴人次数',
                             count(if (js > 0,1,null)) AS '激素' ,
-                            count(if (kjs > 0,1,null)) AS '抗菌素'
+                            count(distinct if (js > 0,pid,null)) as '激素人次数',
+                            count(if (kjs > 0,1,null)) AS '抗菌素',
+                            count(distinct if (kjs > 0,pid,null)) as '抗菌素人次数'
                             from
                              (
                                 select f.opertime,totalprice, department, f.pid, f.cftype, feibie, doctor, zcy, jingdi, js, kjs from 
