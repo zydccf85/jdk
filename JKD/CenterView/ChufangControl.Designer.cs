@@ -134,6 +134,7 @@
             this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn50 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.缴款表TableAdapter1 = new JKD.jkdDataSetTableAdapters.缴款表TableAdapter();
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
@@ -1227,7 +1228,8 @@
             this.gridColumn46,
             this.gridColumn47,
             this.gridColumn48,
-            this.gridColumn49});
+            this.gridColumn49,
+            this.gridColumn50});
             this.gridView5.DetailHeight = 420;
             this.gridView5.FixedLineWidth = 3;
             this.gridView5.GridControl = this.gridControl4;
@@ -1468,6 +1470,16 @@
             this.gridColumn49.Visible = true;
             this.gridColumn49.VisibleIndex = 19;
             this.gridColumn49.Width = 86;
+            // 
+            // gridColumn50
+            // 
+            this.gridColumn50.Caption = "医保人次数";
+            this.gridColumn50.FieldName = "医保人次数";
+            this.gridColumn50.MinWidth = 25;
+            this.gridColumn50.Name = "gridColumn50";
+            this.gridColumn50.Visible = true;
+            this.gridColumn50.VisibleIndex = 20;
+            this.gridColumn50.Width = 94;
             // 
             // 缴款表TableAdapter1
             // 
@@ -1948,5 +1960,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn47;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn48;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn49;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn50;
     }
 }

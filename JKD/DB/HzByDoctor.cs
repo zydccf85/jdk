@@ -24,6 +24,7 @@ namespace JKD.DB
                             convert(min(totalprice),decimal(12,2)) as '最小金额',
                             convert(avg(totalprice),decimal(12,2)) as '平均金额',
                             count(if (feibie = '医保',1,null)) as '医保',
+                            count(distinct if (feibie = '医保', pid,null)) as '医保人次数',
                             count(if (feibie = '自费',1,null)) as '自费',
                             count(if (cftype = '普通',1,null)) as '普通',
                             count(if (cftype = '儿科',1,null)) as '儿科',
