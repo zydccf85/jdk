@@ -16,7 +16,7 @@ namespace JKD.DB
             EndTime += " 23:59:59";
             if (doctor == null) doctor = string.Empty;
             if (patient == null) patient = string.Empty;
-            string mysql = $@"select substr(g.opertime,1,10) AS '日期',department AS '科室',doctor AS '医生',
+            string mysql = $@"select date_format(g.opertime, '%Y-%m-%d') AS '日期',department AS '科室',doctor AS '医生',
                             count(distinct pid) AS '人次数',
                             count(feibie) as '处方数',
                             convert(sum(totalprice),decimal(12,2)) as '金额',
@@ -60,7 +60,7 @@ namespace JKD.DB
                                 group by a.opertime
 	                            )  e on f.opertime = e.opertime
                             ) g
-                            group by substr(g.opertime,1,10),g.department,g.doctor order by substr(g.opertime,1,10) desc ";
+                            group by date_format(g.opertime, '%Y-%m-%d'),g.department,g.doctor order by date_format(g.opertime, '%Y-%m-%d') desc ";
             DataTable dt = new DbContext().Db.SqlQueryable<Object>(mysql.ToString()).ToDataTable();
             return dt;
         }

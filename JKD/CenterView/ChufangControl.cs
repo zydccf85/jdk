@@ -24,6 +24,7 @@ using DevExpress.XtraTab.Buttons;
 using DevExpress.XtraSplashScreen;
 using DevExpress.XtraTab.ViewInfo;
 using DevExpress.XtraGrid.Views.Base;
+using JKD.utils;
 
 namespace JKD.CenterView
 {
@@ -85,6 +86,17 @@ namespace JKD.CenterView
             groupControl2.CustomButtonUnchecked += (s, e) =>
             {
                 bandedGridView1.CollapseAllGroups();
+            };
+            groupControl2.CustomButtonClick += (s, e) =>
+            {
+                if (e.Button.Properties.Caption == "导出数据")
+                {
+                    string filename = MySaveFileDialog.Show();
+                    if (!string.IsNullOrEmpty(filename))
+                    {
+                        bandedGridView1.ExportToXlsx(filename);
+                    };
+                }
             };
         }
         private void Init()
