@@ -78,6 +78,14 @@ namespace JKD.CenterView
           
             this.toggleSwitch1_Toggled(this.tsAll, new EventArgs());
             layoutControlItem1.Enabled = layoutControlItem2.Enabled = false;
+            groupControl2.CustomButtonChecked += (s, e) =>
+            {
+                bandedGridView1.ExpandAllGroups();
+            };
+            groupControl2.CustomButtonUnchecked += (s, e) =>
+            {
+                bandedGridView1.CollapseAllGroups();
+            };
         }
         private void Init()
         {
