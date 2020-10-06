@@ -1,5 +1,6 @@
 ﻿using SqlSugar;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -14,75 +15,37 @@ namespace JKD.Models
 
 
            }
-        /// <summary>
-        /// Desc:
-        /// Default:
-        /// Nullable:False
-        /// </summary>  
+        public static Dictionary<string, string> TitleMapFiled = new Dictionary<string, string>()
+        {
+            {"code","药品代码" },{"name","药品名称" },{"spci","规格" },{"form","剂型" },{"unitprice","常用价" },
+            { "unit","常用单位" },
+            {"cate","帐目类别" },{"cata","药品归类" }
+        };
         [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
         public int? id {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:False
-           /// </summary>           
+          
            public string code {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:False
-           /// </summary>           
+                    
            public string name {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
+         
            public string spci {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
+                   
            public string form {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
+                   
            public string address {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
+                   
            public string unit {get;set;}
 
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
+                   
            public double? unitprice {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
+         
+          
            public string searchcode {get;set;}
-
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
+         
            public string cate {get;set;}
           public string cata { get; set; }
         public override string ToString()

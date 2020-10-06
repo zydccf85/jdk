@@ -149,16 +149,16 @@ namespace JKD.Service
                 {
                     
                         string temp = cfinfo.SelectSingleNode(Cfhead.NameMap[item.Name]).InnerText;
-                   // p.SetValue(model, Convert.ChangeType(data.Rows[i][j], p.PropertyType.GetGenericArguments()[0]), null);
-                    item.SetValue(cfhead, Convert.ChangeType(temp, item.PropertyType.GetGenericArguments()[0]), null);
-                    //if (item.PropertyType == typeof(double?))
-                    //    {
-                    //        item.SetValue(cfhead, Convert.ToDouble(temp), null);
-                    //    }
-                    //    else
-                    //    {
-                    //        item.SetValue(cfhead, temp, null);
-                    //    }
+                    // p.SetValue(model, Convert.ChangeType(data.Rows[i][j], p.PropertyType.GetGenericArguments()[0]), null);
+                    //  item.SetValue(cfhead, Convert.ChangeType(temp, item.PropertyType.GetGenericArguments()[0]), null);
+                    if (item.PropertyType == typeof(double?))
+                    {
+                        item.SetValue(cfhead, Convert.ToDouble(temp), null);
+                    }
+                    else
+                    {
+                        item.SetValue(cfhead, temp, null);
+                    }
                 });
                 List<Cfdetail> cfdetails = new List<Cfdetail>();
 

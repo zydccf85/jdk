@@ -19,47 +19,15 @@ namespace JKD.Service
         #region 从硬盘导入药品
         public int ImportDrug(string filePath)
         {
-            
-            // string path = ConfigurationManager.AppSettings["importExcelPath"];
-            DataTable dt = ExcelHelper.ImportExceltoDt(@filePath);
-            List<Drug> list = new List<Drug>();
-            DrugManager dm = new DrugManager();
-            List<Drug> all = dm.GetAll();
+            DataTable dtDrug = ExcelHelper.ImportExceltoDt(filePath);
+            List<Drug> allDrug = new DrugManager().GetAll();
+            List<Drug> li = DataTableToModel.ToListModel<Drug>(dtDrug).Where(item=>!allDrug.Contains(item)).ToList();
             PinyinHelper ph = new PinyinHelper();
-            foreach (DataRow dataRow in dt.Rows) 
-            {
-                string code = dataRow.Field<string>("code");
-                if (string.IsNullOrEmpty(code)) continue;
-                string name = dataRow.Field<string>("name");
-                System.Diagnostics.Debug.WriteLine(new PinyinHelper().GetFirstLetter(name));
-                string spci = dataRow.Field<string>("spci");
-                string form = dataRow.Field<string>("form");
-                string address = dataRow.Field<string>("address");
-                string unit = dataRow.Field<string>("unit");
-                string unitprice = dataRow.Field<string>("unitprice");
-                if (string.IsNullOrEmpty(unitprice)) System.Diagnostics.Debug.WriteLine(name);
-                Drug drug = new Drug()
-                {
-                    code = code,
-                    name = name,
-                    spci = spci,
-                    form = form,
-                    address = address,
-                    unit = unit,
-                    unitprice = double.Parse(unitprice),
-                    searchcode = ph.GetFirstLetter(name)
-                };
-                if (!all.Contains(drug))
-                {
-                    list.Add(drug);
-                    System.Diagnostics.Debug.WriteLine(drug.name +":"+drug.ToString());
-                }
-               
-                
-            }
-            
-            int count = dm.Insert(list);
+            li.ForEach(item => item.searchcode =ph.GetFirstLetter(item.name));
+            int count = new DrugManager().Insert(li);
+
             return count;
+         
         }
         private Drug Datarow2Drug(DataRow dr)
         {
@@ -107,10 +75,10 @@ namespace JKD.Service
         {
             DataTable dt = ExcelHelper.ImportExceltoDt(@filepath);
             dt.TableName = "mydrug";
-            dt.WriteXmlSchema(new FileStream(@"C:\Users\Administrator\Desktop\drug.xml",FileMode.OpenOrCreate));
+            //dt.WriteXmlSchema(new FileStream(@"C:\Users\Administrator\Desktop\drug.xml",FileMode.OpenOrCreate));
             Dictionary<string, string> dic = new Dictionary<string, string>()
             {
-                {"id","编号"},{"code","药品代码" },{"name","药品名称"},
+                {"code","药品代码" },{"name","药品名称"},
                 {"spci","规格"},{"form","剂型" },{"address","厂商"},
                 {"unit","单位"},{"unitprice","单价" },{"searchcode","搜索码"},
                 { "cate","药品性质"} ,{"cata","药品分类" },{"enable","是否启用"} 

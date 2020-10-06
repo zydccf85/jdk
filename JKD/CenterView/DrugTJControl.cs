@@ -26,16 +26,18 @@ namespace JKD.CenterView
         }
         public void Init()
         {
+            //单击查询按钮
             sbQuery.Click += (s, e) =>
             {
                 SimpleButton sb = s as SimpleButton;
                 DataTable dt = new DrugTJManager().Get(lueDrug.EditValue==null?"":lueDrug.Text, deBegin.Text + " 00:00:00", deEnd.Text + " 23:59:59");
                 gridControl1.DataSource = dt;
             };
+            //单击更新按钮
             sbRefresh.Click += (s, e) =>
             {
-                DataTable dt01 = ExcelHelper.ImportExceltoDt(@"C:\Users\Administrator\Desktop\1.xls");
-                DataTable dt02 = ExcelHelper.ImportExceltoDt(@"C:\Users\Administrator\Desktop\2.xls");
+                DataTable dt01 = ExcelHelper.ImportExceltoDt(@"C:\1.xls");
+                DataTable dt02 = ExcelHelper.ImportExceltoDt(@"C:\2.xls");
                 DateTime minTime01 = Convert.ToDateTime(dt01.Compute("min([发药时间])", "true"));
                 DateTime minTime02 = Convert.ToDateTime(dt02.Compute("min([发/退药时间])", "true"));
 
@@ -44,22 +46,29 @@ namespace JKD.CenterView
                 DateTime? maxTime02 = new FyByDrugManager().GetMaxTime();
                 maxTime02 = maxTime02 == null ? DateTime.MinValue : maxTime02;
 
-                if (minTime01 <= maxTime01 || minTime02 <= maxTime02)
-                {
-                    MessageBox.Show("为防止有数据遗漏,请重新导入数据");
-                    return;
-                }
+                //if (minTime01 <= maxTime01 || minTime02 <= maxTime02)
+                //{
+                //    MessageBox.Show("为防止有数据遗漏,请重新导入数据");
+                //    return;
+                //}
                 List<fybypatient> li01 = DataTableToModel.ToListModel<fybypatient>(dt01).Where(item => item.fytime > maxTime01).ToList();
                 List<fybydrug> li02 = DataTableToModel.ToListModel<fybydrug>(dt02).Where(item => item.fytime > maxTime02).ToList();
                 int count01 = new FyByPatientManager().Insert(li01);
                 int count02 = new FyByDrugManager().Insert(li02);
                 MessageBox.Show($"成功更新表数据为{count01},{count02}");
+                string maxT = new FyByPatientManager().GetMaxTime().ToString();
+                xtraTabControl2.CustomHeaderButtons[0].Caption = $"更新时间为：{maxT}";
             };
             xtraTabControl1.CustomHeaderButtonClick += (s, e) =>
             {
                 if(e.Button.Caption == "导出数据")
                 {
-                    gridView1.ExportToXlsx(@"C:\Users\Administrator\Desktop\yytj.xlsx");
+                    //gridView1.ExportToXlsx(@"C:\Users\Administrator\Desktop\yytj.xlsx");
+                   string filename =  MySaveFileDialog.Show();
+                    if (!string.IsNullOrEmpty(filename))
+                    {
+                        gridView1.ExportToXlsx(filename);
+                    }
                 }else if (e.Button.Caption == "展开")
                 {
                     gridView1.ExpandAllGroups();
@@ -81,8 +90,12 @@ namespace JKD.CenterView
                 string unitprice = dr["unitprice"].ToString();
                 string quantity = dr["quantity"].ToString();
                 xtraTabControl2.TabPages[0].Text = $"医生用药明细　[{code},{drug},{spci},{unitprice},{quantity}]";
-               gridControl2.DataSource = new FyByPatientManager().GetListByCondition(deBegin.Text + " 00:00:00", deEnd.Text + " 23:59:59", doctor, code);
+               gridControl2.DataSource = new FyByPatientManager().GetListByCondition(deBegin.Text + " 00:00:00", deEnd.Text + " 23:59:59", doctor, code).OrderBy(item=>item.fytime);
             };
+            DateTime? maxTime = new FyByPatientManager().GetMaxTime();
+            maxTime = maxTime == null ? DateTime.MinValue : maxTime;
+            string mt = maxTime.ToString();
+            xtraTabControl2.CustomHeaderButtons[0].Caption = $"更新时间为：{mt}";
             deBegin.EditValue = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
              deEnd.EditValue = DateTime.Now;
             lueDrug.Properties.DataSource = SqlHelper.ExecuteTable("select distinct name 名称,searchcode 搜索码 from drug");

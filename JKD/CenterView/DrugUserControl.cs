@@ -21,8 +21,9 @@ namespace JKD.CenterView
         public DrugUserControl()
         {
             InitializeComponent();
-          
-            List<Drug> drugs = new DrugManager().GetAll();
+
+            List<string> sss = checkedComboBoxEdit1.Properties.Items.GetCheckedValues().ConvertAll(item => Convert.ToString(item));
+            List<Drug> drugs = new DrugManager().GetAll().Where(item => sss.Contains(item.cate)).ToList(); ;
             this.pagerNavigator1.GC = this.gridControl1;
             this.pagerNavigator1.SetData(drugs);
             this.gridView1.RowClick += (s, e) =>
@@ -32,7 +33,8 @@ namespace JKD.CenterView
                    Drug drug = gridView1.GetRow(e.RowHandle) as Drug;
                     DialogFactory.CreateDrugEditControl(drug);
                 }
-            };          
+            };
+            
             #region 单击查询按钮
             btnQuery.Click += (s, e) =>
             {
@@ -42,7 +44,8 @@ namespace JKD.CenterView
                     address=textEdit2.Text,
                     form=textEdit3.Text
                 };
-                List<Drug> li = new DrugManager().GetList(drug);
+                List<string> checkedValue = checkedComboBoxEdit1.Properties.Items.GetCheckedValues().ConvertAll(item => Convert.ToString(item));
+                List<Drug> li = new DrugManager().GetList(drug).Where(item => checkedValue.Contains(item.cate)).ToList() ;
                // gridControl1.DataSource = li;
                 this.pagerNavigator1.SetData(li);
 
@@ -51,6 +54,7 @@ namespace JKD.CenterView
             #region 单击查询全部按钮
             btnQueryAll.Click += (s, e) =>
             {
+                checkedComboBoxEdit1.CheckAll();
                 List<Drug> li = new DrugManager().GetAll();
                // gridControl1.DataSource = li;
                 this.pagerNavigator1.SetData(li);
