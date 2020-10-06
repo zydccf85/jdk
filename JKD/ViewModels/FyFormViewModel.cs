@@ -223,7 +223,7 @@ namespace JKD.ViewModels
             myli.Add(HZ);
             XtraReport xr = new FMRpt0();
             xr.DataSource = myli;
-            new MyReport(xr, "cffm.repx",true);
+            new MyReport(xr, "cffm.repx",false);
         }
        
         #endregion

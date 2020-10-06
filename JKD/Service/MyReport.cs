@@ -54,8 +54,6 @@ namespace JKD.Service
                 
             };
             xrd.OpenReport(xr);
-            
-
             xrd.ShowDialog();
             xrd.Dispose();
         }
