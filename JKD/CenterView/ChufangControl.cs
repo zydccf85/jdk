@@ -25,6 +25,7 @@ using DevExpress.XtraSplashScreen;
 using DevExpress.XtraTab.ViewInfo;
 using DevExpress.XtraGrid.Views.Base;
 using JKD.utils;
+using DevExpress.XtraBars;
 
 namespace JKD.CenterView
 {
@@ -50,9 +51,9 @@ namespace JKD.CenterView
             mvvmContext.SetBinding(this.gridControl3, e => e.DataSource, "CfDetailList");
             mvvmContext.SetBinding(this.gridControl4, e => e.DataSource, "HzByDoctor");
             mvvmContext.SetBinding(this.tsUnique, e => e.IsOn, "IsAll");
-            mvvmContext.SetBinding(this.xtraTabControl1.CustomHeaderButtons[0], e => e.Enabled, "IsEnable");
+           // mvvmContext.SetBinding(this.xtraTabControl1.CustomHeaderButtons[0], e => e.Enabled, "IsEnable");
             mvvmContext.BindCommand<FyFormViewModel>(this.sbQuery, x => x.Query());
-            mvvmContext.SetBinding(this.cbeDate, e => e.Text, "SelectDate");
+           // mvvmContext.SetBinding(this.cbeDate, e => e.Text, "SelectDate");
             mvvmContext.SetBinding(this.lblTotlprice, e => e.Text, "Huizong");
 
             mvvmContext.WithEvent<FyFormViewModel, CustomHeaderButtonEventArgs>(xtraTabControl1, "CustomHeaderButtonClick")
@@ -73,12 +74,18 @@ namespace JKD.CenterView
 
             mvvmContext.WithEvent<FyFormViewModel, FocusedRowChangedEventArgs>(gridView1, "FocusedRowChanged")
                .EventToCommand(x =>x.ChangeRow(gridView1), args=>gridView1);
-
+            groupControl3.CustomButtonClick += (s, e) =>
+            {
+                if (e.Button.Properties.Caption == "打印处方封面")
+                {
+                    FFVM.Print();
+                }
+            };
 
             Init();
           
             this.toggleSwitch1_Toggled(this.tsAll, new EventArgs());
-            layoutControlItem1.Enabled = layoutControlItem2.Enabled = false;
+           // layoutControlItem1.Enabled = layoutControlItem2.Enabled = false;
             groupControl2.CustomButtonChecked += (s, e) =>
             {
                 bandedGridView1.ExpandAllGroups();
@@ -98,6 +105,13 @@ namespace JKD.CenterView
                     };
                 }
             };
+            popupMenu1.Manager.ItemClick += (s, e) =>
+            {
+                FFVM.SelectDate = e.Item.Caption;
+            };
+           
+           
+            dropDownButton1.DropDownControl=this.popupMenu1;
         }
         private void Init()
         {

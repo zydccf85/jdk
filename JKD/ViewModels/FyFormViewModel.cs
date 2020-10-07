@@ -86,11 +86,11 @@ namespace JKD.ViewModels
             {
                 case "当日": BeginTime = EndTime = DateTime.Now.ToString("yyyy-MM-dd");
                     break;
-                case "昨天":
+                case "昨日":
                     EndTime = BeginTime = DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd");
                     // EndTime = DateTime.Now.ToString("yyyy-MM-dd");
                     break;
-                case "前天":
+                case "前日":
                     EndTime = BeginTime = DateTime.Now.AddDays(-2).ToString("yyyy-MM-dd");
                     // EndTime = DateTime.Now.ToString("yyyy-MM-dd");
                     break;
