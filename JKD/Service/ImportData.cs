@@ -223,6 +223,11 @@ namespace JKD.Service
             
             Func<FileInfo, bool> func = item => item.Name.CompareTo(maxDate) >= 0;
             string xmlPath = ConfigurationManager.AppSettings["importXmlPath"];
+            if (!Directory.Exists(xmlPath))
+            {
+                XtraMessageBox.Show("指定的自动更新目录,不存在!", "重要提示", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return null;
+            }
             if (Directory.Exists(xmlPath))
             {
                 List<Cfhead> li = ImportByDir(xmlPath, func);

@@ -48,7 +48,7 @@ namespace JKD.DB
                             from
                              (
                                 select f.opertime,totalprice, department, f.pid, f.cftype, feibie, doctor, zcy, jingdi, js, kjs from 
-                                    (select * from cfhead where opertime >='{BeginTime}' and opertime <= '{EndTime}' and doctor like concat('%','{doctor}','%')
+                                    (select * from cfhead where opertime >='{BeginTime}' and opertime <= '{EndTime}' and doctor like concat('%','{doctor}','%' ) and enable=1 
                             and  patient like concat('%','{patient}','%')  and enable=1 )
                                 f left  join
                             (
@@ -63,6 +63,22 @@ namespace JKD.DB
                             group by date_format(g.opertime, '%Y-%m-%d'),g.department,g.doctor order by date_format(g.opertime, '%Y-%m-%d') desc ";
             DataTable dt = new DbContext().Db.SqlQueryable<Object>(mysql.ToString()).ToDataTable();
             return dt;
+        }
+
+        public DataTable GetDataTable02(string BeginTime, String EndTime, string doctor, string patient,string drugtype)
+        {
+            BeginTime += " 00:00:00";
+            EndTime += " 23:59:59";
+            if (doctor == null) doctor = string.Empty;
+            if (patient == null) patient = string.Empty;
+            string sqlstr = $"select b.drug,b.spci,b.unitprice,b.unit ,a.opertime ,a.patient,b.quantity" +
+                           $" from cfhead a  left join cfdetail b on a.opertime = b.opertime"+
+                           $" where a.enable = 1 and  a.opertime >='{BeginTime}' and a.opertime <= '{EndTime}' and a.doctor like concat('%','{doctor}','%') and  a.patient like concat('%','{patient}','%' )"+
+                           $"and b.drug in( select name from drug where cata = '{drugtype}' )";
+            DataTable dt = new DbContext().Db.SqlQueryable<Object>(sqlstr).ToDataTable();
+            System.Diagnostics.Debug.WriteLine(sqlstr);
+            return dt;
+
         }
     }
 }

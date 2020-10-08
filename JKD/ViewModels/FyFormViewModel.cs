@@ -24,7 +24,7 @@ using DevExpress.XtraReports.UserDesigner;
 using ICommandHandler = DevExpress.XtraReports.UserDesigner.ICommandHandler;
 using DevExpress.XtraBars;
 using System.IO;
-
+using JKD.utils;
 namespace JKD.ViewModels
 {
     [POCOViewModel]
@@ -78,6 +78,7 @@ namespace JKD.ViewModels
         public virtual Dictionary<string, decimal> HZdata { get; set; }
         public virtual Boolean IsAll { get; set; }
         public virtual List<Cfdetail> CfDetailList { get; set; }
+        public virtual DataTable JSDT { get; set; }
         
         public void OnSelectDateChanged(string mm)
         {
@@ -178,11 +179,24 @@ namespace JKD.ViewModels
 
             };
             Huizong = HZ.ToString();
-       
+            //JSDT = new HzByDoctor().GetDataTable02(BeginTime, EndTime, Doctor, Patient,"精二");
+            GetJS();
+           
+
 
         }
         #endregion
 
+        #region 查询特殊药品
+        public void GetJS()
+        {
+            JSDT = new HzByDoctor().GetDataTable02(BeginTime, EndTime, Doctor, Patient, "精二");
+        }
+        public void GetMZ()
+        {
+            JSDT = new HzByDoctor().GetDataTable02(BeginTime, EndTime, Doctor, Patient, "麻醉");
+        }
+        #endregion
         #region 查询明细
         public List<Cfdetail> GetChild(string opertime)
         {
@@ -245,21 +259,11 @@ namespace JKD.ViewModels
         #region 导出至Excel表
         public void Export(GridControl gc)
         {
-           // SplashScreenManager.ShowForm(typeof(WaitForm1));
-            XlsxExportOptionsEx op = new XlsxExportOptionsEx()
+            string filename = MySaveFileDialog.Show();
+            if (!string.IsNullOrEmpty(filename))
             {
-                ShowGridLines = false,
-                SheetName = gc.Tag as string,
-                ShowPageTitle = DevExpress.Utils.DefaultBoolean.True,
-                ShowTotalSummaries = DevExpress.Utils.DefaultBoolean.True,
-
-            };
-            op.BandedLayoutMode = DevExpress.Export.BandedLayoutMode.LinearBandsAndColumns;
-            string ml = string.Format(@"C:\Users\Lenovo\Desktop\{2}({0}至{1}).xlsx",BeginTime,EndTime,gc.Tag as string);
-            gc.ExportToXlsx(ml, op);
-           // SplashScreenManager.CloseForm();
-            MessageBox.Show("成功导出至桌面", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                gc.ExportToXlsx(filename);
+            }
         }
         #endregion
 

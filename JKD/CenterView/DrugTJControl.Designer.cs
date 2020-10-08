@@ -76,12 +76,12 @@
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
@@ -395,9 +395,7 @@
             // 
             // splitContainerControl1
             // 
-            this.splitContainerControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Horizontal = false;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.gridControl1);
@@ -405,7 +403,7 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.xtraTabControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(1210, 497);
-            this.splitContainerControl1.SplitterPosition = 279;
+            this.splitContainerControl1.SplitterPosition = 523;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -415,7 +413,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1206, 279);
+            this.gridControl1.Size = new System.Drawing.Size(523, 497);
             this.gridControl1.TabIndex = 7;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -541,7 +539,7 @@
             this.xtraTabControl2.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.xtraTabPage2;
-            this.xtraTabControl2.Size = new System.Drawing.Size(1206, 208);
+            this.xtraTabControl2.Size = new System.Drawing.Size(681, 497);
             this.xtraTabControl2.TabIndex = 7;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage2});
@@ -550,7 +548,7 @@
             // 
             this.xtraTabPage2.Controls.Add(this.gridControl2);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1199, 172);
+            this.xtraTabPage2.Size = new System.Drawing.Size(674, 461);
             this.xtraTabPage2.Text = "医生用药明细";
             // 
             // gridControl2
@@ -559,7 +557,7 @@
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1199, 172);
+            this.gridControl2.Size = new System.Drawing.Size(674, 461);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -568,12 +566,12 @@
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn8,
+            this.gridColumn14,
             this.gridColumn9,
             this.gridColumn10,
             this.gridColumn11,
             this.gridColumn12,
             this.gridColumn13,
-            this.gridColumn14,
             this.gridColumn15,
             this.gridColumn16});
             this.gridView2.GridControl = this.gridControl2;
@@ -591,56 +589,6 @@
             this.gridColumn8.VisibleIndex = 0;
             this.gridColumn8.Width = 94;
             // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Caption = "患者";
-            this.gridColumn9.FieldName = "patient";
-            this.gridColumn9.MinWidth = 25;
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 1;
-            this.gridColumn9.Width = 94;
-            // 
-            // gridColumn10
-            // 
-            this.gridColumn10.Caption = "性别";
-            this.gridColumn10.FieldName = "gender";
-            this.gridColumn10.MinWidth = 25;
-            this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 2;
-            this.gridColumn10.Width = 94;
-            // 
-            // gridColumn11
-            // 
-            this.gridColumn11.Caption = "年龄";
-            this.gridColumn11.FieldName = "age";
-            this.gridColumn11.MinWidth = 25;
-            this.gridColumn11.Name = "gridColumn11";
-            this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 3;
-            this.gridColumn11.Width = 94;
-            // 
-            // gridColumn12
-            // 
-            this.gridColumn12.Caption = "医生";
-            this.gridColumn12.FieldName = "doctor";
-            this.gridColumn12.MinWidth = 25;
-            this.gridColumn12.Name = "gridColumn12";
-            this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 4;
-            this.gridColumn12.Width = 94;
-            // 
-            // gridColumn13
-            // 
-            this.gridColumn13.Caption = "诊断";
-            this.gridColumn13.FieldName = "disease";
-            this.gridColumn13.MinWidth = 25;
-            this.gridColumn13.Name = "gridColumn13";
-            this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 5;
-            this.gridColumn13.Width = 94;
-            // 
             // gridColumn14
             // 
             this.gridColumn14.Caption = "发药时间";
@@ -650,8 +598,58 @@
             this.gridColumn14.MinWidth = 25;
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 6;
+            this.gridColumn14.VisibleIndex = 1;
             this.gridColumn14.Width = 94;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "患者";
+            this.gridColumn9.FieldName = "patient";
+            this.gridColumn9.MinWidth = 25;
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 2;
+            this.gridColumn9.Width = 94;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "性别";
+            this.gridColumn10.FieldName = "gender";
+            this.gridColumn10.MinWidth = 25;
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 3;
+            this.gridColumn10.Width = 94;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "年龄";
+            this.gridColumn11.FieldName = "age";
+            this.gridColumn11.MinWidth = 25;
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 4;
+            this.gridColumn11.Width = 94;
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "医生";
+            this.gridColumn12.FieldName = "doctor";
+            this.gridColumn12.MinWidth = 25;
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.Visible = true;
+            this.gridColumn12.VisibleIndex = 5;
+            this.gridColumn12.Width = 94;
+            // 
+            // gridColumn13
+            // 
+            this.gridColumn13.Caption = "诊断";
+            this.gridColumn13.FieldName = "disease";
+            this.gridColumn13.MinWidth = 25;
+            this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 6;
+            this.gridColumn13.Width = 94;
             // 
             // gridColumn15
             // 
@@ -659,8 +657,6 @@
             this.gridColumn15.FieldName = "fytype";
             this.gridColumn15.MinWidth = 25;
             this.gridColumn15.Name = "gridColumn15";
-            this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 7;
             this.gridColumn15.Width = 94;
             // 
             // gridColumn16
@@ -671,8 +667,6 @@
             this.gridColumn16.FieldName = "updatetime";
             this.gridColumn16.MinWidth = 25;
             this.gridColumn16.Name = "gridColumn16";
-            this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 8;
             this.gridColumn16.Width = 94;
             // 
             // DrugTJControl

@@ -45,13 +45,29 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions7 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions8 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions9 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions1 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
             DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions2 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
             DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions3 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions10 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions4 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
             DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions5 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions11 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions12 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions13 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions14 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -167,6 +183,30 @@
             this.gridBand12 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridColumn48 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn60 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabControl3 = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl5 = new DevExpress.XtraGrid.GridControl();
+            this.bandedGridView2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
+            this.药品基本信息 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.bandedGridColumn1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn3 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn4 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.发药情况 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.bandedGridColumn5 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn6 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn7 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem4 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem5 = new DevExpress.XtraBars.BarStaticItem();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.缴款表TableAdapter1 = new JKD.jkdDataSetTableAdapters.缴款表TableAdapter();
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
@@ -175,16 +215,6 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
-            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
-            this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
-            this.barStaticItem4 = new DevExpress.XtraBars.BarStaticItem();
-            this.barStaticItem5 = new DevExpress.XtraBars.BarStaticItem();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.deBegin = new DevExpress.XtraEditors.DateEdit();
             this.tsUnique = new DevExpress.XtraEditors.ToggleSwitch();
             this.tsAll = new DevExpress.XtraEditors.ToggleSwitch();
@@ -232,6 +262,13 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).BeginInit();
+            this.xtraTabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl3)).BeginInit();
+            this.xtraTabControl3.SuspendLayout();
+            this.xtraTabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bandedGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             this.sidePanel1.SuspendLayout();
@@ -240,7 +277,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deBegin.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deBegin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsUnique.Properties)).BeginInit();
@@ -406,7 +442,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(5);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1732, 412);
+            this.gridControl1.Size = new System.Drawing.Size(1732, 402);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.Tag = "处方头汇总表";
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -662,36 +698,36 @@
             serializableAppearanceObject1.ForeColor = System.Drawing.Color.Maroon;
             serializableAppearanceObject1.Options.UseBorderColor = true;
             serializableAppearanceObject1.Options.UseForeColor = true;
-            editorButtonImageOptions2.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
-            editorButtonImageOptions2.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            serializableAppearanceObject2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            serializableAppearanceObject2.Image = ((System.Drawing.Image)(resources.GetObject("serializableAppearanceObject2.Image")));
-            serializableAppearanceObject2.Options.UseForeColor = true;
-            serializableAppearanceObject2.Options.UseImage = true;
-            serializableAppearanceObject2.Options.UseTextOptions = true;
+            editorButtonImageOptions3.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
             editorButtonImageOptions3.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            serializableAppearanceObject3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            serializableAppearanceObject3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            serializableAppearanceObject3.Image = ((System.Drawing.Image)(resources.GetObject("serializableAppearanceObject3.Image")));
             serializableAppearanceObject3.Options.UseForeColor = true;
-            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
-            editorButtonImageOptions4.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            serializableAppearanceObject4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            serializableAppearanceObject4.Options.UseForeColor = true;
+            serializableAppearanceObject3.Options.UseImage = true;
+            serializableAppearanceObject3.Options.UseTextOptions = true;
             editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
             editorButtonImageOptions5.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            serializableAppearanceObject5.ForeColor = System.Drawing.Color.Purple;
+            serializableAppearanceObject5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             serializableAppearanceObject5.Options.UseForeColor = true;
+            editorButtonImageOptions7.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions7.Image")));
+            editorButtonImageOptions7.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            serializableAppearanceObject7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            serializableAppearanceObject7.Options.UseForeColor = true;
+            editorButtonImageOptions9.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions9.Image")));
+            editorButtonImageOptions9.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            serializableAppearanceObject9.ForeColor = System.Drawing.Color.Purple;
+            serializableAppearanceObject9.Options.UseForeColor = true;
             this.xtraTabControl1.CustomHeaderButtons.AddRange(new DevExpress.XtraTab.Buttons.CustomHeaderButton[] {
-            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "删除选中记录", -1, true, true, editorButtonImageOptions1, serializableAppearanceObject1, "", null, null),
-            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Separator),
-            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "同步数据", -1, true, true, editorButtonImageOptions2, serializableAppearanceObject2, "", null, null),
-            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Separator),
-            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "打印处方封面", -1, true, true, editorButtonImageOptions3, serializableAppearanceObject3, "", null, null),
-            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Separator),
-            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "导出处方", -1, true, true, editorButtonImageOptions4, serializableAppearanceObject4, "", "处方头", null),
-            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Separator),
-            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "导出汇总", -1, true, true, editorButtonImageOptions5, serializableAppearanceObject5, "", "处方汇总", null)});
+            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "删除选中记录", -1, true, false, editorButtonImageOptions1, serializableAppearanceObject1, "", null, null),
+            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Separator, "", -1, true, false, editorButtonImageOptions2, serializableAppearanceObject2, "", null, null),
+            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "同步数据", -1, true, true, editorButtonImageOptions3, serializableAppearanceObject3, "", null, null),
+            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Separator, "", -1, true, false, editorButtonImageOptions4, serializableAppearanceObject4, "", null, null),
+            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "打印处方封面", -1, true, false, editorButtonImageOptions5, serializableAppearanceObject5, "", null, null),
+            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Separator, "", -1, true, false, editorButtonImageOptions6, serializableAppearanceObject6, "", null, null),
+            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "导出处方", -1, true, false, editorButtonImageOptions7, serializableAppearanceObject7, "", "处方头", null),
+            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Separator, "", -1, true, false, editorButtonImageOptions8, serializableAppearanceObject8, "", null, null),
+            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "导出汇总", -1, true, false, editorButtonImageOptions9, serializableAppearanceObject9, "", "处方汇总", null)});
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(5);
@@ -703,7 +739,8 @@
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage2,
-            this.xtraTabPage4});
+            this.xtraTabPage4,
+            this.xtraTabPage5});
             this.xtraTabControl1.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtraTabControl1_SelectedPageChanged);
             // 
             // xtraTabPage1
@@ -717,7 +754,7 @@
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(5);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(1746, 676);
-            this.xtraTabPage1.Text = "门诊处方明细表";
+            this.xtraTabPage1.Text = "门诊处方";
             // 
             // groupControl3
             // 
@@ -744,29 +781,29 @@
             this.tableLayoutPanel1.Controls.Add(this.gridControl1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblTotlprice, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 35);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 49);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1742, 639);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1742, 625);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
             // xtraTabControl2
             // 
-            editorButtonImageOptions6.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions6.Image")));
-            editorButtonImageOptions6.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            serializableAppearanceObject6.ForeColor = System.Drawing.Color.Maroon;
-            serializableAppearanceObject6.Options.UseForeColor = true;
+            editorButtonImageOptions10.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions10.Image")));
+            editorButtonImageOptions10.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            serializableAppearanceObject10.ForeColor = System.Drawing.Color.Maroon;
+            serializableAppearanceObject10.Options.UseForeColor = true;
             this.xtraTabControl2.CustomHeaderButtons.AddRange(new DevExpress.XtraTab.Buttons.CustomHeaderButton[] {
-            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "查看历史处方", -1, true, true, editorButtonImageOptions6, serializableAppearanceObject6, "", null, null)});
+            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "查看历史处方", -1, true, true, editorButtonImageOptions10, serializableAppearanceObject10, "", null, null)});
             this.xtraTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl2.Location = new System.Drawing.Point(5, 463);
+            this.xtraTabControl2.Location = new System.Drawing.Point(5, 453);
             this.xtraTabControl2.Margin = new System.Windows.Forms.Padding(5);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.xtraTabPage3;
-            this.xtraTabControl2.Size = new System.Drawing.Size(1732, 171);
+            this.xtraTabControl2.Size = new System.Drawing.Size(1732, 167);
             this.xtraTabControl2.TabIndex = 0;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage3});
@@ -777,8 +814,8 @@
             this.xtraTabPage3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(5);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1725, 135);
-            this.xtraTabPage3.Text = "门诊处方明细表";
+            this.xtraTabPage3.Size = new System.Drawing.Size(1725, 131);
+            this.xtraTabPage3.Text = "明细表";
             // 
             // gridControl3
             // 
@@ -788,7 +825,7 @@
             this.gridControl3.MainView = this.gridView4;
             this.gridControl3.Margin = new System.Windows.Forms.Padding(5);
             this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(1725, 135);
+            this.gridControl3.Size = new System.Drawing.Size(1725, 131);
             this.gridControl3.TabIndex = 0;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -951,7 +988,7 @@
             // 
             this.lblTotlprice.Appearance.BackColor = System.Drawing.Color.Honeydew;
             this.lblTotlprice.Appearance.BackColor2 = System.Drawing.SystemColors.Window;
-            this.lblTotlprice.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblTotlprice.Appearance.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lblTotlprice.Appearance.ForeColor = System.Drawing.Color.Navy;
             this.lblTotlprice.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.lblTotlprice.Appearance.Options.UseBackColor = true;
@@ -968,7 +1005,7 @@
             this.lblTotlprice.AutoEllipsis = true;
             this.lblTotlprice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTotlprice.LineLocation = DevExpress.XtraEditors.LineLocation.Bottom;
-            this.lblTotlprice.Location = new System.Drawing.Point(7, 428);
+            this.lblTotlprice.Location = new System.Drawing.Point(7, 418);
             this.lblTotlprice.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.lblTotlprice.MaximumSize = new System.Drawing.Size(2000, 37);
             this.lblTotlprice.MinimumSize = new System.Drawing.Size(1467, 37);
@@ -984,6 +1021,7 @@
             this.xtraTabPage2.Controls.Add(this.gridSplitContainer1);
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(5);
             this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.PageVisible = false;
             this.xtraTabPage2.Size = new System.Drawing.Size(1746, 676);
             this.xtraTabPage2.Text = "门诊处方汇总表（按日）";
             // 
@@ -1243,7 +1281,7 @@
             this.xtraTabPage4.Controls.Add(this.groupControl2);
             this.xtraTabPage4.Name = "xtraTabPage4";
             this.xtraTabPage4.Size = new System.Drawing.Size(1746, 676);
-            this.xtraTabPage4.Text = "处方统计（按医生）";
+            this.xtraTabPage4.Text = "处方统计";
             // 
             // groupControl2
             // 
@@ -1852,6 +1890,257 @@
             this.gridColumn60.Visible = true;
             this.gridColumn60.Width = 99;
             // 
+            // xtraTabPage5
+            // 
+            this.xtraTabPage5.Controls.Add(this.xtraTabControl3);
+            this.xtraTabPage5.Name = "xtraTabPage5";
+            this.xtraTabPage5.Size = new System.Drawing.Size(1746, 676);
+            this.xtraTabPage5.Text = "特殊药品用药情况";
+            // 
+            // xtraTabControl3
+            // 
+            serializableAppearanceObject11.ForeColor = System.Drawing.Color.Maroon;
+            serializableAppearanceObject11.Options.UseForeColor = true;
+            serializableAppearanceObject12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            serializableAppearanceObject12.Options.UseForeColor = true;
+            serializableAppearanceObject13.ForeColor = System.Drawing.Color.Black;
+            serializableAppearanceObject13.Options.UseForeColor = true;
+            serializableAppearanceObject14.ForeColor = System.Drawing.Color.Navy;
+            serializableAppearanceObject14.Options.UseForeColor = true;
+            this.xtraTabControl3.CustomHeaderButtons.AddRange(new DevExpress.XtraTab.Buttons.CustomHeaderButton[] {
+            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "精神药品", -1, true, true, editorButtonImageOptions11, serializableAppearanceObject11, "", null, null),
+            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "麻醉药品", -1, true, true, editorButtonImageOptions12, serializableAppearanceObject12, "", null, null),
+            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "毒性药品", -1, true, true, editorButtonImageOptions13, serializableAppearanceObject13, "", null, null),
+            new DevExpress.XtraTab.Buttons.CustomHeaderButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "其它特殊药品", -1, true, true, editorButtonImageOptions14, serializableAppearanceObject14, "", null, null)});
+            this.xtraTabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabControl3.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabControl3.Name = "xtraTabControl3";
+            this.xtraTabControl3.SelectedTabPage = this.xtraTabPage6;
+            this.xtraTabControl3.Size = new System.Drawing.Size(1746, 676);
+            this.xtraTabControl3.TabIndex = 0;
+            this.xtraTabControl3.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage6});
+            // 
+            // xtraTabPage6
+            // 
+            this.xtraTabPage6.Controls.Add(this.gridControl5);
+            this.xtraTabPage6.Name = "xtraTabPage6";
+            this.xtraTabPage6.Size = new System.Drawing.Size(1739, 640);
+            this.xtraTabPage6.Text = "精神药品";
+            // 
+            // gridControl5
+            // 
+            this.gridControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl5.Location = new System.Drawing.Point(0, 0);
+            this.gridControl5.MainView = this.bandedGridView2;
+            this.gridControl5.MenuManager = this.barManager1;
+            this.gridControl5.Name = "gridControl5";
+            this.gridControl5.Size = new System.Drawing.Size(1739, 640);
+            this.gridControl5.TabIndex = 0;
+            this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.bandedGridView2});
+            // 
+            // bandedGridView2
+            // 
+            this.bandedGridView2.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.药品基本信息,
+            this.发药情况});
+            this.bandedGridView2.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
+            this.bandedGridColumn1,
+            this.bandedGridColumn2,
+            this.bandedGridColumn3,
+            this.bandedGridColumn4,
+            this.bandedGridColumn5,
+            this.bandedGridColumn6,
+            this.bandedGridColumn7});
+            this.bandedGridView2.GridControl = this.gridControl5;
+            this.bandedGridView2.GroupCount = 1;
+            this.bandedGridView2.Name = "bandedGridView2";
+            this.bandedGridView2.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.bandedGridColumn5, DevExpress.Data.ColumnSortOrder.Ascending)});
+            // 
+            // 药品基本信息
+            // 
+            this.药品基本信息.AppearanceHeader.Options.UseTextOptions = true;
+            this.药品基本信息.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.药品基本信息.Caption = "药品基本信息";
+            this.药品基本信息.Columns.Add(this.bandedGridColumn1);
+            this.药品基本信息.Columns.Add(this.bandedGridColumn2);
+            this.药品基本信息.Columns.Add(this.bandedGridColumn3);
+            this.药品基本信息.Columns.Add(this.bandedGridColumn4);
+            this.药品基本信息.Name = "药品基本信息";
+            this.药品基本信息.VisibleIndex = 0;
+            this.药品基本信息.Width = 925;
+            // 
+            // bandedGridColumn1
+            // 
+            this.bandedGridColumn1.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn1.Caption = "药品名称";
+            this.bandedGridColumn1.FieldName = "drug";
+            this.bandedGridColumn1.MinWidth = 25;
+            this.bandedGridColumn1.Name = "bandedGridColumn1";
+            this.bandedGridColumn1.Visible = true;
+            this.bandedGridColumn1.Width = 140;
+            // 
+            // bandedGridColumn2
+            // 
+            this.bandedGridColumn2.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn2.Caption = "规格";
+            this.bandedGridColumn2.FieldName = "spci";
+            this.bandedGridColumn2.MinWidth = 25;
+            this.bandedGridColumn2.Name = "bandedGridColumn2";
+            this.bandedGridColumn2.Visible = true;
+            this.bandedGridColumn2.Width = 168;
+            // 
+            // bandedGridColumn3
+            // 
+            this.bandedGridColumn3.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn3.Caption = "单价";
+            this.bandedGridColumn3.FieldName = "unitprice";
+            this.bandedGridColumn3.MinWidth = 25;
+            this.bandedGridColumn3.Name = "bandedGridColumn3";
+            this.bandedGridColumn3.Visible = true;
+            this.bandedGridColumn3.Width = 368;
+            // 
+            // bandedGridColumn4
+            // 
+            this.bandedGridColumn4.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn4.Caption = "单位";
+            this.bandedGridColumn4.FieldName = "unit";
+            this.bandedGridColumn4.MinWidth = 25;
+            this.bandedGridColumn4.Name = "bandedGridColumn4";
+            this.bandedGridColumn4.Visible = true;
+            this.bandedGridColumn4.Width = 249;
+            // 
+            // 发药情况
+            // 
+            this.发药情况.AppearanceHeader.Options.UseTextOptions = true;
+            this.发药情况.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.发药情况.Caption = "发药情况";
+            this.发药情况.Columns.Add(this.bandedGridColumn5);
+            this.发药情况.Columns.Add(this.bandedGridColumn6);
+            this.发药情况.Columns.Add(this.bandedGridColumn7);
+            this.发药情况.Name = "发药情况";
+            this.发药情况.VisibleIndex = 1;
+            this.发药情况.Width = 691;
+            // 
+            // bandedGridColumn5
+            // 
+            this.bandedGridColumn5.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn5.Caption = "发药时间";
+            this.bandedGridColumn5.FieldName = "opertime";
+            this.bandedGridColumn5.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.DateMonth;
+            this.bandedGridColumn5.MinWidth = 25;
+            this.bandedGridColumn5.Name = "bandedGridColumn5";
+            this.bandedGridColumn5.Visible = true;
+            this.bandedGridColumn5.Width = 227;
+            // 
+            // bandedGridColumn6
+            // 
+            this.bandedGridColumn6.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn6.Caption = "患者";
+            this.bandedGridColumn6.FieldName = "patient";
+            this.bandedGridColumn6.MinWidth = 25;
+            this.bandedGridColumn6.Name = "bandedGridColumn6";
+            this.bandedGridColumn6.Visible = true;
+            this.bandedGridColumn6.Width = 227;
+            // 
+            // bandedGridColumn7
+            // 
+            this.bandedGridColumn7.AppearanceHeader.Options.UseTextOptions = true;
+            this.bandedGridColumn7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridColumn7.Caption = "数量";
+            this.bandedGridColumn7.FieldName = "quantity";
+            this.bandedGridColumn7.MinWidth = 25;
+            this.bandedGridColumn7.Name = "bandedGridColumn7";
+            this.bandedGridColumn7.Visible = true;
+            this.bandedGridColumn7.Width = 237;
+            // 
+            // barManager1
+            // 
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barStaticItem1,
+            this.barStaticItem2,
+            this.barStaticItem3,
+            this.barStaticItem4,
+            this.barStaticItem5});
+            this.barManager1.MaxItemId = 14;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(1753, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 806);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(1753, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 806);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1753, 0);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 806);
+            // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Caption = "当日";
+            this.barStaticItem1.Id = 8;
+            this.barStaticItem1.ItemAppearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.barStaticItem1.ItemAppearance.Pressed.Options.UseBackColor = true;
+            this.barStaticItem1.Name = "barStaticItem1";
+            // 
+            // barStaticItem2
+            // 
+            this.barStaticItem2.Caption = "昨日";
+            this.barStaticItem2.Id = 9;
+            this.barStaticItem2.Name = "barStaticItem2";
+            // 
+            // barStaticItem3
+            // 
+            this.barStaticItem3.Caption = "前日";
+            this.barStaticItem3.Id = 10;
+            this.barStaticItem3.Name = "barStaticItem3";
+            // 
+            // barStaticItem4
+            // 
+            this.barStaticItem4.Caption = "当月";
+            this.barStaticItem4.Id = 11;
+            this.barStaticItem4.Name = "barStaticItem4";
+            // 
+            // barStaticItem5
+            // 
+            this.barStaticItem5.Caption = "上月";
+            this.barStaticItem5.Id = 12;
+            this.barStaticItem5.Name = "barStaticItem5";
+            // 
             // 缴款表TableAdapter1
             // 
             this.缴款表TableAdapter1.ClearBeforeFill = true;
@@ -1939,85 +2228,6 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem5)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
-            // 
-            // barStaticItem1
-            // 
-            this.barStaticItem1.Caption = "当日";
-            this.barStaticItem1.Id = 8;
-            this.barStaticItem1.ItemAppearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.barStaticItem1.ItemAppearance.Pressed.Options.UseBackColor = true;
-            this.barStaticItem1.Name = "barStaticItem1";
-            // 
-            // barStaticItem2
-            // 
-            this.barStaticItem2.Caption = "昨日";
-            this.barStaticItem2.Id = 9;
-            this.barStaticItem2.Name = "barStaticItem2";
-            // 
-            // barStaticItem3
-            // 
-            this.barStaticItem3.Caption = "前日";
-            this.barStaticItem3.Id = 10;
-            this.barStaticItem3.Name = "barStaticItem3";
-            // 
-            // barStaticItem4
-            // 
-            this.barStaticItem4.Caption = "当月";
-            this.barStaticItem4.Id = 11;
-            this.barStaticItem4.Name = "barStaticItem4";
-            // 
-            // barStaticItem5
-            // 
-            this.barStaticItem5.Caption = "上月";
-            this.barStaticItem5.Id = 12;
-            this.barStaticItem5.Name = "barStaticItem5";
-            // 
-            // barManager1
-            // 
-            this.barManager1.DockControls.Add(this.barDockControlTop);
-            this.barManager1.DockControls.Add(this.barDockControlBottom);
-            this.barManager1.DockControls.Add(this.barDockControlLeft);
-            this.barManager1.DockControls.Add(this.barDockControlRight);
-            this.barManager1.Form = this;
-            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barStaticItem1,
-            this.barStaticItem2,
-            this.barStaticItem3,
-            this.barStaticItem4,
-            this.barStaticItem5});
-            this.barManager1.MaxItemId = 14;
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1753, 0);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 806);
-            this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1753, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 806);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1753, 0);
-            this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 806);
             // 
             // deBegin
             // 
@@ -2337,6 +2547,13 @@
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).EndInit();
+            this.xtraTabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl3)).EndInit();
+            this.xtraTabControl3.ResumeLayout(false);
+            this.xtraTabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bandedGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             this.sidePanel1.ResumeLayout(false);
@@ -2345,7 +2562,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deBegin.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deBegin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsUnique.Properties)).EndInit();
@@ -2528,5 +2744,19 @@
         private DevExpress.XtraGrid.Columns.GridColumn fei_bei;
         private DevExpress.XtraGrid.Columns.GridColumn total_price;
         private DevExpress.XtraEditors.LabelControl lblTotlprice;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage5;
+        private DevExpress.XtraTab.XtraTabControl xtraTabControl3;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage6;
+        private DevExpress.XtraGrid.GridControl gridControl5;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView bandedGridView2;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand 药品基本信息;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn1;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn2;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn3;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn4;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand 发药情况;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn5;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn6;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn7;
     }
 }

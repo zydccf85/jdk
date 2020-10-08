@@ -51,6 +51,7 @@ namespace JKD.CenterView
             mvvmContext.SetBinding(this.gridControl3, e => e.DataSource, "CfDetailList");
             mvvmContext.SetBinding(this.gridControl4, e => e.DataSource, "HzByDoctor");
             mvvmContext.SetBinding(this.tsUnique, e => e.IsOn, "IsAll");
+            mvvmContext.SetBinding(gridControl5, e => e.DataSource, "JSDT");
            // mvvmContext.SetBinding(this.xtraTabControl1.CustomHeaderButtons[0], e => e.Enabled, "IsEnable");
             mvvmContext.BindCommand<FyFormViewModel>(this.sbQuery, x => x.Query());
            // mvvmContext.SetBinding(this.cbeDate, e => e.Text, "SelectDate");
@@ -76,9 +77,16 @@ namespace JKD.CenterView
                .EventToCommand(x =>x.ChangeRow(gridView1), args=>gridView1);
             groupControl3.CustomButtonClick += (s, e) =>
             {
-                if (e.Button.Properties.Caption == "打印处方封面")
+                string caption = e.Button.Properties.Caption;
+                if (caption == "删除选中记录")
+                {
+                    FFVM.DeleteRow();
+                }else if(caption == "打印处方封面")
                 {
                     FFVM.Print();
+                }else if(caption == "导出处方")
+                {
+                    FFVM.Export(gridControl1);
                 }
             };
 
@@ -112,6 +120,20 @@ namespace JKD.CenterView
            
            
             dropDownButton1.DropDownControl=this.popupMenu1;
+            xtraTabControl3.CustomHeaderButtonClick += (s, e) =>
+            {
+                MessageBox.Show("hehe");
+                string caption = e.Button.Caption;
+                if (caption == "精神药品")
+                {
+                    xtraTabPage6.Text = "精神药品";
+                    FFVM.GetJS();
+                }else if(caption == "麻醉药品")
+                {
+                    xtraTabPage6.Text = "麻醉药品";
+                    FFVM.GetMZ();
+                }
+            };
         }
         private void Init()
         {
