@@ -72,11 +72,9 @@ namespace JKD.DB
             if (doctor == null) doctor = string.Empty;
             if (patient == null) patient = string.Empty;
             string sqlstr = $"select b.drug,b.spci,b.unitprice,b.unit ,a.opertime ,a.patient,b.quantity" +
-                           $" from cfhead a  left join cfdetail b on a.opertime = b.opertime"+
-                           $" where a.enable = 1 and  a.opertime >='{BeginTime}' and a.opertime <= '{EndTime}' and a.doctor like concat('%','{doctor}','%') and  a.patient like concat('%','{patient}','%' )"+
-                           $"and b.drug in( select name from drug where cata = '{drugtype}' )";
+                           $" from (select * from cfhead where enable = 1 and  opertime >='{BeginTime}' and opertime <= '{EndTime}' and doctor like concat('%','{doctor}','%') and  patient like concat('%','{patient}','%' )) a  left join cfdetail b on a.opertime = b.opertime" +
+                           $" where b.drug in( select name from drug where cata = '{drugtype}' )";
             DataTable dt = new DbContext().Db.SqlQueryable<Object>(sqlstr).ToDataTable();
-            System.Diagnostics.Debug.WriteLine(sqlstr);
             return dt;
 
         }

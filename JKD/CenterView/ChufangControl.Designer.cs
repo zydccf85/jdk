@@ -1955,7 +1955,13 @@
             this.bandedGridColumn7});
             this.bandedGridView2.GridControl = this.gridControl5;
             this.bandedGridView2.GroupCount = 1;
+            this.bandedGridView2.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "quantity", this.bandedGridColumn7, "(数量:{0:0.##})")});
             this.bandedGridView2.Name = "bandedGridView2";
+            this.bandedGridView2.OptionsBehavior.AutoExpandAllGroups = true;
+            this.bandedGridView2.OptionsBehavior.Editable = false;
+            this.bandedGridView2.OptionsView.ShowFooter = true;
+            this.bandedGridView2.OptionsView.ShowGroupPanel = false;
             this.bandedGridView2.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.bandedGridColumn5, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
@@ -1996,9 +2002,13 @@
             // 
             // bandedGridColumn3
             // 
+            this.bandedGridColumn3.AppearanceCell.Options.UseTextOptions = true;
+            this.bandedGridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn3.AppearanceHeader.Options.UseTextOptions = true;
             this.bandedGridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn3.Caption = "单价";
+            this.bandedGridColumn3.DisplayFormat.FormatString = "C2";
+            this.bandedGridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.bandedGridColumn3.FieldName = "unitprice";
             this.bandedGridColumn3.MinWidth = 25;
             this.bandedGridColumn3.Name = "bandedGridColumn3";
@@ -2007,6 +2017,8 @@
             // 
             // bandedGridColumn4
             // 
+            this.bandedGridColumn4.AppearanceCell.Options.UseTextOptions = true;
+            this.bandedGridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn4.AppearanceHeader.Options.UseTextOptions = true;
             this.bandedGridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn4.Caption = "单位";
@@ -2030,11 +2042,13 @@
             // 
             // bandedGridColumn5
             // 
+            this.bandedGridColumn5.AppearanceCell.Options.UseTextOptions = true;
+            this.bandedGridColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn5.AppearanceHeader.Options.UseTextOptions = true;
             this.bandedGridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn5.Caption = "发药时间";
             this.bandedGridColumn5.FieldName = "opertime";
-            this.bandedGridColumn5.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.DateMonth;
+            this.bandedGridColumn5.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.Date;
             this.bandedGridColumn5.MinWidth = 25;
             this.bandedGridColumn5.Name = "bandedGridColumn5";
             this.bandedGridColumn5.Visible = true;
@@ -2042,6 +2056,8 @@
             // 
             // bandedGridColumn6
             // 
+            this.bandedGridColumn6.AppearanceCell.Options.UseTextOptions = true;
+            this.bandedGridColumn6.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn6.AppearanceHeader.Options.UseTextOptions = true;
             this.bandedGridColumn6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn6.Caption = "患者";
@@ -2053,12 +2069,16 @@
             // 
             // bandedGridColumn7
             // 
+            this.bandedGridColumn7.AppearanceCell.Options.UseTextOptions = true;
+            this.bandedGridColumn7.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn7.AppearanceHeader.Options.UseTextOptions = true;
             this.bandedGridColumn7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.bandedGridColumn7.Caption = "数量";
             this.bandedGridColumn7.FieldName = "quantity";
             this.bandedGridColumn7.MinWidth = 25;
             this.bandedGridColumn7.Name = "bandedGridColumn7";
+            this.bandedGridColumn7.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "quantity", "{0:0.##}")});
             this.bandedGridColumn7.Visible = true;
             this.bandedGridColumn7.Width = 237;
             // 

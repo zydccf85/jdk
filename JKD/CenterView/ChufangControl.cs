@@ -122,7 +122,6 @@ namespace JKD.CenterView
             dropDownButton1.DropDownControl=this.popupMenu1;
             xtraTabControl3.CustomHeaderButtonClick += (s, e) =>
             {
-                MessageBox.Show("hehe");
                 string caption = e.Button.Caption;
                 if (caption == "精神药品")
                 {
